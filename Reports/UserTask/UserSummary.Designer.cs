@@ -111,7 +111,7 @@
             // 
             // BottomMargin
             // 
-            this.BottomMargin.HeightF = 0F;
+            this.BottomMargin.HeightF = 5.882352F;
             this.BottomMargin.Name = "BottomMargin";
             // 
             // xrShape3
@@ -472,7 +472,7 @@
             // 
             this.GroupFooter1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrTable3});
-            this.GroupFooter1.HeightF = 32.71611F;
+            this.GroupFooter1.HeightF = 22.24918F;
             this.GroupFooter1.Name = "GroupFooter1";
             // 
             // xrTable3
@@ -483,12 +483,12 @@
             this.xrTable3.BorderWidth = 1F;
             this.xrTable3.Font = new DevExpress.Drawing.DXFont("calibri", 8F);
             this.xrTable3.ForeColor = System.Drawing.Color.White;
-            this.xrTable3.LocationFloat = new DevExpress.Utils.PointFloat(0F, 5.072759F);
+            this.xrTable3.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrTable3.Name = "xrTable3";
             this.xrTable3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrTable3.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow3});
-            this.xrTable3.SizeF = new System.Drawing.SizeF(790F, 23.01348F);
+            this.xrTable3.SizeF = new System.Drawing.SizeF(790F, 21.54289F);
             this.xrTable3.StylePriority.UseBackColor = false;
             this.xrTable3.StylePriority.UseBorderColor = false;
             this.xrTable3.StylePriority.UseBorders = false;
@@ -680,7 +680,7 @@
             this.FilterString = "[TaskDate] >= ?FromDate And [TaskDate] <= ?ToDate And [DepartmentName] = ?DeptNam" +
     "e And (?AssignTo Is Null Or ?AssignTo = \'\' Or [AssignTo] = ?AssignTo)";
             this.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-            this.Margins = new DevExpress.Drawing.DXMargins(30F, 30F, 0F, 0F);
+            this.Margins = new DevExpress.Drawing.DXMargins(30F, 30F, 0F, 5.882352F);
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.FromDate,
             this.ToDate,

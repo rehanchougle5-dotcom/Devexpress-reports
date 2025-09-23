@@ -303,7 +303,7 @@
             // 
             // xrLine1
             // 
-            this.xrLine1.ForeColor = System.Drawing.Color.Black;
+            this.xrLine1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(63)))), ((int)(((byte)(88)))));
             this.xrLine1.LineDirection = DevExpress.XtraReports.UI.LineDirection.Vertical;
             this.xrLine1.LineWidth = 2F;
             this.xrLine1.LocationFloat = new DevExpress.Utils.PointFloat(70.50283F, 10F);
@@ -399,7 +399,7 @@
             // xrShape3
             // 
             this.xrShape3.BorderColor = System.Drawing.Color.Transparent;
-            this.xrShape3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(240)))), ((int)(((byte)(255)))));
+            this.xrShape3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(211)))), ((int)(((byte)(240)))));
             this.xrShape3.ForeColor = System.Drawing.Color.Black;
             this.xrShape3.LocationFloat = new DevExpress.Utils.PointFloat(12.50003F, 4.974498F);
             this.xrShape3.Name = "xrShape3";

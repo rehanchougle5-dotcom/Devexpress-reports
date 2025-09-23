@@ -117,33 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="xrTableCell8.ExpressionBindings" xml:space="preserve">
-    <value>Iif([taskStatusName] = 'Assigned', 'Blue',
-Iif([taskStatusName] = 'Completed', 'Green',
-Iif([taskStatusName] = 'Confirmed', 'DarkGreen',
-Iif([taskStatusName] = 'Hold', 'Orange',
-Iif([taskStatusName] = 'Not Confirmed', 'Gray',
-Iif([taskStatusName] = 'Postponed', 'Brown',
-Iif([taskStatusName] = 'Pending', 'Red',
-Iif([taskStatusName] = 'In-Process', 'Purple',
-Iif([taskStatusName] = 'Close', 'DarkBlue',
-Iif([taskStatusName] = 'Cancelled', 'Black', ''))))))))))
-</value>
-  </data>
-  <data name="xrTableCell8.ExpressionBindings1" xml:space="preserve">
-    <value>Iif([taskStatusName] = 'Assigned', 'Blue',
-Iif([taskStatusName] = 'Completed', 'Green',
-Iif([taskStatusName] = 'Confirmed', 'DarkGreen',
-Iif([taskStatusName] = 'Hold', 'Orange',
-Iif([taskStatusName] = 'Not Confirmed', 'Gray',
-Iif([taskStatusName] = 'Postponed', 'Brown',
-Iif([taskStatusName] = 'Pending', 'Red',
-Iif([taskStatusName] = 'In-Process', 'Purple',
-Iif([taskStatusName] = 'Close', 'DarkBlue',
-Iif([taskStatusName] = 'Cancelled', 'Black', ''))))))))))
-</value>
-  </data>
   <data name="sqlDataSource1.ResultSchemaSerializable" xml:space="preserve">
-    <value>PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9IlJQVF9Vc2VyVGFza1N0ZXBzIj48RmllbGQgTmFtZT0idGFza0lkIiBUeXBlPSJJbnQ2NCIgLz48RmllbGQgTmFtZT0ibGluZUlkIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0idGFza1N0ZXBJZCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9InRhc2tTdGVwTmFtZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJ0YXNrU3RhdHVzSWQiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0ic29ydEluZHgiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJiYXNlT24iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0ic3RhdHVzVXBkYXRlZEJ5IiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9InN0YXR1c1VwZGF0ZWREYXRlIiBUeXBlPSJEYXRlVGltZSIgLz48RmllbGQgTmFtZT0idGFza1N0YXR1c05hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iYXNzaWduVG8iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iYXNzaWduZWRCeSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJhc3NpZ25lZERhdGUiIFR5cGU9IkRhdGVUaW1lIiAvPjwvVmlldz48L0RhdGFTZXQ+</value>
+    <value>PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9IkFNR19UUkRfVUFFX1JQVF9XSFNCaW5EZXRhaWxzIj48RmllbGQgTmFtZT0id2hzQ29kZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJ3aHNOYW1lIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9ImJpbkNvZGUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iU0wxQ29kZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJzbDFOYW1lIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlNMMkNvZGUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0ic2wyTmFtZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJTTDNDb2RlIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9InNsM05hbWUiIFR5cGU9IlN0cmluZyIgLz48L1ZpZXc+PC9EYXRhU2V0Pg==</value>
   </data>
 </root>

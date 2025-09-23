@@ -181,6 +181,12 @@
     <Compile Include="Reports\AR_Invoice\AR_INVOICE_4.Designer.cs">
       <DependentUpon>AR_INVOICE_4.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\AR_Invoice\XtraReport4.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\AR_Invoice\XtraReport4.Designer.cs">
+      <DependentUpon>XtraReport4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\Bank Details\Bank_Details_2.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -608,6 +614,12 @@
     <Compile Include="Reports\UserTask\MonthlyUserTask.Designer.cs">
       <DependentUpon>MonthlyUserTask.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\UserTask\ProjectStatus.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\UserTask\ProjectStatus.Designer.cs">
+      <DependentUpon>ProjectStatus.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\UserTask\Related User.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -638,6 +650,12 @@
     <Compile Include="Reports\UserTask\UserTask.Designer.cs">
       <DependentUpon>UserTask.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\UserTask\UserTask1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\UserTask\UserTask1.Designer.cs">
+      <DependentUpon>UserTask1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\UserTask\UserTaskSetup.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -655,6 +673,18 @@
     </Compile>
     <Compile Include="Reports\UserTask\UserTask_2.Designer.cs">
       <DependentUpon>UserTask_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\BinPrinting\Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\BinPrinting\Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\BinPrinting\BinPrinting.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\BinPrinting\BinPrinting.Designer.cs">
+      <DependentUpon>BinPrinting.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\XtraReport3.cs">
       <SubType>Component</SubType>
@@ -711,6 +741,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\AR_Invoice\AR_INVOICE_4.resx">
       <DependentUpon>AR_INVOICE_4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\AR_Invoice\XtraReport4.resx">
+      <DependentUpon>XtraReport4.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Bank Details\Bank_Details_2.resx">
       <DependentUpon>Bank_Details_2.cs</DependentUpon>
@@ -925,6 +958,9 @@
     <EmbeddedResource Include="Reports\UserTask\MonthlyUserTask.resx">
       <DependentUpon>MonthlyUserTask.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UserTask\ProjectStatus.resx">
+      <DependentUpon>ProjectStatus.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\UserTask\Related User.resx">
       <DependentUpon>Related User.cs</DependentUpon>
     </EmbeddedResource>
@@ -940,6 +976,9 @@
     <EmbeddedResource Include="Reports\UserTask\UserTask.resx">
       <DependentUpon>UserTask.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UserTask\UserTask1.resx">
+      <DependentUpon>UserTask1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\UserTask\UserTaskSetup.resx">
       <DependentUpon>UserTaskSetup.cs</DependentUpon>
     </EmbeddedResource>
@@ -948,6 +987,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\UserTask\UserTask_2.resx">
       <DependentUpon>UserTask_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\BinPrinting\Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\BinPrinting\BinPrinting.resx">
+      <DependentUpon>BinPrinting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\XtraReport3.resx">
       <DependentUpon>XtraReport3.cs</DependentUpon>

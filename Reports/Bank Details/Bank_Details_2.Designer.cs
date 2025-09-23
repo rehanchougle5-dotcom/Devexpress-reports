@@ -839,8 +839,8 @@ namespace dxReports.Reports.Bank_Details
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.sqlDataSource1,
             this.sqlDataSource2});
-            this.DataMember = "AMG_TRD_UAE_RPT_BANK_ACCOUNT_DETAILS";
-            this.DataSource = this.sqlDataSource1;
+            this.DataMember = "AMG_TRD_KSA_RPT_BANK_ACCOUNT_DETAILS";
+            this.DataSource = this.sqlDataSource2;
             this.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
             this.Margins = new DevExpress.Drawing.DXMargins(40F, 25F, 0F, 8.74F);
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {
