@@ -4,11 +4,11 @@ using System.Collections;
 using System.ComponentModel;
 using System.Drawing;
 
-namespace dxReports.Reports.UserTask
+namespace dxReports.Reports.StockIssue
 {
-    public partial class UserTask1 : DevExpress.XtraReports.UI.XtraReport
+    public partial class stock_issuance : DevExpress.XtraReports.UI.XtraReport
     {
-        public UserTask1()
+        public stock_issuance()
         {
             InitializeComponent();
         }

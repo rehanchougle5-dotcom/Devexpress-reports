@@ -4,11 +4,11 @@ using System.Collections;
 using System.ComponentModel;
 using System.Drawing;
 
-namespace dxReports.Reports.AR_Invoice
+namespace dxReports.Reports.UserTask
 {
-    public partial class XtraReport4 : DevExpress.XtraReports.UI.XtraReport
+    public partial class TaskReport1 : DevExpress.XtraReports.UI.XtraReport
     {
-        public XtraReport4()
+        public TaskReport1()
         {
             InitializeComponent();
         }

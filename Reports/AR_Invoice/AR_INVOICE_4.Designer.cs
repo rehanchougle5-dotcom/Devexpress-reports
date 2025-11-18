@@ -49,6 +49,7 @@ namespace dxReports.Reports.AR_Invoice
             DevExpress.XtraPrinting.Shape.ShapeRectangle shapeRectangle12 = new DevExpress.XtraPrinting.Shape.ShapeRectangle();
             DevExpress.XtraPrinting.Shape.ShapeRectangle shapeRectangle13 = new DevExpress.XtraPrinting.Shape.ShapeRectangle();
             DevExpress.XtraPrinting.Shape.ShapeRectangle shapeRectangle14 = new DevExpress.XtraPrinting.Shape.ShapeRectangle();
+            DevExpress.XtraPrinting.BarCode.QRCodeGenerator qrCodeGenerator1 = new DevExpress.XtraPrinting.BarCode.QRCodeGenerator();
             DevExpress.XtraPrinting.Shape.ShapeRectangle shapeRectangle15 = new DevExpress.XtraPrinting.Shape.ShapeRectangle();
             DevExpress.XtraPrinting.Shape.ShapeRectangle shapeRectangle16 = new DevExpress.XtraPrinting.Shape.ShapeRectangle();
             DevExpress.XtraPrinting.Shape.ShapeRectangle shapeRectangle17 = new DevExpress.XtraPrinting.Shape.ShapeRectangle();
@@ -59,7 +60,6 @@ namespace dxReports.Reports.AR_Invoice
             DevExpress.DataAccess.Sql.QueryParameter queryParameter1 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery2 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter2 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.XtraPrinting.BarCode.QRCodeGenerator qrCodeGenerator1 = new DevExpress.XtraPrinting.BarCode.QRCodeGenerator();
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
@@ -109,6 +109,7 @@ namespace dxReports.Reports.AR_Invoice
             this.xrTableCell70 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableRow26 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell71 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrPictureBox2 = new DevExpress.XtraReports.UI.XRPictureBox();
             this.SubBand8 = new DevExpress.XtraReports.UI.SubBand();
             this.xrTable13 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow49 = new DevExpress.XtraReports.UI.XRTableRow();
@@ -129,6 +130,7 @@ namespace dxReports.Reports.AR_Invoice
             this.xrTableCell138 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableRow34 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell139 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
             this.xrTable22 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow57 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell209 = new DevExpress.XtraReports.UI.XRTableCell();
@@ -147,6 +149,7 @@ namespace dxReports.Reports.AR_Invoice
             this.xrTableCell164 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell165 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrBarCode3 = new DevExpress.XtraReports.UI.XRBarCode();
+            this.xrPictureBox3 = new DevExpress.XtraReports.UI.XRPictureBox();
             this.xrTable16 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow43 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell171 = new DevExpress.XtraReports.UI.XRTableCell();
@@ -358,6 +361,7 @@ namespace dxReports.Reports.AR_Invoice
             this.GroupFooter1 = new DevExpress.XtraReports.UI.GroupFooterBand();
             this.xrLine3 = new DevExpress.XtraReports.UI.XRLine();
             this.SubBand4 = new DevExpress.XtraReports.UI.SubBand();
+            this.xrPictureBox5 = new DevExpress.XtraReports.UI.XRPictureBox();
             this.xrTable19 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow60 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell248 = new DevExpress.XtraReports.UI.XRTableCell();
@@ -420,7 +424,6 @@ namespace dxReports.Reports.AR_Invoice
             this.xrTableCell262 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrLabel32 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel31 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrPictureBox4 = new DevExpress.XtraReports.UI.XRPictureBox();
             this.xrTable12 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow48 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell207 = new DevExpress.XtraReports.UI.XRTableCell();
@@ -430,6 +433,8 @@ namespace dxReports.Reports.AR_Invoice
             this.xrTableCell208 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell238 = new DevExpress.XtraReports.UI.XRTableCell();
             this.SubBand18 = new DevExpress.XtraReports.UI.SubBand();
+            this.xrBarCode4 = new DevExpress.XtraReports.UI.XRBarCode();
+            this.xrPictureBox4 = new DevExpress.XtraReports.UI.XRPictureBox();
             this.xrTable10 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow30 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell166 = new DevExpress.XtraReports.UI.XRTableCell();
@@ -468,6 +473,7 @@ namespace dxReports.Reports.AR_Invoice
             this.xrTableCell152 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell153 = new DevExpress.XtraReports.UI.XRTableCell();
             this.SubBand17 = new DevExpress.XtraReports.UI.SubBand();
+            this.isArabic = new DevExpress.XtraReports.Parameters.Parameter();
             this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
             this.SubBand13 = new DevExpress.XtraReports.UI.SubBand();
             this.xrTable4 = new DevExpress.XtraReports.UI.XRTable();
@@ -487,18 +493,12 @@ namespace dxReports.Reports.AR_Invoice
             this.xrControlStyle1 = new DevExpress.XtraReports.UI.XRControlStyle();
             this.xrControlStyle2 = new DevExpress.XtraReports.UI.XRControlStyle();
             this.DocEntry = new DevExpress.XtraReports.Parameters.Parameter();
-            this.isArabic = new DevExpress.XtraReports.Parameters.Parameter();
             this.rpt_ReportLanguage = new DevExpress.XtraReports.UI.CalculatedField();
             this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
             this.sqlDataSource2 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.linqInstantFeedbackSource1 = new DevExpress.Data.Linq.LinqInstantFeedbackSource();
-            this.xrBarCode4 = new DevExpress.XtraReports.UI.XRBarCode();
             this.sr_Bank_Details = new DevExpress.XtraReports.UI.XRSubreport();
-            this.xrPictureBox5 = new DevExpress.XtraReports.UI.XRPictureBox();
-            this.xrPictureBox2 = new DevExpress.XtraReports.UI.XRPictureBox();
-            this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
-            this.xrPictureBox3 = new DevExpress.XtraReports.UI.XRPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable18)).BeginInit();
@@ -534,7 +534,7 @@ namespace dxReports.Reports.AR_Invoice
             // 
             // Detail
             // 
-            this.Detail.HeightF = 0F;
+            this.Detail.HeightF = 0.2500407F;
             this.Detail.Name = "Detail";
             this.Detail.SubBands.AddRange(new DevExpress.XtraReports.UI.SubBand[] {
             this.SubBand2,
@@ -1119,6 +1119,14 @@ namespace dxReports.Reports.AR_Invoice
             this.xrTableCell71.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             this.xrTableCell71.Weight = 2.3963924593205168D;
             // 
+            // xrPictureBox2
+            // 
+            this.xrPictureBox2.ImageSource = new DevExpress.XtraPrinting.Drawing.ImageSource(global::dxReports.Properties.Resources.AMG_LOGO_JPG_10, true);
+            this.xrPictureBox2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrPictureBox2.Name = "xrPictureBox2";
+            this.xrPictureBox2.SizeF = new System.Drawing.SizeF(62.18679F, 74.60587F);
+            this.xrPictureBox2.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage;
+            // 
             // SubBand8
             // 
             this.SubBand8.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
@@ -1392,6 +1400,14 @@ namespace dxReports.Reports.AR_Invoice
             this.xrTableCell139.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             this.xrTableCell139.Weight = 2.3963924593205168D;
             // 
+            // xrPictureBox1
+            // 
+            this.xrPictureBox1.ImageSource = new DevExpress.XtraPrinting.Drawing.ImageSource(global::dxReports.Properties.Resources.AMG_LOGO_JPG_10, true);
+            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 4F);
+            this.xrPictureBox1.Name = "xrPictureBox1";
+            this.xrPictureBox1.SizeF = new System.Drawing.SizeF(75.13003F, 87.67313F);
+            this.xrPictureBox1.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage;
+            // 
             // xrTable22
             // 
             this.xrTable22.LocationFloat = new DevExpress.Utils.PointFloat(639.7391F, 0F);
@@ -1645,6 +1661,14 @@ namespace dxReports.Reports.AR_Invoice
             this.xrBarCode3.StylePriority.UseTextAlignment = false;
             this.xrBarCode3.Symbology = code128Generator3;
             this.xrBarCode3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
+            // 
+            // xrPictureBox3
+            // 
+            this.xrPictureBox3.ImageSource = new DevExpress.XtraPrinting.Drawing.ImageSource(global::dxReports.Properties.Resources.AMG_LOGO_JPG_10, true);
+            this.xrPictureBox3.LocationFloat = new DevExpress.Utils.PointFloat(731.8128F, 0F);
+            this.xrPictureBox3.Name = "xrPictureBox3";
+            this.xrPictureBox3.SizeF = new System.Drawing.SizeF(62.18679F, 74.60587F);
+            this.xrPictureBox3.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage;
             // 
             // xrTable16
             // 
@@ -3789,7 +3813,7 @@ namespace dxReports.Reports.AR_Invoice
             this.SubBand6.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrTable3});
             this.SubBand6.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[rpt_ReportLanguage] = \'EA\' Or [rpt_ReportLanguage] = \'EN\'\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[rpt_ReportLanguage] = \'EA\' Or [rpt_ReportLanguage]= \'EN\'\n")});
             this.SubBand6.HeightF = 41.0467F;
             this.SubBand6.Name = "SubBand6";
             // 
@@ -3930,7 +3954,7 @@ namespace dxReports.Reports.AR_Invoice
             this.SubBand12.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrTable2});
             this.SubBand12.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[ReportLanguage] = \'EA\' Or [ReportLanguage] = \'AR\'")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[rpt_ReportLanguage] = \'EA\' Or [rpt_ReportLanguage] = \'AR\'")});
             this.SubBand12.HeightF = 43.75F;
             this.SubBand12.Name = "SubBand12";
             // 
@@ -4102,6 +4126,15 @@ namespace dxReports.Reports.AR_Invoice
             this.xrTable12});
             this.SubBand4.HeightF = 220.0687F;
             this.SubBand4.Name = "SubBand4";
+            // 
+            // xrPictureBox5
+            // 
+            this.xrPictureBox5.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "ImageSource", "[FileContnt]")});
+            this.xrPictureBox5.LocationFloat = new DevExpress.Utils.PointFloat(289.247F, 0F);
+            this.xrPictureBox5.Name = "xrPictureBox5";
+            this.xrPictureBox5.SizeF = new System.Drawing.SizeF(204.1876F, 185.8866F);
+            this.xrPictureBox5.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage;
             // 
             // xrTable19
             // 
@@ -5366,14 +5399,6 @@ namespace dxReports.Reports.AR_Invoice
             this.xrLabel31.Text = "INTERNAL USE ONLY";
             this.xrLabel31.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomCenter;
             // 
-            // xrPictureBox4
-            // 
-            this.xrPictureBox4.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "ImageSource", "[FileContnt]")});
-            this.xrPictureBox4.LocationFloat = new DevExpress.Utils.PointFloat(247.5303F, 45.23422F);
-            this.xrPictureBox4.Name = "xrPictureBox4";
-            this.xrPictureBox4.SizeF = new System.Drawing.SizeF(92.51F, 90.11F);
-            // 
             // xrTable12
             // 
             this.xrTable12.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
@@ -5484,6 +5509,29 @@ namespace dxReports.Reports.AR_Invoice
             this.SubBand18.HeightF = 186.0031F;
             this.SubBand18.Name = "SubBand18";
             this.SubBand18.Visible = false;
+            // 
+            // xrBarCode4
+            // 
+            this.xrBarCode4.AutoModule = true;
+            this.xrBarCode4.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[FileContnt]")});
+            this.xrBarCode4.LocationFloat = new DevExpress.Utils.PointFloat(10F, 0F);
+            this.xrBarCode4.Name = "xrBarCode4";
+            this.xrBarCode4.Padding = new DevExpress.XtraPrinting.PaddingInfo(10, 10, 0, 0, 100F);
+            this.xrBarCode4.ShowText = false;
+            this.xrBarCode4.SizeF = new System.Drawing.SizeF(204.188F, 186.0031F);
+            qrCodeGenerator1.CompactionMode = DevExpress.XtraPrinting.BarCode.QRCodeCompactionMode.Byte;
+            qrCodeGenerator1.ErrorCorrectionLevel = DevExpress.XtraPrinting.BarCode.QRCodeErrorCorrectionLevel.Q;
+            qrCodeGenerator1.IncludeQuietZone = false;
+            this.xrBarCode4.Symbology = qrCodeGenerator1;
+            // 
+            // xrPictureBox4
+            // 
+            this.xrPictureBox4.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "ImageSource", "[FileContnt]")});
+            this.xrPictureBox4.LocationFloat = new DevExpress.Utils.PointFloat(247.5303F, 45.23422F);
+            this.xrPictureBox4.Name = "xrPictureBox4";
+            this.xrPictureBox4.SizeF = new System.Drawing.SizeF(92.51F, 90.11F);
             // 
             // xrTable10
             // 
@@ -6234,6 +6282,13 @@ namespace dxReports.Reports.AR_Invoice
             this.SubBand17.HeightF = 90F;
             this.SubBand17.Name = "SubBand17";
             // 
+            // isArabic
+            // 
+            this.isArabic.Description = "isArabic";
+            this.isArabic.Name = "isArabic";
+            this.isArabic.Type = typeof(bool);
+            this.isArabic.ValueInfo = "False";
+            // 
             // ReportFooter
             // 
             this.ReportFooter.HeightF = 0F;
@@ -6307,7 +6362,7 @@ namespace dxReports.Reports.AR_Invoice
             // 
             // xrTableCell41
             // 
-            this.xrTableCell41.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(63)))), ((int)(((byte)(88)))));
+            this.xrTableCell41.BorderColor = System.Drawing.Color.Black;
             this.xrTableCell41.Borders = DevExpress.XtraPrinting.BorderSide.Top;
             this.xrTableCell41.Font = new DevExpress.Drawing.DXFont("calibri", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrTableCell41.Multiline = true;
@@ -6359,7 +6414,7 @@ namespace dxReports.Reports.AR_Invoice
             // 
             // xrTableCell44
             // 
-            this.xrTableCell44.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(63)))), ((int)(((byte)(88)))));
+            this.xrTableCell44.BorderColor = System.Drawing.Color.Black;
             this.xrTableCell44.Borders = DevExpress.XtraPrinting.BorderSide.Top;
             this.xrTableCell44.Font = new DevExpress.Drawing.DXFont("calibri", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrTableCell44.Multiline = true;
@@ -6412,13 +6467,6 @@ namespace dxReports.Reports.AR_Invoice
             this.DocEntry.Type = typeof(int);
             this.DocEntry.ValueInfo = "0";
             // 
-            // isArabic
-            // 
-            this.isArabic.Description = "isArabic";
-            this.isArabic.Name = "isArabic";
-            this.isArabic.Type = typeof(bool);
-            this.isArabic.ValueInfo = "False";
-            // 
             // rpt_ReportLanguage
             // 
             this.rpt_ReportLanguage.DataMember = "AMG_TRD_UAE_RPT_AR_INVOICE";
@@ -6462,21 +6510,6 @@ namespace dxReports.Reports.AR_Invoice
             storedProcQuery2});
             this.sqlDataSource2.ResultSchemaSerializable = resources.GetString("sqlDataSource2.ResultSchemaSerializable");
             // 
-            // xrBarCode4
-            // 
-            this.xrBarCode4.AutoModule = true;
-            this.xrBarCode4.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[FileContnt]")});
-            this.xrBarCode4.LocationFloat = new DevExpress.Utils.PointFloat(10F, 0F);
-            this.xrBarCode4.Name = "xrBarCode4";
-            this.xrBarCode4.Padding = new DevExpress.XtraPrinting.PaddingInfo(10, 10, 0, 0, 100F);
-            this.xrBarCode4.ShowText = false;
-            this.xrBarCode4.SizeF = new System.Drawing.SizeF(204.188F, 186.0031F);
-            qrCodeGenerator1.CompactionMode = DevExpress.XtraPrinting.BarCode.QRCodeCompactionMode.Byte;
-            qrCodeGenerator1.ErrorCorrectionLevel = DevExpress.XtraPrinting.BarCode.QRCodeErrorCorrectionLevel.Q;
-            qrCodeGenerator1.IncludeQuietZone = false;
-            this.xrBarCode4.Symbology = qrCodeGenerator1;
-            // 
             // sr_Bank_Details
             // 
             this.sr_Bank_Details.LocationFloat = new DevExpress.Utils.PointFloat(0.0004238552F, 0F);
@@ -6487,39 +6520,6 @@ namespace dxReports.Reports.AR_Invoice
             this.sr_Bank_Details.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("isArabic", this.isArabic));
             this.sr_Bank_Details.ReportSource = new dxReports.Reports.Bank_Details.Bank_Details_2();
             this.sr_Bank_Details.SizeF = new System.Drawing.SizeF(795.2411F, 89.99999F);
-            // 
-            // xrPictureBox5
-            // 
-            this.xrPictureBox5.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "ImageSource", "[FileContnt]")});
-            this.xrPictureBox5.LocationFloat = new DevExpress.Utils.PointFloat(289.247F, 0F);
-            this.xrPictureBox5.Name = "xrPictureBox5";
-            this.xrPictureBox5.SizeF = new System.Drawing.SizeF(204.1876F, 185.8866F);
-            this.xrPictureBox5.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage;
-            // 
-            // xrPictureBox2
-            // 
-            this.xrPictureBox2.ImageSource = new DevExpress.XtraPrinting.Drawing.ImageSource(global::dxReports.Properties.Resources.AMG_LOGO_JPG_10, true);
-            this.xrPictureBox2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.xrPictureBox2.Name = "xrPictureBox2";
-            this.xrPictureBox2.SizeF = new System.Drawing.SizeF(62.18679F, 74.60587F);
-            this.xrPictureBox2.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage;
-            // 
-            // xrPictureBox1
-            // 
-            this.xrPictureBox1.ImageSource = new DevExpress.XtraPrinting.Drawing.ImageSource(global::dxReports.Properties.Resources.AMG_LOGO_JPG_10, true);
-            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 4F);
-            this.xrPictureBox1.Name = "xrPictureBox1";
-            this.xrPictureBox1.SizeF = new System.Drawing.SizeF(75.13003F, 87.67313F);
-            this.xrPictureBox1.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage;
-            // 
-            // xrPictureBox3
-            // 
-            this.xrPictureBox3.ImageSource = new DevExpress.XtraPrinting.Drawing.ImageSource(global::dxReports.Properties.Resources.AMG_LOGO_JPG_10, true);
-            this.xrPictureBox3.LocationFloat = new DevExpress.Utils.PointFloat(731.8128F, 0F);
-            this.xrPictureBox3.Name = "xrPictureBox3";
-            this.xrPictureBox3.SizeF = new System.Drawing.SizeF(62.18679F, 74.60587F);
-            this.xrPictureBox3.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage;
             // 
             // AR_INVOICE_4
             // 
@@ -6538,8 +6538,8 @@ namespace dxReports.Reports.AR_Invoice
             this.sqlDataSource1,
             this.sqlDataSource2,
             this.linqInstantFeedbackSource1});
-            this.DataMember = "AMG_TRD_KSA_RPT_AR_INVOICE";
-            this.DataSource = this.sqlDataSource2;
+            this.DataMember = "AMG_TRD_UAE_RPT_AR_INVOICE";
+            this.DataSource = this.sqlDataSource1;
             this.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
             this.Margins = new DevExpress.Drawing.DXMargins(25F, 6F, 10F, 19.89F);
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {

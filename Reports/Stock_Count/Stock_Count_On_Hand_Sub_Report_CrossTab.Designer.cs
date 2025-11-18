@@ -167,7 +167,7 @@ namespace dxReports.Reports
             this.crossTabHeaderCell1.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.crossTabHeaderCell1.BorderWidth = 1F;
             this.crossTabHeaderCell1.ColumnIndex = 0;
-            this.crossTabHeaderCell1.Font = new DevExpress.Drawing.DXFont("ubuntu", 7.5F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.crossTabHeaderCell1.Font = new DevExpress.Drawing.DXFont("calibri", 7.5F, DevExpress.Drawing.DXFontStyle.Bold);
             this.crossTabHeaderCell1.ForeColor = System.Drawing.Color.White;
             this.crossTabHeaderCell1.Name = "crossTabHeaderCell1";
             this.crossTabHeaderCell1.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 2, 0, 0, 100F);
@@ -182,7 +182,7 @@ namespace dxReports.Reports
             this.crossTabDataCell1.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.crossTabDataCell1.BorderWidth = 1F;
             this.crossTabDataCell1.ColumnIndex = 4;
-            this.crossTabDataCell1.Font = new DevExpress.Drawing.DXFont("ubuntu", 7.5F);
+            this.crossTabDataCell1.Font = new DevExpress.Drawing.DXFont("calibri", 7.5F);
             this.crossTabDataCell1.ForeColor = System.Drawing.Color.Black;
             this.crossTabDataCell1.Name = "crossTabDataCell1";
             this.crossTabDataCell1.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 2, 0, 0, 100F);
@@ -199,7 +199,7 @@ namespace dxReports.Reports
             this.crossTabHeaderCell2.ColumnIndex = 4;
             this.crossTabHeaderCell2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'Total\'")});
-            this.crossTabHeaderCell2.Font = new DevExpress.Drawing.DXFont("ubuntu", 7.5F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.crossTabHeaderCell2.Font = new DevExpress.Drawing.DXFont("calibri", 7.5F, DevExpress.Drawing.DXFontStyle.Bold);
             this.crossTabHeaderCell2.ForeColor = System.Drawing.Color.White;
             this.crossTabHeaderCell2.Name = "crossTabHeaderCell2";
             this.crossTabHeaderCell2.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 2, 0, 0, 100F);
@@ -211,12 +211,14 @@ namespace dxReports.Reports
             this.crossTabHeaderCell3.BackColor = System.Drawing.Color.Transparent;
             this.crossTabHeaderCell3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(122)))), ((int)(((byte)(160)))));
             this.crossTabHeaderCell3.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.crossTabHeaderCell3.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.crossTabHeaderCell3.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Right) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.crossTabHeaderCell3.BorderWidth = 1F;
             this.crossTabHeaderCell3.ColumnIndex = 0;
             this.crossTabHeaderCell3.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'  \' + [itemGroupDesc]")});
-            this.crossTabHeaderCell3.Font = new DevExpress.Drawing.DXFont("ubuntu", 7.5F);
+            this.crossTabHeaderCell3.Font = new DevExpress.Drawing.DXFont("calibri", 7.5F);
             this.crossTabHeaderCell3.ForeColor = System.Drawing.Color.Black;
             this.crossTabHeaderCell3.Name = "crossTabHeaderCell3";
             this.crossTabHeaderCell3.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 2, 0, 0, 100F);
@@ -233,7 +235,7 @@ namespace dxReports.Reports
             this.crossTabHeaderCell4.BorderWidth = 1F;
             this.crossTabHeaderCell4.ColumnIndex = 0;
             this.crossTabHeaderCell4.ColumnSpan = 4;
-            this.crossTabHeaderCell4.Font = new DevExpress.Drawing.DXFont("ubuntu", 7.5F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.crossTabHeaderCell4.Font = new DevExpress.Drawing.DXFont("calibri", 7.5F, DevExpress.Drawing.DXFontStyle.Bold);
             this.crossTabHeaderCell4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(102)))), ((int)(((byte)(122)))));
             this.crossTabHeaderCell4.Name = "crossTabHeaderCell4";
             this.crossTabHeaderCell4.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 2, 0, 0, 100F);
@@ -248,7 +250,7 @@ namespace dxReports.Reports
             this.crossTabTotalCell1.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.crossTabTotalCell1.BorderWidth = 1F;
             this.crossTabTotalCell1.ColumnIndex = 4;
-            this.crossTabTotalCell1.Font = new DevExpress.Drawing.DXFont("ubuntu", 7.5F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.crossTabTotalCell1.Font = new DevExpress.Drawing.DXFont("calibri", 7.5F, DevExpress.Drawing.DXFontStyle.Bold);
             this.crossTabTotalCell1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(102)))), ((int)(((byte)(122)))));
             this.crossTabTotalCell1.Name = "crossTabTotalCell1";
             this.crossTabTotalCell1.RowIndex = 5;
@@ -263,7 +265,7 @@ namespace dxReports.Reports
             this.crossTabHeaderCell5.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.crossTabHeaderCell5.BorderWidth = 1F;
             this.crossTabHeaderCell5.ColumnIndex = 1;
-            this.crossTabHeaderCell5.Font = new DevExpress.Drawing.DXFont("ubuntu", 7.5F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.crossTabHeaderCell5.Font = new DevExpress.Drawing.DXFont("calibri", 7.5F, DevExpress.Drawing.DXFontStyle.Bold);
             this.crossTabHeaderCell5.ForeColor = System.Drawing.Color.White;
             this.crossTabHeaderCell5.Name = "crossTabHeaderCell5";
             this.crossTabHeaderCell5.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
@@ -276,15 +278,17 @@ namespace dxReports.Reports
             this.crossTabHeaderCell6.BackColor = System.Drawing.Color.Transparent;
             this.crossTabHeaderCell6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(122)))), ((int)(((byte)(160)))));
             this.crossTabHeaderCell6.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.crossTabHeaderCell6.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.crossTabHeaderCell6.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Right) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.crossTabHeaderCell6.BorderWidth = 1F;
             this.crossTabHeaderCell6.ColumnIndex = 1;
             this.crossTabHeaderCell6.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[itemCategoryDesc]")});
-            this.crossTabHeaderCell6.Font = new DevExpress.Drawing.DXFont("ubuntu", 7.5F);
+            this.crossTabHeaderCell6.Font = new DevExpress.Drawing.DXFont("calibri", 7.5F);
             this.crossTabHeaderCell6.ForeColor = System.Drawing.Color.Black;
             this.crossTabHeaderCell6.Name = "crossTabHeaderCell6";
-            this.crossTabHeaderCell6.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.crossTabHeaderCell6.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.crossTabHeaderCell6.RowIndex = 1;
             this.crossTabHeaderCell6.RowSpan = 2;
             this.crossTabHeaderCell6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
@@ -296,7 +300,7 @@ namespace dxReports.Reports
             this.crossTabHeaderCell7.BorderWidth = 1F;
             this.crossTabHeaderCell7.ColumnIndex = 0;
             this.crossTabHeaderCell7.ColumnSpan = 4;
-            this.crossTabHeaderCell7.Font = new DevExpress.Drawing.DXFont("Tahoma", 8F);
+            this.crossTabHeaderCell7.Font = new DevExpress.Drawing.DXFont("calibri", 8F);
             this.crossTabHeaderCell7.ForeColor = System.Drawing.Color.Black;
             this.crossTabHeaderCell7.Name = "crossTabHeaderCell7";
             this.crossTabHeaderCell7.RowIndex = 4;
@@ -321,7 +325,7 @@ namespace dxReports.Reports
             this.crossTabHeaderCell8.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.crossTabHeaderCell8.BorderWidth = 1F;
             this.crossTabHeaderCell8.ColumnIndex = 2;
-            this.crossTabHeaderCell8.Font = new DevExpress.Drawing.DXFont("ubuntu", 7.5F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.crossTabHeaderCell8.Font = new DevExpress.Drawing.DXFont("calibri", 7.5F, DevExpress.Drawing.DXFontStyle.Bold);
             this.crossTabHeaderCell8.ForeColor = System.Drawing.Color.White;
             this.crossTabHeaderCell8.Name = "crossTabHeaderCell8";
             this.crossTabHeaderCell8.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
@@ -339,10 +343,10 @@ namespace dxReports.Reports
             this.crossTabHeaderCell9.ColumnIndex = 2;
             this.crossTabHeaderCell9.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[itemCode]")});
-            this.crossTabHeaderCell9.Font = new DevExpress.Drawing.DXFont("ubuntu", 7.5F);
+            this.crossTabHeaderCell9.Font = new DevExpress.Drawing.DXFont("calibri", 7.5F);
             this.crossTabHeaderCell9.ForeColor = System.Drawing.Color.Black;
             this.crossTabHeaderCell9.Name = "crossTabHeaderCell9";
-            this.crossTabHeaderCell9.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.crossTabHeaderCell9.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.crossTabHeaderCell9.RowIndex = 1;
             this.crossTabHeaderCell9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
@@ -352,7 +356,7 @@ namespace dxReports.Reports
             this.crossTabHeaderCell10.BorderWidth = 1F;
             this.crossTabHeaderCell10.ColumnIndex = 1;
             this.crossTabHeaderCell10.ColumnSpan = 3;
-            this.crossTabHeaderCell10.Font = new DevExpress.Drawing.DXFont("Tahoma", 8F);
+            this.crossTabHeaderCell10.Font = new DevExpress.Drawing.DXFont("calibri", 8F);
             this.crossTabHeaderCell10.Name = "crossTabHeaderCell10";
             this.crossTabHeaderCell10.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 2, 0, 0, 100F);
             this.crossTabHeaderCell10.RowIndex = 3;
@@ -375,7 +379,7 @@ namespace dxReports.Reports
             this.crossTabHeaderCell11.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.crossTabHeaderCell11.BorderWidth = 1F;
             this.crossTabHeaderCell11.ColumnIndex = 3;
-            this.crossTabHeaderCell11.Font = new DevExpress.Drawing.DXFont("ubuntu", 7.5F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.crossTabHeaderCell11.Font = new DevExpress.Drawing.DXFont("calibri", 7.5F, DevExpress.Drawing.DXFontStyle.Bold);
             this.crossTabHeaderCell11.ForeColor = System.Drawing.Color.White;
             this.crossTabHeaderCell11.Name = "crossTabHeaderCell11";
             this.crossTabHeaderCell11.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 2, 0, 0, 100F);
@@ -393,7 +397,7 @@ namespace dxReports.Reports
             this.crossTabHeaderCell12.ColumnIndex = 3;
             this.crossTabHeaderCell12.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'  \' + [itemName]")});
-            this.crossTabHeaderCell12.Font = new DevExpress.Drawing.DXFont("ubuntu", 7.5F);
+            this.crossTabHeaderCell12.Font = new DevExpress.Drawing.DXFont("calibri", 7.5F);
             this.crossTabHeaderCell12.ForeColor = System.Drawing.Color.Black;
             this.crossTabHeaderCell12.Name = "crossTabHeaderCell12";
             this.crossTabHeaderCell12.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 2, 0, 0, 100F);
@@ -406,7 +410,7 @@ namespace dxReports.Reports
             this.crossTabHeaderCell13.BorderWidth = 1F;
             this.crossTabHeaderCell13.ColumnIndex = 2;
             this.crossTabHeaderCell13.ColumnSpan = 2;
-            this.crossTabHeaderCell13.Font = new DevExpress.Drawing.DXFont("Tahoma", 8F);
+            this.crossTabHeaderCell13.Font = new DevExpress.Drawing.DXFont("calibri", 8F);
             this.crossTabHeaderCell13.Name = "crossTabHeaderCell13";
             this.crossTabHeaderCell13.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 2, 0, 0, 100F);
             this.crossTabHeaderCell13.RowIndex = 2;
@@ -423,7 +427,7 @@ namespace dxReports.Reports
             // 
             // sqlDataSource1
             // 
-            this.sqlDataSource1.ConnectionName = "RIZ_SQL_Main_RPT";
+            this.sqlDataSource1.ConnectionName = "PowerBI";
             this.sqlDataSource1.Name = "sqlDataSource1";
             storedProcQuery1.Name = "RPT_STOCK_COUNT";
             queryParameter1.Name = "@stockCountId";
@@ -512,7 +516,7 @@ namespace dxReports.Reports
             this.xrLabel6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.xrLabel6.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel6.BorderWidth = 1.2F;
-            this.xrLabel6.Font = new DevExpress.Drawing.DXFont("neotech", 12F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel6.Font = new DevExpress.Drawing.DXFont("calibri", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(102)))), ((int)(((byte)(122)))));
             this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(18.81002F, 0F);
             this.xrLabel6.Multiline = true;
@@ -545,7 +549,7 @@ namespace dxReports.Reports
             this.xrLabel22.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(102)))), ((int)(((byte)(122)))));
             this.xrLabel22.Borders = DevExpress.XtraPrinting.BorderSide.Top;
             this.xrLabel22.BorderWidth = 1.5F;
-            this.xrLabel22.Font = new DevExpress.Drawing.DXFont("neotech", 10F);
+            this.xrLabel22.Font = new DevExpress.Drawing.DXFont("calibri", 10F);
             this.xrLabel22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(102)))), ((int)(((byte)(122)))));
             this.xrLabel22.LocationFloat = new DevExpress.Utils.PointFloat(560.4847F, 43.44146F);
             this.xrLabel22.Multiline = true;
@@ -597,7 +601,7 @@ namespace dxReports.Reports
             // 
             // xrLabel1
             // 
-            this.xrLabel1.Font = new DevExpress.Drawing.DXFont("ubuntu", 7.5F);
+            this.xrLabel1.Font = new DevExpress.Drawing.DXFont("calibri", 7.5F);
             this.xrLabel1.ForeColor = System.Drawing.Color.Gray;
             this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrLabel1.Multiline = true;
@@ -621,6 +625,8 @@ namespace dxReports.Reports
             this.ReportFooter});
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.sqlDataSource1});
+            this.DataMember = "RPT_STOCK_COUNT";
+            this.DataSource = this.sqlDataSource1;
             this.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
             this.Margins = new DevExpress.Drawing.DXMargins(35F, 11F, 24.82F, 20.02F);
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {

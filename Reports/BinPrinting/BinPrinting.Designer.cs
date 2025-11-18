@@ -62,7 +62,7 @@
             this.xrLine2 = new DevExpress.XtraReports.UI.XRLine();
             this.xrLabel12 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLine1 = new DevExpress.XtraReports.UI.XRLine();
-            this.WHSBIN = new DevExpress.XtraReports.Parameters.Parameter();
+            this.binCode = new DevExpress.XtraReports.Parameters.Parameter();
             this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.xrTable4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).BeginInit();
@@ -405,10 +405,9 @@
             this.xrLine1.SizeF = new System.Drawing.SizeF(289.4789F, 3.059525F);
             this.xrLine1.StylePriority.UseBorders = false;
             // 
-            // WHSBIN
+            // binCode
             // 
-            this.WHSBIN.Name = "WHSBIN";
-            this.WHSBIN.ValueInfo = "WH_01-S1-R01-B04";
+            this.binCode.Name = "binCode";
             // 
             // sqlDataSource1
             // 
@@ -417,7 +416,7 @@
             storedProcQuery1.Name = "AMG_TRD_UAE_RPT_WHSBinDetails";
             queryParameter1.Name = "BINCODE";
             queryParameter1.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter1.Value = new DevExpress.DataAccess.Expression("?WHSBIN", typeof(string));
+            queryParameter1.Value = new DevExpress.DataAccess.Expression("?binCode", typeof(string));
             storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter1});
             storedProcQuery1.StoredProcName = "AMG_TRD_UAE.RPT_WHSBinDetails";
@@ -425,7 +424,7 @@
             storedProcQuery1});
             this.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable");
             // 
-            // WHSBINDETAILS
+            // BinPrinting
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
             this.TopMargin,
@@ -435,13 +434,16 @@
             this.sqlDataSource1});
             this.DataMember = "AMG_TRD_UAE_RPT_WHSBinDetails";
             this.DataSource = this.sqlDataSource1;
+            this.FilterString = "[binCode] = ?binCode";
             this.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
             this.Margins = new DevExpress.Drawing.DXMargins(3F, 3F, 5F, 14F);
             this.PageHeight = 215;
             this.PageWidth = 300;
             this.PaperKind = DevExpress.Drawing.Printing.DXPaperKind.Custom;
+            this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.binCode, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
-            this.WHSBIN});
+            this.binCode});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this.xrTable4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).EndInit();
@@ -456,7 +458,7 @@
         private DevExpress.XtraReports.UI.TopMarginBand TopMargin;
         private DevExpress.XtraReports.UI.BottomMarginBand BottomMargin;
         private DevExpress.XtraReports.UI.DetailBand Detail;
-        private DevExpress.XtraReports.Parameters.Parameter WHSBIN;
+        private DevExpress.XtraReports.Parameters.Parameter binCode;
         private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
         private DevExpress.XtraReports.UI.XRBarCode xrBarCode1;
         private DevExpress.XtraReports.UI.XRLine xrLine1;

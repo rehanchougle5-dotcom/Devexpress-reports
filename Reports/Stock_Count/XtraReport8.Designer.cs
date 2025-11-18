@@ -1,6 +1,6 @@
-﻿namespace dxReports.Reports.Sales_Order
+﻿namespace dxReports.Reports.Stock_Count
 {
-    partial class AR_SO_8
+    partial class XtraReport8
     {
         /// <summary>
         /// Required designer variable.
@@ -45,7 +45,7 @@
             // 
             this.Detail.Name = "Detail";
             // 
-            // AR_SO_8
+            // XtraReport8
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
             this.TopMargin,

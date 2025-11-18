@@ -169,6 +169,18 @@
     <Compile Include="Reports\AR Credit Note\AR_CREDIT_NOTE_1.Designer.cs">
       <DependentUpon>AR_CREDIT_NOTE_1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\AR Credit Note\XtraReport5.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\AR Credit Note\XtraReport5.Designer.cs">
+      <DependentUpon>XtraReport5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\AR Credit Note\XtraReport6.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\AR Credit Note\XtraReport6.Designer.cs">
+      <DependentUpon>XtraReport6.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\AR_Invoice\AR_INVOICE_3.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -181,17 +193,29 @@
     <Compile Include="Reports\AR_Invoice\AR_INVOICE_4.Designer.cs">
       <DependentUpon>AR_INVOICE_4.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\AR_Invoice\XtraReport4.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\AR_Invoice\XtraReport4.Designer.cs">
-      <DependentUpon>XtraReport4.cs</DependentUpon>
-    </Compile>
     <Compile Include="Reports\Bank Details\Bank_Details_2.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\Bank Details\Bank_Details_2.Designer.cs">
       <DependentUpon>Bank_Details_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\BinPrinting\BinPrinting1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\BinPrinting\BinPrinting1.Designer.cs">
+      <DependentUpon>BinPrinting1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\BinPrinting\XtraReport4.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\BinPrinting\XtraReport4.Designer.cs">
+      <DependentUpon>XtraReport4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\BoxPrint01\BoxPrint01.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\BoxPrint01\BoxPrint01.Designer.cs">
+      <DependentUpon>BoxPrint01.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\Commercial_License\Commercial_License.cs">
       <SubType>Component</SubType>
@@ -234,6 +258,12 @@
     </Compile>
     <Compile Include="Reports\Coupon QR Printing\Coupon QR Printing.Designer.cs">
       <DependentUpon>Coupon QR Printing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Coupon_Printing\Coupon_Printing.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Coupon_Printing\Coupon_Printing.Designer.cs">
+      <DependentUpon>Coupon_Printing.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\Customer Aging\Customer_Aging_1.cs">
       <SubType>Component</SubType>
@@ -282,6 +312,12 @@
     </Compile>
     <Compile Include="Reports\Goods Receipt PO\Goods_Receipt_PO_2.Designer.cs">
       <DependentUpon>Goods_Receipt_PO_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Goods Receipt PO\Goods_Reciept_PO_3.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Goods Receipt PO\Goods_Reciept_PO_3.Designer.cs">
+      <DependentUpon>Goods_Reciept_PO_3.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\Incoming Payments\Incoming_Payments.cs">
       <SubType>Component</SubType>
@@ -451,6 +487,12 @@
     <Compile Include="Reports\Report Header\Header.Designer.cs">
       <DependentUpon>Header.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\Retails Sale report\RetailStoreCashBalance.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Retails Sale report\RetailStoreCashBalance.Designer.cs">
+      <DependentUpon>RetailStoreCashBalance.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\Sales_Order\AR_SO_3.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -488,12 +530,6 @@
     <Compile Include="Reports\Sales_Order\AR_SO_7.Designer.cs">
       <DependentUpon>AR_SO_7.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\Sales_Order\AR_SO_8.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\Sales_Order\AR_SO_8.Designer.cs">
-      <DependentUpon>AR_SO_8.cs</DependentUpon>
-    </Compile>
     <Compile Include="Reports\Sales_Quotation\SQ_1.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -518,6 +554,24 @@
     <Compile Include="Reports\Stock Count OLD\STOCK_COUNT_1.Designer.cs">
       <DependentUpon>STOCK_COUNT_1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\StockIssue\StockIssue.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\StockIssue\StockIssue.Designer.cs">
+      <DependentUpon>StockIssue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\StockIssue\StockRecieve.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\StockIssue\StockRecieve.Designer.cs">
+      <DependentUpon>StockRecieve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\StockIssue\stock_issuance.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\StockIssue\stock_issuance.Designer.cs">
+      <DependentUpon>stock_issuance.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\Stock_Count\sr_Stock_Count_Auditors.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -535,6 +589,12 @@
     </Compile>
     <Compile Include="Reports\Stock_Count\sr_Stock_Count_Salespersons.Designer.cs">
       <DependentUpon>sr_Stock_Count_Salespersons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Stock_Count\Stock12Count.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Stock_Count\Stock12Count.Designer.cs">
+      <DependentUpon>Stock12Count.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\Stock_Count\Stock_Count_Detail_Sub_Report.cs">
       <SubType>Component</SubType>
@@ -571,6 +631,12 @@
     </Compile>
     <Compile Include="Reports\Stock_Count\Stock_Count_Sub_Report_Signatures.Designer.cs">
       <DependentUpon>Stock_Count_Sub_Report_Signatures.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Stock_Count\XtraReport8.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Stock_Count\XtraReport8.Designer.cs">
+      <DependentUpon>XtraReport8.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\Support Ticket\Support_Ticket_1.cs">
       <SubType>Component</SubType>
@@ -638,6 +704,12 @@
     <Compile Include="Reports\UserTask\submarryByProject.Designer.cs">
       <DependentUpon>submarryByProject.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\UserTask\TaskReport1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\UserTask\TaskReport1.Designer.cs">
+      <DependentUpon>TaskReport1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\UserTask\UserSummary.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -650,11 +722,11 @@
     <Compile Include="Reports\UserTask\UserTask.Designer.cs">
       <DependentUpon>UserTask.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\UserTask\UserTask1.cs">
+    <Compile Include="Reports\UserTask\TaskReport.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\UserTask\UserTask1.Designer.cs">
-      <DependentUpon>UserTask1.cs</DependentUpon>
+    <Compile Include="Reports\UserTask\TaskReport.Designer.cs">
+      <DependentUpon>TaskReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\UserTask\UserTaskSetup.cs">
       <SubType>Component</SubType>
@@ -667,6 +739,12 @@
     </Compile>
     <Compile Include="Reports\UserTask\UserTaskSetup1.Designer.cs">
       <DependentUpon>UserTaskSetup1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\UserTask\UserTaskStep2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\UserTask\UserTaskStep2.Designer.cs">
+      <DependentUpon>UserTaskStep2.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\UserTask\UserTask_2.cs">
       <SubType>Component</SubType>
@@ -742,11 +820,18 @@
     <EmbeddedResource Include="Reports\AR_Invoice\AR_INVOICE_4.resx">
       <DependentUpon>AR_INVOICE_4.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\AR_Invoice\XtraReport4.resx">
-      <DependentUpon>XtraReport4.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Reports\Bank Details\Bank_Details_2.resx">
       <DependentUpon>Bank_Details_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\BinPrinting\BinPrinting1.resx">
+      <DependentUpon>BinPrinting1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\BinPrinting\XtraReport4.resx">
+      <DependentUpon>XtraReport4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\BoxPrint01\BoxPrint01.resx">
+      <DependentUpon>BoxPrint01.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Commercial_License\Commercial_License.resx">
       <DependentUpon>Commercial_License.cs</DependentUpon>
@@ -768,6 +853,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Coupon QR Printing\Coupon QR Printing.resx">
       <DependentUpon>Coupon QR Printing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Coupon_Printing\Coupon_Printing.resx">
+      <DependentUpon>Coupon_Printing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Customer Aging\Customer_Aging_1.resx">
       <DependentUpon>Customer_Aging_1.cs</DependentUpon>
@@ -792,6 +880,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Goods Receipt PO\Goods_Receipt_PO_2.resx">
       <DependentUpon>Goods_Receipt_PO_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Goods Receipt PO\Goods_Reciept_PO_3.resx">
+      <DependentUpon>Goods_Reciept_PO_3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Incoming Payments\Incoming_Payments.resx">
       <DependentUpon>Incoming_Payments.cs</DependentUpon>
@@ -877,6 +968,9 @@
     <EmbeddedResource Include="Reports\Report Header\Header.resx">
       <DependentUpon>Header.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Retails Sale report\RetailStoreCashBalance.resx">
+      <DependentUpon>RetailStoreCashBalance.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\Sales_Order\AR_SO_3.resx">
       <DependentUpon>AR_SO_3.cs</DependentUpon>
     </EmbeddedResource>
@@ -895,9 +989,6 @@
     <EmbeddedResource Include="Reports\Sales_Order\AR_SO_7.resx">
       <DependentUpon>AR_SO_7.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\Sales_Order\AR_SO_8.resx">
-      <DependentUpon>AR_SO_8.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Reports\Sales_Quotation\SQ_1.resx">
       <DependentUpon>SQ_1.cs</DependentUpon>
     </EmbeddedResource>
@@ -910,6 +1001,15 @@
     <EmbeddedResource Include="Reports\Stock Count OLD\STOCK_COUNT_1.resx">
       <DependentUpon>STOCK_COUNT_1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\StockIssue\StockIssue.resx">
+      <DependentUpon>StockIssue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\StockIssue\StockRecieve.resx">
+      <DependentUpon>StockRecieve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\StockIssue\stock_issuance.resx">
+      <DependentUpon>stock_issuance.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\Stock_Count\sr_Stock_Count_Auditors.resx">
       <DependentUpon>sr_Stock_Count_Auditors.cs</DependentUpon>
     </EmbeddedResource>
@@ -918,6 +1018,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Stock_Count\sr_Stock_Count_Salespersons.resx">
       <DependentUpon>sr_Stock_Count_Salespersons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Stock_Count\Stock12Count.resx">
+      <DependentUpon>Stock12Count.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Stock_Count\Stock_Count_Detail_Sub_Report.resx">
       <DependentUpon>Stock_Count_Detail_Sub_Report.cs</DependentUpon>
@@ -936,6 +1039,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Stock_Count\Stock_Count_Sub_Report_Signatures.resx">
       <DependentUpon>Stock_Count_Sub_Report_Signatures.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Stock_Count\XtraReport8.resx">
+      <DependentUpon>XtraReport8.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Support Ticket\Support_Ticket_1.resx">
       <DependentUpon>Support_Ticket_1.cs</DependentUpon>
@@ -970,20 +1076,26 @@
     <EmbeddedResource Include="Reports\UserTask\submarryByProject.resx">
       <DependentUpon>submarryByProject.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UserTask\TaskReport1.resx">
+      <DependentUpon>TaskReport1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\UserTask\UserSummary.resx">
       <DependentUpon>UserSummary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\UserTask\UserTask.resx">
       <DependentUpon>UserTask.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\UserTask\UserTask1.resx">
-      <DependentUpon>UserTask1.cs</DependentUpon>
+    <EmbeddedResource Include="Reports\UserTask\TaskReport.resx">
+      <DependentUpon>TaskReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\UserTask\UserTaskSetup.resx">
       <DependentUpon>UserTaskSetup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\UserTask\UserTaskSetup1.resx">
       <DependentUpon>UserTaskSetup1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\UserTask\UserTaskStep2.resx">
+      <DependentUpon>UserTaskStep2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\UserTask\UserTask_2.resx">
       <DependentUpon>UserTask_2.cs</DependentUpon>

@@ -30,8 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             DevExpress.XtraReports.UI.XRSummary xrSummary1 = new DevExpress.XtraReports.UI.XRSummary();
+            DevExpress.XtraPrinting.BarCode.Code128Generator code128Generator1 = new DevExpress.XtraPrinting.BarCode.Code128Generator();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AR_SO_7));
             DevExpress.XtraReports.UI.XRSummary xrSummary2 = new DevExpress.XtraReports.UI.XRSummary();
+            DevExpress.XtraPrinting.BarCode.Code128Generator code128Generator2 = new DevExpress.XtraPrinting.BarCode.Code128Generator();
             DevExpress.XtraPrinting.BarCode.Code39Generator code39Generator1 = new DevExpress.XtraPrinting.BarCode.Code39Generator();
             DevExpress.XtraPrinting.Shape.ShapeRectangle shapeRectangle1 = new DevExpress.XtraPrinting.Shape.ShapeRectangle();
             DevExpress.XtraPrinting.BarCode.Code39Generator code39Generator2 = new DevExpress.XtraPrinting.BarCode.Code39Generator();
@@ -52,8 +54,6 @@
             DevExpress.DataAccess.Sql.QueryParameter queryParameter1 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter2 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter3 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.XtraPrinting.BarCode.Code128Generator code128Generator1 = new DevExpress.XtraPrinting.BarCode.Code128Generator();
-            DevExpress.XtraPrinting.BarCode.Code128Generator code128Generator2 = new DevExpress.XtraPrinting.BarCode.Code128Generator();
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
@@ -63,6 +63,8 @@
             this.xrTableCell36 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell47 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell48 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell7 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrBarCode4 = new DevExpress.XtraReports.UI.XRBarCode();
             this.xrTableCell49 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell51 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell52 = new DevExpress.XtraReports.UI.XRTableCell();
@@ -83,6 +85,8 @@
             this.xrTableCell34 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell50 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell112 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell15 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrBarCode5 = new DevExpress.XtraReports.UI.XRBarCode();
             this.xrTableCell113 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell115 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell116 = new DevExpress.XtraReports.UI.XRTableCell();
@@ -386,6 +390,7 @@
             this.xrTableCell35 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell28 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell29 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell11 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell30 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell31 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell32 = new DevExpress.XtraReports.UI.XRTableCell();
@@ -397,6 +402,7 @@
             this.xrTableCell145 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell146 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell147 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell8 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell148 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell149 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell150 = new DevExpress.XtraReports.UI.XRTableCell();
@@ -408,6 +414,7 @@
             this.xrTableCell99 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell100 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell101 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell13 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell104 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell105 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell106 = new DevExpress.XtraReports.UI.XRTableCell();
@@ -420,6 +427,7 @@
             this.xrTableCell153 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell154 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell155 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell14 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell156 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell157 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell158 = new DevExpress.XtraReports.UI.XRTableCell();
@@ -445,14 +453,6 @@
             this.DateFrom = new DevExpress.XtraReports.Parameters.Parameter();
             this.DateTo = new DevExpress.XtraReports.Parameters.Parameter();
             this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
-            this.xrTableCell7 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell8 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell11 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrBarCode4 = new DevExpress.XtraReports.UI.XRBarCode();
-            this.xrTableCell13 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell14 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell15 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrBarCode5 = new DevExpress.XtraReports.UI.XRBarCode();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable9)).BeginInit();
@@ -574,6 +574,28 @@
             this.xrTableCell48.Name = "xrTableCell48";
             this.xrTableCell48.Text = "xrTableCell37";
             this.xrTableCell48.Weight = 40.533857172158733D;
+            // 
+            // xrTableCell7
+            // 
+            this.xrTableCell7.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrBarCode4});
+            this.xrTableCell7.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[BarCode]")});
+            this.xrTableCell7.Multiline = true;
+            this.xrTableCell7.Name = "xrTableCell7";
+            this.xrTableCell7.Text = "xrTableCell7";
+            this.xrTableCell7.Weight = 40.533857172158733D;
+            // 
+            // xrBarCode4
+            // 
+            this.xrBarCode4.AutoModule = true;
+            this.xrBarCode4.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[BarCode]")});
+            this.xrBarCode4.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrBarCode4.Name = "xrBarCode4";
+            this.xrBarCode4.Padding = new DevExpress.XtraPrinting.PaddingInfo(10, 10, 0, 0, 96F);
+            this.xrBarCode4.SizeF = new System.Drawing.SizeF(151.7786F, 33.85949F);
+            this.xrBarCode4.Symbology = code128Generator1;
             // 
             // xrTableCell49
             // 
@@ -801,6 +823,28 @@
             this.xrTableCell112.Text = "xrTableCell37";
             this.xrTableCell112.Weight = 32.251933130004666D;
             // 
+            // xrTableCell15
+            // 
+            this.xrTableCell15.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrBarCode5});
+            this.xrTableCell15.Multiline = true;
+            this.xrTableCell15.Name = "xrTableCell15";
+            this.xrTableCell15.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 2, 0, 0, 100F);
+            this.xrTableCell15.StylePriority.UsePadding = false;
+            this.xrTableCell15.Text = "xrTableCell15";
+            this.xrTableCell15.Weight = 32.251933130004666D;
+            // 
+            // xrBarCode5
+            // 
+            this.xrBarCode5.AutoModule = true;
+            this.xrBarCode5.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[BarCode]")});
+            this.xrBarCode5.LocationFloat = new DevExpress.Utils.PointFloat(0.2394104F, 0F);
+            this.xrBarCode5.Name = "xrBarCode5";
+            this.xrBarCode5.Padding = new DevExpress.XtraPrinting.PaddingInfo(10, 10, 0, 0, 100F);
+            this.xrBarCode5.SizeF = new System.Drawing.SizeF(111.0047F, 33.96378F);
+            this.xrBarCode5.Symbology = code128Generator2;
+            // 
             // xrTableCell113
             // 
             this.xrTableCell113.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
@@ -965,11 +1009,11 @@
             // SubBand13
             // 
             this.SubBand13.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrBarCode2,
             this.xrTable18,
             this.xrTable2,
             this.xrTable6,
-            this.xrPictureBox1});
+            this.xrPictureBox1,
+            this.xrBarCode2});
             this.SubBand13.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "/*[ReportLanguage] = \'EN\'*/\n/*[rpt_ReportLanguage]  = \'EN\'*/\n\n")});
             this.SubBand13.HeightF = 74.6104F;
@@ -5372,6 +5416,13 @@
             this.xrTableCell29.Text = "Item Name";
             this.xrTableCell29.Weight = 2.2080587716192319D;
             // 
+            // xrTableCell11
+            // 
+            this.xrTableCell11.Multiline = true;
+            this.xrTableCell11.Name = "xrTableCell11";
+            this.xrTableCell11.Text = "Barcode";
+            this.xrTableCell11.Weight = 2.2080587716192319D;
+            // 
             // xrTableCell30
             // 
             this.xrTableCell30.CanGrow = false;
@@ -5494,6 +5545,13 @@
             this.xrTableCell147.Name = "xrTableCell147";
             this.xrTableCell147.Text = "اسم العنصر";
             this.xrTableCell147.Weight = 2.2080587716192319D;
+            // 
+            // xrTableCell8
+            // 
+            this.xrTableCell8.Multiline = true;
+            this.xrTableCell8.Name = "xrTableCell8";
+            this.xrTableCell8.Text = "الرمز الشريطي";
+            this.xrTableCell8.Weight = 2.2080587716192319D;
             // 
             // xrTableCell148
             // 
@@ -5618,6 +5676,15 @@
             this.xrTableCell101.StylePriority.UsePadding = false;
             this.xrTableCell101.Text = "Description";
             this.xrTableCell101.Weight = 1.5624799815187409D;
+            // 
+            // xrTableCell13
+            // 
+            this.xrTableCell13.Multiline = true;
+            this.xrTableCell13.Name = "xrTableCell13";
+            this.xrTableCell13.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 2, 0, 0, 100F);
+            this.xrTableCell13.StylePriority.UsePadding = false;
+            this.xrTableCell13.Text = "Barcode";
+            this.xrTableCell13.Weight = 1.5624799815187409D;
             // 
             // xrTableCell104
             // 
@@ -5744,6 +5811,13 @@
             this.xrTableCell155.Name = "xrTableCell155";
             this.xrTableCell155.Text = "اسم العنصر";
             this.xrTableCell155.Weight = 1.5624799815187409D;
+            // 
+            // xrTableCell14
+            // 
+            this.xrTableCell14.Multiline = true;
+            this.xrTableCell14.Name = "xrTableCell14";
+            this.xrTableCell14.Text = "الرمز الشريطي";
+            this.xrTableCell14.Weight = 1.5624799815187409D;
             // 
             // xrTableCell156
             // 
@@ -5956,80 +6030,6 @@
             storedProcQuery1});
             this.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable");
             // 
-            // xrTableCell7
-            // 
-            this.xrTableCell7.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrBarCode4});
-            this.xrTableCell7.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[BarCode]")});
-            this.xrTableCell7.Multiline = true;
-            this.xrTableCell7.Name = "xrTableCell7";
-            this.xrTableCell7.Text = "xrTableCell7";
-            this.xrTableCell7.Weight = 40.533857172158733D;
-            // 
-            // xrTableCell8
-            // 
-            this.xrTableCell8.Multiline = true;
-            this.xrTableCell8.Name = "xrTableCell8";
-            this.xrTableCell8.Text = "الرمز الشريطي";
-            this.xrTableCell8.Weight = 2.2080587716192319D;
-            // 
-            // xrTableCell11
-            // 
-            this.xrTableCell11.Multiline = true;
-            this.xrTableCell11.Name = "xrTableCell11";
-            this.xrTableCell11.Text = "Barcode";
-            this.xrTableCell11.Weight = 2.2080587716192319D;
-            // 
-            // xrBarCode4
-            // 
-            this.xrBarCode4.AutoModule = true;
-            this.xrBarCode4.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[BarCode]")});
-            this.xrBarCode4.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.xrBarCode4.Name = "xrBarCode4";
-            this.xrBarCode4.Padding = new DevExpress.XtraPrinting.PaddingInfo(10, 10, 0, 0, 96F);
-            this.xrBarCode4.SizeF = new System.Drawing.SizeF(151.7786F, 33.85949F);
-            this.xrBarCode4.Symbology = code128Generator1;
-            // 
-            // xrTableCell13
-            // 
-            this.xrTableCell13.Multiline = true;
-            this.xrTableCell13.Name = "xrTableCell13";
-            this.xrTableCell13.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 2, 0, 0, 100F);
-            this.xrTableCell13.StylePriority.UsePadding = false;
-            this.xrTableCell13.Text = "Barcode";
-            this.xrTableCell13.Weight = 1.5624799815187409D;
-            // 
-            // xrTableCell14
-            // 
-            this.xrTableCell14.Multiline = true;
-            this.xrTableCell14.Name = "xrTableCell14";
-            this.xrTableCell14.Text = "الرمز الشريطي";
-            this.xrTableCell14.Weight = 1.5624799815187409D;
-            // 
-            // xrTableCell15
-            // 
-            this.xrTableCell15.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrBarCode5});
-            this.xrTableCell15.Multiline = true;
-            this.xrTableCell15.Name = "xrTableCell15";
-            this.xrTableCell15.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 2, 0, 0, 100F);
-            this.xrTableCell15.StylePriority.UsePadding = false;
-            this.xrTableCell15.Text = "xrTableCell15";
-            this.xrTableCell15.Weight = 32.251933130004666D;
-            // 
-            // xrBarCode5
-            // 
-            this.xrBarCode5.AutoModule = true;
-            this.xrBarCode5.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[BarCode]")});
-            this.xrBarCode5.LocationFloat = new DevExpress.Utils.PointFloat(0.2394104F, 0F);
-            this.xrBarCode5.Name = "xrBarCode5";
-            this.xrBarCode5.Padding = new DevExpress.XtraPrinting.PaddingInfo(10, 10, 0, 0, 100F);
-            this.xrBarCode5.SizeF = new System.Drawing.SizeF(111.0047F, 33.96378F);
-            this.xrBarCode5.Symbology = code128Generator2;
-            // 
             // AR_SO_7
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -6052,7 +6052,7 @@
             this.DataMember = "AMG_TRD_UAE_RPT_SALES_ORDER";
             this.DataSource = this.sqlDataSource1;
             this.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-            this.Margins = new DevExpress.Drawing.DXMargins(34F, 2F, 10F, 5.489509F);
+            this.Margins = new DevExpress.Drawing.DXMargins(34F, 0F, 10F, 5.489509F);
             this.PageHeight = 1169;
             this.PageWidth = 827;
             this.PaperKind = DevExpress.Drawing.Printing.DXPaperKind.A4;
