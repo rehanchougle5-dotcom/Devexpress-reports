@@ -169,18 +169,6 @@
     <Compile Include="Reports\AR Credit Note\AR_CREDIT_NOTE_1.Designer.cs">
       <DependentUpon>AR_CREDIT_NOTE_1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\AR Credit Note\XtraReport5.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\AR Credit Note\XtraReport5.Designer.cs">
-      <DependentUpon>XtraReport5.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\AR Credit Note\XtraReport6.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\AR Credit Note\XtraReport6.Designer.cs">
-      <DependentUpon>XtraReport6.cs</DependentUpon>
-    </Compile>
     <Compile Include="Reports\AR_Invoice\AR_INVOICE_3.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -553,12 +541,6 @@
     </Compile>
     <Compile Include="Reports\Stock Count OLD\STOCK_COUNT_1.Designer.cs">
       <DependentUpon>STOCK_COUNT_1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\StockIssue\StockIssue.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\StockIssue\StockIssue.Designer.cs">
-      <DependentUpon>StockIssue.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\StockIssue\StockRecieve.cs">
       <SubType>Component</SubType>
@@ -1000,9 +982,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Stock Count OLD\STOCK_COUNT_1.resx">
       <DependentUpon>STOCK_COUNT_1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\StockIssue\StockIssue.resx">
-      <DependentUpon>StockIssue.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\StockIssue\StockRecieve.resx">
       <DependentUpon>StockRecieve.cs</DependentUpon>
