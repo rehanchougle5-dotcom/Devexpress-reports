@@ -486,6 +486,8 @@ namespace dxReports.Reports.AR_Invoice
             this.DocEntry = new DevExpress.XtraReports.Parameters.Parameter();
             this.isArabic = new DevExpress.XtraReports.Parameters.Parameter();
             this.sqlDataSource2 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
+            this.xrTableRow1 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.xrTableCell1 = new DevExpress.XtraReports.UI.XRTableCell();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable18)).BeginInit();
@@ -510,7 +512,7 @@ namespace dxReports.Reports.AR_Invoice
             // 
             // TopMargin
             // 
-            this.TopMargin.HeightF = 10F;
+            this.TopMargin.HeightF = 8.466228F;
             this.TopMargin.Name = "TopMargin";
             // 
             // BottomMargin
@@ -537,7 +539,7 @@ namespace dxReports.Reports.AR_Invoice
             this.xrPictureBox2});
             this.PageHeader.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[rpt_ReportLanguage] = \'EN\'")});
-            this.PageHeader.HeightF = 74.60587F;
+            this.PageHeader.HeightF = 91.83723F;
             this.PageHeader.Name = "PageHeader";
             this.PageHeader.SubBands.AddRange(new DevExpress.XtraReports.UI.SubBand[] {
             this.SubBand8,
@@ -563,7 +565,7 @@ namespace dxReports.Reports.AR_Invoice
             // 
             this.GroupFooter1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrLine3});
-            this.GroupFooter1.HeightF = 17.88993F;
+            this.GroupFooter1.HeightF = 24.19506F;
             this.GroupFooter1.Name = "GroupFooter1";
             this.GroupFooter1.SubBands.AddRange(new DevExpress.XtraReports.UI.SubBand[] {
             this.SubBand4,
@@ -704,7 +706,7 @@ namespace dxReports.Reports.AR_Invoice
             this.xrTableCell50.StylePriority.UseTextAlignment = false;
             this.xrTableCell50.Text = "xrTableCell39";
             this.xrTableCell50.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            this.xrTableCell50.TextFormatString = "{0:#.00}";
+            this.xrTableCell50.TextFormatString = "{0:#}";
             this.xrTableCell50.Weight = 15.322255056926501D;
             // 
             // xrTableCell51
@@ -758,13 +760,13 @@ namespace dxReports.Reports.AR_Invoice
             // xrTableCell135
             // 
             this.xrTableCell135.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "FormatString(\'{0:0.00}%\', [LineTaxPrcnt])\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "FormatString(\'{0:0}%\', [LineTaxPrcnt])\n")});
             this.xrTableCell135.Multiline = true;
             this.xrTableCell135.Name = "xrTableCell135";
             this.xrTableCell135.StylePriority.UseTextAlignment = false;
             this.xrTableCell135.Text = "xrTableCell135";
             this.xrTableCell135.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            this.xrTableCell135.TextFormatString = "{0:0.00%}";
+            this.xrTableCell135.TextFormatString = "{0:0%}";
             this.xrTableCell135.Weight = 13.092023755174292D;
             // 
             // xrTableCell140
@@ -811,7 +813,7 @@ namespace dxReports.Reports.AR_Invoice
             this.xrTableCell268.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", resources.GetString("xrTableCell268.ExpressionBindings"))});
             this.xrTableCell268.Font = new DevExpress.Drawing.DXFont("calibri", 8F);
-            this.xrTableCell268.ForeColor = System.Drawing.Color.DimGray;
+            this.xrTableCell268.ForeColor = System.Drawing.Color.Gray;
             this.xrTableCell268.Multiline = true;
             this.xrTableCell268.Name = "xrTableCell268";
             this.xrTableCell268.StylePriority.UseFont = false;
@@ -854,7 +856,7 @@ namespace dxReports.Reports.AR_Invoice
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "([CompanyRegion] = \'KSA\') \nAND ((NOT IsNullOrEmpty([GlblLocNum])) OR (NOT IsNullO" +
                     "rEmpty([Building])))\n\n/*Iif([CompanyRegion] = \'KSA\',true , false )*/")});
             this.xrTable18.Font = new DevExpress.Drawing.DXFont("calibri", 6F);
-            this.xrTable18.LocationFloat = new DevExpress.Utils.PointFloat(607.5995F, 36.03548F);
+            this.xrTable18.LocationFloat = new DevExpress.Utils.PointFloat(608.8405F, 36.03547F);
             this.xrTable18.Name = "xrTable18";
             this.xrTable18.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrTable18.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
@@ -896,15 +898,16 @@ namespace dxReports.Reports.AR_Invoice
             // 
             this.xrTable8.Font = new DevExpress.Drawing.DXFont("Arial", 22F);
             this.xrTable8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(63)))), ((int)(((byte)(88)))));
-            this.xrTable8.LocationFloat = new DevExpress.Utils.PointFloat(75.13022F, 0F);
+            this.xrTable8.LocationFloat = new DevExpress.Utils.PointFloat(75.1302F, 0F);
             this.xrTable8.Name = "xrTable8";
             this.xrTable8.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrTable8.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow20,
             this.xrTableRow22,
             this.xrTableRow25,
-            this.xrTableRow26});
-            this.xrTable8.SizeF = new System.Drawing.SizeF(532.4692F, 74.60587F);
+            this.xrTableRow26,
+            this.xrTableRow1});
+            this.xrTable8.SizeF = new System.Drawing.SizeF(532.4692F, 91.67313F);
             this.xrTable8.StylePriority.UseFont = false;
             this.xrTable8.StylePriority.UseForeColor = false;
             // 
@@ -1136,7 +1139,7 @@ namespace dxReports.Reports.AR_Invoice
             // xrTableCell71
             // 
             this.xrTableCell71.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[U_SaleOfficeTel_EN]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[U_EmailLabel_EN] + \' : \' + [U_Email]")});
             this.xrTableCell71.Font = new DevExpress.Drawing.DXFont("Calibri", 8F);
             this.xrTableCell71.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(63)))), ((int)(((byte)(88)))));
             this.xrTableCell71.Multiline = true;
@@ -1395,7 +1398,7 @@ namespace dxReports.Reports.AR_Invoice
             // 
             this.xrTableCell12.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[U_Name_AR]")});
-            this.xrTableCell12.Font = new DevExpress.Drawing.DXFont("Calibri", 14F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrTableCell12.Font = new DevExpress.Drawing.DXFont("Calibri", 11F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrTableCell12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(63)))), ((int)(((byte)(88)))));
             this.xrTableCell12.Multiline = true;
             this.xrTableCell12.Name = "xrTableCell12";
@@ -1425,7 +1428,7 @@ namespace dxReports.Reports.AR_Invoice
             // xrTableCell138
             // 
             this.xrTableCell138.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[U_TRNLabel_EN] + \' : \' + [U_TRNValue_EN]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[U_TRNLabel_EN] + \' : \' + [U_TRNValue_EN] / [U_TRNLabel_AR] : [U_TRNValue_AR]")});
             this.xrTableCell138.Font = new DevExpress.Drawing.DXFont("Calibri", 8F);
             this.xrTableCell138.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(63)))), ((int)(((byte)(88)))));
             this.xrTableCell138.Multiline = true;
@@ -1989,7 +1992,7 @@ namespace dxReports.Reports.AR_Invoice
             this.xrTable3});
             this.SubBand6.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[rpt_ReportLanguage] = \'EA\' Or [rpt_ReportLanguage] = \'EN\'\n")});
-            this.SubBand6.HeightF = 41.0467F;
+            this.SubBand6.HeightF = 31.0467F;
             this.SubBand6.Name = "SubBand6";
             // 
             // SubBand12
@@ -1998,7 +2001,7 @@ namespace dxReports.Reports.AR_Invoice
             this.xrTable2});
             this.SubBand12.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[ReportLanguage] = \'EA\' Or [ReportLanguage] = \'AR\'")});
-            this.SubBand12.HeightF = 43.75F;
+            this.SubBand12.HeightF = 33.75F;
             this.SubBand12.Name = "SubBand12";
             // 
             // SubBand19
@@ -2670,7 +2673,7 @@ namespace dxReports.Reports.AR_Invoice
             // xrLabel46
             // 
             this.xrLabel46.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[BillAddress]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[BillAddress] + \' ,\' + [Address2]")});
             this.xrLabel46.Font = new DevExpress.Drawing.DXFont("CALIbri", 8F);
             this.xrLabel46.LocationFloat = new DevExpress.Utils.PointFloat(93.90983F, 166.2543F);
             this.xrLabel46.Multiline = true;
@@ -3935,7 +3938,7 @@ namespace dxReports.Reports.AR_Invoice
             this.xrTable3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrTable3.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow7});
-            this.xrTable3.SizeF = new System.Drawing.SizeF(794.0007F, 41.0467F);
+            this.xrTable3.SizeF = new System.Drawing.SizeF(794.0007F, 31.0467F);
             this.xrTable3.StylePriority.UseBackColor = false;
             this.xrTable3.StylePriority.UseBorderColor = false;
             this.xrTable3.StylePriority.UseBorders = false;
@@ -3959,7 +3962,7 @@ namespace dxReports.Reports.AR_Invoice
             this.xrTableCell37,
             this.xrTableCell128});
             this.xrTableRow7.Name = "xrTableRow7";
-            this.xrTableRow7.Weight = 1D;
+            this.xrTableRow7.Weight = 0.75637505290355722D;
             // 
             // xrTableCell35
             // 
@@ -4067,7 +4070,7 @@ namespace dxReports.Reports.AR_Invoice
             this.xrTable2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrTable2.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow29});
-            this.xrTable2.SizeF = new System.Drawing.SizeF(794.0007F, 43.75F);
+            this.xrTable2.SizeF = new System.Drawing.SizeF(794.0007F, 33.75F);
             this.xrTable2.StylePriority.UseBackColor = false;
             this.xrTable2.StylePriority.UseBorderColor = false;
             this.xrTable2.StylePriority.UseBorders = false;
@@ -4091,7 +4094,7 @@ namespace dxReports.Reports.AR_Invoice
             this.xrTableCell127,
             this.xrTableCell129});
             this.xrTableRow29.Name = "xrTableRow29";
-            this.xrTableRow29.Weight = 1D;
+            this.xrTableRow29.Weight = 0.77142857142857146D;
             // 
             // xrTableCell108
             // 
@@ -4198,9 +4201,9 @@ namespace dxReports.Reports.AR_Invoice
             // xrLine3
             // 
             this.xrLine3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(63)))), ((int)(((byte)(88)))));
-            this.xrLine3.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrLine3.LocationFloat = new DevExpress.Utils.PointFloat(0F, 4.927572F);
             this.xrLine3.Name = "xrLine3";
-            this.xrLine3.SizeF = new System.Drawing.SizeF(794.0009F, 17.88993F);
+            this.xrLine3.SizeF = new System.Drawing.SizeF(794.0009F, 19.26749F);
             this.xrLine3.StylePriority.UseForeColor = false;
             // 
             // SubBand4
@@ -4211,7 +4214,8 @@ namespace dxReports.Reports.AR_Invoice
             this.xrLabel31,
             this.xrPictureBox4,
             this.xrTable12});
-            this.SubBand4.HeightF = 220.0687F;
+            this.SubBand4.HeightF = 237.6956F;
+            this.SubBand4.KeepTogether = true;
             this.SubBand4.Name = "SubBand4";
             // 
             // SubBand18
@@ -4220,7 +4224,7 @@ namespace dxReports.Reports.AR_Invoice
             this.xrTable10});
             this.SubBand18.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "IsNullOrEmpty([FileContnt]) AND [Company] = \'KSA\'\n")});
-            this.SubBand18.HeightF = 139.8726F;
+            this.SubBand18.HeightF = 151.7462F;
             this.SubBand18.Name = "SubBand18";
             this.SubBand18.Visible = false;
             // 
@@ -4229,6 +4233,7 @@ namespace dxReports.Reports.AR_Invoice
             this.SubBand17.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.sr_Bank_Details});
             this.SubBand17.HeightF = 90F;
+            this.SubBand17.KeepTogether = true;
             this.SubBand17.Name = "SubBand17";
             // 
             // xrTable19
@@ -6351,6 +6356,7 @@ namespace dxReports.Reports.AR_Invoice
             this.sr_Bank_Details.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("sr_Currency", null, "AMG_TRD_UAE_RPT_AR_INVOICE.DocCurr"));
             this.sr_Bank_Details.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("sr_ReportCode", null, "AMG_TRD_UAE_RPT_AR_INVOICE.ReportCode"));
             this.sr_Bank_Details.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("sr_ReportLanguage", null, "AMG_TRD_UAE_RPT_AR_INVOICE.ReportLanguage"));
+            this.sr_Bank_Details.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("isArabic", null, null));
             this.sr_Bank_Details.ReportSource = new dxReports.Reports.Bank_Details.Bank_Details_2();
             this.sr_Bank_Details.SizeF = new System.Drawing.SizeF(795.2411F, 89.99999F);
             // 
@@ -6566,6 +6572,28 @@ namespace dxReports.Reports.AR_Invoice
             storedProcQuery2});
             this.sqlDataSource2.ResultSchemaSerializable = resources.GetString("sqlDataSource2.ResultSchemaSerializable");
             // 
+            // xrTableRow1
+            // 
+            this.xrTableRow1.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+            this.xrTableCell1});
+            this.xrTableRow1.Name = "xrTableRow1";
+            this.xrTableRow1.Weight = 0.18618992405363949D;
+            // 
+            // xrTableCell1
+            // 
+            this.xrTableCell1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[U_SaleOfficeTel_EN]")});
+            this.xrTableCell1.Font = new DevExpress.Drawing.DXFont("Calibri", 8F);
+            this.xrTableCell1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(63)))), ((int)(((byte)(88)))));
+            this.xrTableCell1.Multiline = true;
+            this.xrTableCell1.Name = "xrTableCell1";
+            this.xrTableCell1.StylePriority.UseFont = false;
+            this.xrTableCell1.StylePriority.UseForeColor = false;
+            this.xrTableCell1.StylePriority.UseTextAlignment = false;
+            this.xrTableCell1.Text = "xrTableCell1";
+            this.xrTableCell1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.xrTableCell1.Weight = 2.3963924593205168D;
+            // 
             // AR_INVOICE_4
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -6585,7 +6613,7 @@ namespace dxReports.Reports.AR_Invoice
             this.DataMember = "AMG_TRD_UAE_RPT_AR_INVOICE";
             this.DataSource = this.sqlDataSource1;
             this.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-            this.Margins = new DevExpress.Drawing.DXMargins(25F, 6F, 10F, 19.89F);
+            this.Margins = new DevExpress.Drawing.DXMargins(25F, 28F, 8.466228F, 19.89F);
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.DocEntry, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.isArabic, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
@@ -7052,5 +7080,7 @@ namespace dxReports.Reports.AR_Invoice
         private DevExpress.XtraReports.Parameters.Parameter DocEntry;
         private DevExpress.XtraReports.Parameters.Parameter isArabic;
         private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource2;
+        private DevExpress.XtraReports.UI.XRTableRow xrTableRow1;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell1;
     }
 }

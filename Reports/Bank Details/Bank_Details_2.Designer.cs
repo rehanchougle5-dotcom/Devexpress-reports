@@ -102,7 +102,7 @@ namespace dxReports.Reports.Bank_Details
             // 
             // TopMargin
             // 
-            this.TopMargin.HeightF = 0F;
+            this.TopMargin.HeightF = 19.16667F;
             this.TopMargin.Name = "TopMargin";
             // 
             // BottomMargin
@@ -842,7 +842,7 @@ namespace dxReports.Reports.Bank_Details
             this.DataMember = "AMG_TRD_UAE_RPT_BANK_ACCOUNT_DETAILS_1";
             this.DataSource = this.sqlDataSource1;
             this.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-            this.Margins = new DevExpress.Drawing.DXMargins(40F, 25F, 0F, 8.74F);
+            this.Margins = new DevExpress.Drawing.DXMargins(40F, 25F, 19.16667F, 8.74F);
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.sr_Currency, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.isArabic, DevExpress.XtraReports.Parameters.Orientation.Horizontal),

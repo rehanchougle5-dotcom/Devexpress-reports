@@ -524,6 +524,12 @@
     <Compile Include="Reports\Sales_Quotation\SQ_2.Designer.cs">
       <DependentUpon>SQ_2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\Standar Approval - Sub Report\NEW_Standard_Approval_Sub_report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Standar Approval - Sub Report\NEW_Standard_Approval_Sub_report.Designer.cs">
+      <DependentUpon>NEW_Standard_Approval_Sub_report.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\Standar Approval - Sub Report\Standar Approval_Sub_Report.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -967,6 +973,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Sales_Quotation\SQ_2.resx">
       <DependentUpon>SQ_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Standar Approval - Sub Report\NEW_Standard_Approval_Sub_report.resx">
+      <DependentUpon>NEW_Standard_Approval_Sub_report.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Standar Approval - Sub Report\Standar Approval_Sub_Report.resx">
       <DependentUpon>Standar Approval_Sub_Report.cs</DependentUpon>
