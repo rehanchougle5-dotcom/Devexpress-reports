@@ -283,12 +283,6 @@
     <Compile Include="Reports\E-Commerce\E_COMMERCE_AR_INVOICE_2.Designer.cs">
       <DependentUpon>E_COMMERCE_AR_INVOICE_2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\E-Commerce\E_COMM_AR_INVOICE_1.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\E-Commerce\E_COMM_AR_INVOICE_1.Designer.cs">
-      <DependentUpon>E_COMM_AR_INVOICE_1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Reports\Goods Receipt PO\Goods_Receipt_PO.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -336,6 +330,12 @@
     </Compile>
     <Compile Include="Reports\Inventory Transfer\Inventory_Transfer_1.Designer.cs">
       <DependentUpon>Inventory_Transfer_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Item Launch\Item Launch.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Item Launch\Item Launch.Designer.cs">
+      <DependentUpon>Item Launch.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\Outgoing Payment Draft\Outgoing_Payment_Draft.cs">
       <SubType>Component</SubType>
@@ -650,12 +650,6 @@
     <Compile Include="Reports\Task Status Report\Task_Status_Report_2.Designer.cs">
       <DependentUpon>Task_Status_Report_2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\TEST\XtraReport1.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\TEST\XtraReport1.Designer.cs">
-      <DependentUpon>XtraReport1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Reports\TEST\XtraReport2.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -739,12 +733,6 @@
     </Compile>
     <Compile Include="Reports\UserTask\UserTask_2.Designer.cs">
       <DependentUpon>UserTask_2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\BinPrinting\Report.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\BinPrinting\Report.Designer.cs">
-      <DependentUpon>Report.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\BinPrinting\BinPrinting.cs">
       <SubType>Component</SubType>
@@ -860,9 +848,6 @@
     <EmbeddedResource Include="Reports\E-Commerce\E_COMMERCE_AR_INVOICE_2.resx">
       <DependentUpon>E_COMMERCE_AR_INVOICE_2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\E-Commerce\E_COMM_AR_INVOICE_1.resx">
-      <DependentUpon>E_COMM_AR_INVOICE_1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Reports\Goods Receipt PO\Goods_Receipt_PO.resx">
       <DependentUpon>Goods_Receipt_PO.cs</DependentUpon>
     </EmbeddedResource>
@@ -886,6 +871,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Inventory Transfer\Inventory_Transfer_1.resx">
       <DependentUpon>Inventory_Transfer_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Item Launch\Item Launch.resx">
+      <DependentUpon>Item Launch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Outgoing Payment Draft\Outgoing_Payment_Draft.resx">
       <DependentUpon>Outgoing_Payment_Draft.cs</DependentUpon>
@@ -1043,9 +1031,6 @@
     <EmbeddedResource Include="Reports\Task Status Report\Task_Status_Report_2.resx">
       <DependentUpon>Task_Status_Report_2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\TEST\XtraReport1.resx">
-      <DependentUpon>XtraReport1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Reports\TEST\XtraReport2.resx">
       <DependentUpon>XtraReport2.cs</DependentUpon>
     </EmbeddedResource>
@@ -1087,9 +1072,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\UserTask\UserTask_2.resx">
       <DependentUpon>UserTask_2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\BinPrinting\Report.resx">
-      <DependentUpon>Report.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\BinPrinting\BinPrinting.resx">
       <DependentUpon>BinPrinting.cs</DependentUpon>
@@ -1183,9 +1165,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AMG-LOGO-Gold.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\AMG-LOGO-FILES.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\arrowbearright.svg" />
