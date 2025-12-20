@@ -36,7 +36,6 @@ namespace dxReports.Reports.Purchase_Order
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
-            this.sr_TrnspName = new DevExpress.XtraReports.Parameters.Parameter();
             this.sr_DocEntry = new DevExpress.XtraReports.Parameters.Parameter();
             this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
@@ -65,11 +64,6 @@ namespace dxReports.Reports.Purchase_Order
             // 
             this.Detail.HeightF = 0F;
             this.Detail.Name = "Detail";
-            // 
-            // sr_TrnspName
-            // 
-            this.sr_TrnspName.Description = "Transport Code";
-            this.sr_TrnspName.Name = "sr_TrnspName";
             // 
             // sr_DocEntry
             // 
@@ -210,10 +204,8 @@ namespace dxReports.Reports.Purchase_Order
             this.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
             this.Margins = new DevExpress.Drawing.DXMargins(100F, 100F, 23.17709F, 0F);
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.sr_TrnspName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.sr_DocEntry, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
-            this.sr_TrnspName,
             this.sr_DocEntry});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
@@ -226,7 +218,6 @@ namespace dxReports.Reports.Purchase_Order
         private DevExpress.XtraReports.UI.TopMarginBand TopMargin;
         private DevExpress.XtraReports.UI.BottomMarginBand BottomMargin;
         private DevExpress.XtraReports.UI.DetailBand Detail;
-        private DevExpress.XtraReports.Parameters.Parameter sr_TrnspName;
         private DevExpress.XtraReports.Parameters.Parameter sr_DocEntry;
         private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
         private DevExpress.XtraReports.UI.ReportHeaderBand ReportHeader;

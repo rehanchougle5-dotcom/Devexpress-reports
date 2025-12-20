@@ -355,7 +355,7 @@ namespace dxReports.Reports.Purchase_Request
             this.xrLabel3.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumAvg([Quantity])")});
             this.xrLabel3.Font = new DevExpress.Drawing.DXFont("CAlibri", 8F);
-            this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(200F, 0F);
+            this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(200.0001F, 0F);
             this.xrLabel3.Multiline = true;
             this.xrLabel3.Name = "xrLabel3";
             this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);

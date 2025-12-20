@@ -89,20 +89,20 @@ namespace dxReports.Reports.Bank_Details
             this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
-            this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.rpt_ReportLanguage = new DevExpress.XtraReports.UI.CalculatedField();
             this.sr_Currency = new DevExpress.XtraReports.Parameters.Parameter();
             this.isArabic = new DevExpress.XtraReports.Parameters.Parameter();
             this.sr_ReportCode = new DevExpress.XtraReports.Parameters.Parameter();
             this.sr_ReportLanguage = new DevExpress.XtraReports.Parameters.Parameter();
             this.sqlDataSource2 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
+            this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // TopMargin
             // 
-            this.TopMargin.HeightF = 0F;
+            this.TopMargin.HeightF = 19.16667F;
             this.TopMargin.Name = "TopMargin";
             // 
             // BottomMargin
@@ -732,7 +732,7 @@ namespace dxReports.Reports.Bank_Details
             this.xrLabel3.Multiline = true;
             this.xrLabel3.Name = "xrLabel3";
             this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel3.SizeF = new System.Drawing.SizeF(282.738F, 23F);
+            this.xrLabel3.SizeF = new System.Drawing.SizeF(100F, 23F);
             this.xrLabel3.Text = "xrLabel3";
             // 
             // xrLabel2
@@ -758,25 +758,6 @@ namespace dxReports.Reports.Bank_Details
             this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel1.SizeF = new System.Drawing.SizeF(129.5705F, 23F);
             this.xrLabel1.Text = "xrLabel1";
-            // 
-            // sqlDataSource1
-            // 
-            this.sqlDataSource1.ConnectionName = "Far_hana";
-            this.sqlDataSource1.Name = "sqlDataSource1";
-            storedProcQuery1.Name = "AMG_TRD_UAE_RPT_BANK_ACCOUNT_DETAILS";
-            queryParameter1.Name = "CURRENCY";
-            queryParameter1.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter1.Value = new DevExpress.DataAccess.Expression("?sr_Currency", typeof(string));
-            queryParameter2.Name = "REPORTCODE";
-            queryParameter2.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter2.Value = new DevExpress.DataAccess.Expression("?sr_ReportCode", typeof(string));
-            storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter1,
-            queryParameter2});
-            storedProcQuery1.StoredProcName = "AMG_TRD_UAE.RPT_BANK_ACCOUNT_DETAILS";
-            this.sqlDataSource1.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
-            storedProcQuery1});
-            this.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable");
             // 
             // rpt_ReportLanguage
             // 
@@ -812,8 +793,27 @@ namespace dxReports.Reports.Bank_Details
             // 
             this.sqlDataSource2.ConnectionName = "Far_hana";
             this.sqlDataSource2.Name = "sqlDataSource2";
-            storedProcQuery2.Name = "AMG_TRD_KSA_RPT_BANK_ACCOUNT_DETAILS";
-            queryParameter3.Name = "CURRENCY";
+            storedProcQuery1.Name = "AMG_TRD_KSA_RPT_BANK_ACCOUNT_DETAILS";
+            queryParameter1.Name = "CURRENCY";
+            queryParameter1.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter1.Value = new DevExpress.DataAccess.Expression("?sr_Currency", typeof(string));
+            queryParameter2.Name = "REPORTCODE";
+            queryParameter2.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter2.Value = new DevExpress.DataAccess.Expression("?sr_ReportCode", typeof(string));
+            storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter1,
+            queryParameter2});
+            storedProcQuery1.StoredProcName = "AMG_TRD_KSA.RPT_BANK_ACCOUNT_DETAILS";
+            this.sqlDataSource2.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
+            storedProcQuery1});
+            this.sqlDataSource2.ResultSchemaSerializable = resources.GetString("sqlDataSource2.ResultSchemaSerializable");
+            // 
+            // sqlDataSource1
+            // 
+            this.sqlDataSource1.ConnectionName = "Far_hana";
+            this.sqlDataSource1.Name = "sqlDataSource1";
+            storedProcQuery2.Name = "AMG_TRD_UAE_RPT_BANK_ACCOUNT_DETAILS_1";
+            queryParameter3.Name = "DOCCURR";
             queryParameter3.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter3.Value = new DevExpress.DataAccess.Expression("?sr_Currency", typeof(string));
             queryParameter4.Name = "REPORTCODE";
@@ -822,10 +822,10 @@ namespace dxReports.Reports.Bank_Details
             storedProcQuery2.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter3,
             queryParameter4});
-            storedProcQuery2.StoredProcName = "AMG_TRD_KSA.RPT_BANK_ACCOUNT_DETAILS";
-            this.sqlDataSource2.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
+            storedProcQuery2.StoredProcName = "AMG_TRD_UAE.RPT_BANK_ACCOUNT_DETAILS_1";
+            this.sqlDataSource1.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery2});
-            this.sqlDataSource2.ResultSchemaSerializable = resources.GetString("sqlDataSource2.ResultSchemaSerializable");
+            this.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable");
             // 
             // Bank_Details_2
             // 
@@ -837,12 +837,12 @@ namespace dxReports.Reports.Bank_Details
             this.CalculatedFields.AddRange(new DevExpress.XtraReports.UI.CalculatedField[] {
             this.rpt_ReportLanguage});
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
-            this.sqlDataSource1,
-            this.sqlDataSource2});
-            this.DataMember = "AMG_TRD_UAE_RPT_BANK_ACCOUNT_DETAILS";
+            this.sqlDataSource2,
+            this.sqlDataSource1});
+            this.DataMember = "AMG_TRD_UAE_RPT_BANK_ACCOUNT_DETAILS_1";
             this.DataSource = this.sqlDataSource1;
             this.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-            this.Margins = new DevExpress.Drawing.DXMargins(40F, 25F, 0F, 8.74F);
+            this.Margins = new DevExpress.Drawing.DXMargins(40F, 25F, 19.16667F, 8.74F);
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.sr_Currency, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.isArabic, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
@@ -884,7 +884,6 @@ namespace dxReports.Reports.Bank_Details
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell9;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell10;
         private DevExpress.XtraReports.UI.PageHeaderBand PageHeader;
-        private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
         private DevExpress.XtraReports.UI.CalculatedField rpt_ReportLanguage;
         private DevExpress.XtraReports.Parameters.Parameter sr_Currency;
         private DevExpress.XtraReports.Parameters.Parameter isArabic;
@@ -918,5 +917,6 @@ namespace dxReports.Reports.Bank_Details
         private DevExpress.XtraReports.UI.XRLabel xrLabel2;
         private DevExpress.XtraReports.UI.XRLabel xrLabel1;
         private DevExpress.XtraReports.UI.XRLabel xrLabel11;
+        private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
     }
 }

@@ -88,6 +88,7 @@ namespace DevExpress_Reports.Reports
             this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
             this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
             this.SubBand6 = new DevExpress.XtraReports.UI.SubBand();
+            this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
             this.isArabic = new DevExpress.XtraReports.Parameters.Parameter();
             this.SubBand7 = new DevExpress.XtraReports.UI.SubBand();
             this.xrLine10 = new DevExpress.XtraReports.UI.XRLine();
@@ -236,7 +237,6 @@ namespace DevExpress_Reports.Reports
             this.GroupFooter2 = new DevExpress.XtraReports.UI.GroupFooterBand();
             this.SubBand8 = new DevExpress.XtraReports.UI.SubBand();
             this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
-            this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable6)).BeginInit();
@@ -329,7 +329,7 @@ namespace DevExpress_Reports.Reports
             this.xrTableCell18.StylePriority.UseFont = false;
             this.xrTableCell18.Text = "xrTableCell18";
             this.xrTableCell18.TextFormatString = "{0:N2}";
-            this.xrTableCell18.Weight = 0.96410334096521832D;
+            this.xrTableCell18.Weight = 0.96410334096521833D;
             // 
             // xrTableCell17
             // 
@@ -1006,6 +1006,16 @@ namespace DevExpress_Reports.Reports
             this.SubBand6.StylePriority.UseBorderDashStyle = false;
             this.SubBand6.StylePriority.UseBorders = false;
             // 
+            // xrSubreport1
+            // 
+            this.xrSubreport1.LocationFloat = new DevExpress.Utils.PointFloat(3.19926F, 0F);
+            this.xrSubreport1.Name = "xrSubreport1";
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("sr_Currency", null, "AMG_TRD_UAE_RPT_AR_INVOICE.DocCurr"));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("isArabic", this.isArabic));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("sr_ReportCode", null, "AMG_TRD_UAE_RPT_AR_INVOICE.ReportCode"));
+            this.xrSubreport1.ReportSource = new dxReports.Reports.BankDetails_1();
+            this.xrSubreport1.SizeF = new System.Drawing.SizeF(777.8007F, 225.5216F);
+            // 
             // isArabic
             // 
             this.isArabic.Description = "Show Arabic";
@@ -1274,8 +1284,7 @@ namespace DevExpress_Reports.Reports
             this.xrTableCell19.BorderWidth = 0.5F;
             this.xrTableCell19.CanGrow = false;
             this.xrTableCell19.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(\n?isArabic = 0, \'Total Amount :\', \n?isArabic = 1, \'Total Amount / السعرالاجما" +
-                    "لي :\',\n\'\')\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", resources.GetString("xrTableCell19.ExpressionBindings"))});
             this.xrTableCell19.Font = new DevExpress.Drawing.DXFont("tahoma", 8F);
             this.xrTableCell19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(71)))), ((int)(((byte)(129)))));
             this.xrTableCell19.Multiline = true;
@@ -3191,16 +3200,6 @@ namespace DevExpress_Reports.Reports
             storedProcQuery2});
             this.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable");
             // 
-            // xrSubreport1
-            // 
-            this.xrSubreport1.LocationFloat = new DevExpress.Utils.PointFloat(3.19926F, 0F);
-            this.xrSubreport1.Name = "xrSubreport1";
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("sr_Currency", null, "AMG_TRD_UAE_RPT_AR_INVOICE.DocCurr"));
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("isArabic", this.isArabic));
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("sr_ReportCode", null, "AMG_TRD_UAE_RPT_AR_INVOICE.ReportCode"));
-            this.xrSubreport1.ReportSource = new dxReports.Reports.BankDetails_1();
-            this.xrSubreport1.SizeF = new System.Drawing.SizeF(777.8007F, 225.5216F);
-            // 
             // AR_Invoice_3
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -3220,8 +3219,8 @@ namespace DevExpress_Reports.Reports
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.sqlDataSource2,
             this.sqlDataSource1});
-            this.DataMember = "AMG_TRD_UAE_RPT_AR_INVOICE";
-            this.DataSource = this.sqlDataSource1;
+            this.DataMember = "AMG_TRD_KSA_RPT_AR_INVOICE";
+            this.DataSource = this.sqlDataSource2;
             this.FilterString = "[DocEntry] = ?DocEntry";
             this.Font = new DevExpress.Drawing.DXFont("tahoma", 8F);
             this.Margins = new DevExpress.Drawing.DXMargins(35F, 11F, 10F, 19.88856F);
