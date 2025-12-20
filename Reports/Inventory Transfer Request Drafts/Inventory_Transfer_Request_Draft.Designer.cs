@@ -132,7 +132,6 @@
             this.xrTableCell208 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell238 = new DevExpress.XtraReports.UI.XRTableCell();
             this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
-            this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
             this.xrPageInfo2 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.xrControlStyle1 = new DevExpress.XtraReports.UI.XRControlStyle();
             this.xrControlStyle2 = new DevExpress.XtraReports.UI.XRControlStyle();
@@ -140,9 +139,7 @@
             this.rpt_HeadingBasedOnDocType_AR = new DevExpress.XtraReports.UI.CalculatedField();
             this.DocEntry = new DevExpress.XtraReports.Parameters.Parameter();
             this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
-            this.SubBand8 = new DevExpress.XtraReports.UI.SubBand();
-            this.SubBand9 = new DevExpress.XtraReports.UI.SubBand();
-            this.xrSubreport2 = new DevExpress.XtraReports.UI.XRSubreport();
+            this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable8)).BeginInit();
@@ -1265,21 +1262,10 @@
             // PageFooter
             // 
             this.PageFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrSubreport2});
-            this.PageFooter.HeightF = 33.00004F;
+            this.xrSubreport1,
+            this.xrPageInfo2});
+            this.PageFooter.HeightF = 55.08841F;
             this.PageFooter.Name = "PageFooter";
-            this.PageFooter.SubBands.AddRange(new DevExpress.XtraReports.UI.SubBand[] {
-            this.SubBand8,
-            this.SubBand9});
-            // 
-            // xrSubreport1
-            // 
-            this.xrSubreport1.LocationFloat = new DevExpress.Utils.PointFloat(1.145799F, 0F);
-            this.xrSubreport1.Name = "xrSubreport1";
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("srDocEntry", null, "AMG_TRD_UAE_RPT_STOCK_TRANSFER_REQUEST_DRAFT.DocEntry"));
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("srObjType", null, "AMG_TRD_UAE_RPT_STOCK_TRANSFER_REQUEST_DRAFT.ObjType"));
-            this.xrSubreport1.ReportSource = new dxReports.Reports.Purchase_Request_Drafts.Purchase_Request_Draft_Approval_Sub_Report();
-            this.xrSubreport1.SizeF = new System.Drawing.SizeF(785.8546F, 32.99999F);
             // 
             // xrPageInfo2
             // 
@@ -1287,7 +1273,7 @@
             this.xrPageInfo2.BorderWidth = 0F;
             this.xrPageInfo2.Font = new DevExpress.Drawing.DXFont("tahoma", 8F);
             this.xrPageInfo2.ForeColor = System.Drawing.Color.Silver;
-            this.xrPageInfo2.LocationFloat = new DevExpress.Utils.PointFloat(0.0002724784F, 0F);
+            this.xrPageInfo2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 34.08845F);
             this.xrPageInfo2.Name = "xrPageInfo2";
             this.xrPageInfo2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrPageInfo2.SizeF = new System.Drawing.SizeF(787.0002F, 20.99996F);
@@ -1345,29 +1331,14 @@
             storedProcQuery1});
             this.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable");
             // 
-            // SubBand8
+            // xrSubreport1
             // 
-            this.SubBand8.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrSubreport1});
-            this.SubBand8.HeightF = 32.99999F;
-            this.SubBand8.Name = "SubBand8";
-            this.SubBand8.Visible = false;
-            // 
-            // SubBand9
-            // 
-            this.SubBand9.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrPageInfo2});
-            this.SubBand9.HeightF = 20.99996F;
-            this.SubBand9.Name = "SubBand9";
-            // 
-            // xrSubreport2
-            // 
-            this.xrSubreport2.LocationFloat = new DevExpress.Utils.PointFloat(1.145799F, 0F);
-            this.xrSubreport2.Name = "xrSubreport2";
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("srDraftEntry", null, "AMG_TRD_UAE_RPT_STOCK_TRANSFER_REQUEST_DRAFT.DocEntry"));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("srObjType", null, "AMG_TRD_UAE_RPT_STOCK_TRANSFER_REQUEST_DRAFT.ObjType"));
-            this.xrSubreport2.ReportSource = new dxReports.Reports.Standar_Approval___Sub_Report.Standar_Approval_Sub_Report();
-            this.xrSubreport2.SizeF = new System.Drawing.SizeF(784.709F, 33.00004F);
+            this.xrSubreport1.LocationFloat = new DevExpress.Utils.PointFloat(0.0002724784F, 0F);
+            this.xrSubreport1.Name = "xrSubreport1";
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("srDocEntry", null, "AMG_TRD_UAE_RPT_STOCK_TRANSFER_REQUEST_DRAFT.DocEntry"));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("srObjType", null, "AMG_TRD_UAE_RPT_STOCK_TRANSFER_REQUEST_DRAFT.ObjType"));
+            this.xrSubreport1.ReportSource = new dxReports.Reports.Purchase_Request_Drafts.Purchase_Request_Draft_Approval_Sub_Report();
+            this.xrSubreport1.SizeF = new System.Drawing.SizeF(785.8546F, 32.99999F);
             // 
             // Inventory_Transfer_Request_Draft
             // 
@@ -1519,8 +1490,5 @@
         private DevExpress.XtraReports.Parameters.Parameter DocEntry;
         private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
         private DevExpress.XtraReports.UI.XRSubreport xrSubreport1;
-        private DevExpress.XtraReports.UI.XRSubreport xrSubreport2;
-        private DevExpress.XtraReports.UI.SubBand SubBand8;
-        private DevExpress.XtraReports.UI.SubBand SubBand9;
     }
 }
