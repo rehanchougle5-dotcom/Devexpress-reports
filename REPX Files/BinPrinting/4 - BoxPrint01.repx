@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="23.1.6.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="Box_Print_03" PageWidth="850" PageHeight="1100" Version="23.1" DataMember="RPT_BoxPrint" DataSource="#Ref-0" Font="Arial, 9.75pt">
+  <Parameters>
+    <Item1 Ref="3" Name="itemName" />
+    <Item2 Ref="5" ValueInfo="0" Name="barcode" Type="#Ref-4" />
+  </Parameters>
+  <Bands>
+    <Item1 Ref="6" ControlType="TopMarginBand" Name="TopMargin" />
+    <Item2 Ref="7" ControlType="BottomMarginBand" Name="BottomMargin" />
+    <Item3 Ref="8" ControlType="DetailBand" Name="Detail">
+      <Controls>
+        <Item1 Ref="9" ControlType="XRLabel" Name="xrLabel2" Multiline="true" Text="xrLabel2" TextAlignment="TopCenter" SizeF="640,23" LocationFloat="9.999992,19.6666718" Font="Arial, 15pt, style=Bold" Padding="2,2,0,0,96">
+          <ExpressionBindings>
+            <Item1 Ref="10" EventName="BeforePrint" PropertyName="Text" Expression="[itemName]" />
+          </ExpressionBindings>
+          <StylePriority Ref="11" UseFont="false" UseTextAlignment="false" />
+        </Item1>
+        <Item2 Ref="12" ControlType="XRLabel" Name="xrLabel1" Multiline="true" Text="&lt;&lt;&lt;&lt;&lt;TESTING&gt;&gt;&gt;&gt;&gt;&gt;" TextAlignment="TopCenter" SizeF="640,23" LocationFloat="9.999992,42.6666641" Font="Arial, 9.75pt, style=Bold" ForeColor="Red" Padding="2,2,0,0,96">
+          <StylePriority Ref="13" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+        </Item2>
+      </Controls>
+    </Item3>
+  </Bands>
+  <ParameterPanelLayoutItems>
+    <Item1 Ref="14" LayoutItemType="Parameter" Parameter="#Ref-3" />
+    <Item2 Ref="15" LayoutItemType="Parameter" Parameter="#Ref-5" />
+  </ParameterPanelLayoutItems>
+  <ComponentStorage>
+    <Item1 Ref="0" ObjectType="DevExpress.DataAccess.Sql.SqlDataSource,DevExpress.DataAccess.v23.1" Name="sqlDataSource1" Base64="PFNxbERhdGFTb3VyY2UgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxDb25uZWN0aW9uIE5hbWU9IlBvd2VyQkkiIEZyb21BcHBDb25maWc9InRydWUiIC8+PFF1ZXJ5IFR5cGU9IlN0b3JlZFByb2NRdWVyeSIgTmFtZT0iUlBUX0JveFByaW50Ij48UGFyYW1ldGVyIE5hbWU9IkBiYXJjb2RlIiBUeXBlPSJEZXZFeHByZXNzLkRhdGFBY2Nlc3MuRXhwcmVzc2lvbiI+KFN5c3RlbS5JbnQzMikoP2JhcmNvZGUpPC9QYXJhbWV0ZXI+PFBhcmFtZXRlciBOYW1lPSJAaXRlbU5hbWUiIFR5cGU9IkRldkV4cHJlc3MuRGF0YUFjY2Vzcy5FeHByZXNzaW9uIj4oU3lzdGVtLlN0cmluZykoP2l0ZW1OYW1lKTwvUGFyYW1ldGVyPjxQcm9jTmFtZT5SUFQuQm94UHJpbnQ8L1Byb2NOYW1lPjwvUXVlcnk+PFJlc3VsdFNjaGVtYT48RGF0YVNldCBOYW1lPSJzcWxEYXRhU291cmNlMSI+PFZpZXcgTmFtZT0iUlBUX0JveFByaW50Ij48RmllbGQgTmFtZT0iYmFyQ29kZSIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9Iml0ZW1OYW1lIiBUeXBlPSJTdHJpbmciIC8+PC9WaWV3PjwvRGF0YVNldD48L1Jlc3VsdFNjaGVtYT48Q29ubmVjdGlvbk9wdGlvbnMgQ2xvc2VDb25uZWN0aW9uPSJ0cnVlIiAvPjwvU3FsRGF0YVNvdXJjZT4=" />
+  </ComponentStorage>
+  <ObjectStorage>
+    <Item1 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v23.1" Ref="4" Content="System.Int32" Type="System.Type" />
+  </ObjectStorage>
+</XtraReportsLayoutSerializer>

@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="23.1.6.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="BinPrinting1" Margins="5, 5, 7, 13" PaperKind="Custom" PageWidth="394" PageHeight="197" Version="23.1" FilterString="[binCode] = ?binCode" DataMember="AMG_TRD_UAE_RPT_WHSBinDetails" DataSource="#Ref-0" Font="Arial, 9.75pt">
+  <Parameters>
+    <Item1 Ref="3" Name="binCode" />
+  </Parameters>
+  <Bands>
+    <Item1 Ref="4" ControlType="TopMarginBand" Name="TopMargin" HeightF="7" />
+    <Item2 Ref="5" ControlType="BottomMarginBand" Name="BottomMargin" HeightF="13" />
+    <Item3 Ref="6" ControlType="DetailBand" Name="Detail" HeightF="183.0189" KeepTogether="true">
+      <Controls>
+        <Item1 Ref="7" ControlType="XRPanel" Name="xrPanel1" SizeF="376.4744,149.252716" LocationFloat="0,0" Borders="All" BorderWidth="2">
+          <Controls>
+            <Item1 Ref="8" ControlType="XRTable" Name="xrTable4" TextAlignment="MiddleLeft" SizeF="205.5502,17.08974" LocationFloat="167.719,84.34384" Font="calibri, 13pt, style=Bold" Padding="2,2,0,0,96" Borders="None">
+              <Rows>
+                <Item1 Ref="9" ControlType="XRTableRow" Name="xrTableRow4" Weight="1">
+                  <Cells>
+                    <Item1 Ref="10" ControlType="XRTableCell" Name="xrTableCell10" Weight="0.58008507509892826" Multiline="true" Text="xrTableCell10" Font="calibri, 14pt, style=Bold">
+                      <ExpressionBindings>
+                        <Item1 Ref="11" EventName="BeforePrint" PropertyName="Text" Expression="[sl3Name]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="12" UseFont="false" />
+                    </Item1>
+                    <Item2 Ref="13" ControlType="XRTableCell" Name="xrTableCell11" Weight="0.10792999608360714" Multiline="true" Text=":" Font="calibri, 14pt, style=Bold">
+                      <StylePriority Ref="14" UseFont="false" />
+                    </Item2>
+                    <Item3 Ref="15" ControlType="XRTableCell" Name="xrTableCell12" Weight="0.880777274931846" Multiline="true" Text="xrTableCell12" Font="calibri, 14pt, style=Bold">
+                      <ExpressionBindings>
+                        <Item1 Ref="16" EventName="BeforePrint" PropertyName="Text" Expression="[SL3Code]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="17" UseFont="false" />
+                    </Item3>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="18" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item1>
+            <Item2 Ref="19" ControlType="XRTable" Name="xrTable3" TextAlignment="MiddleLeft" SizeF="205.5502,19.97439" LocationFloat="167.719,64.36948" Font="calibri, 13pt, style=Bold" Padding="2,2,0,0,96" Borders="None">
+              <Rows>
+                <Item1 Ref="20" ControlType="XRTableRow" Name="xrTableRow3" Weight="1.52447509765625">
+                  <Cells>
+                    <Item1 Ref="21" ControlType="XRTableCell" Name="xrTableCell7" Weight="0.58008634847477925" Multiline="true" Text="xrTableCell7" Font="calibri, 14pt, style=Bold">
+                      <ExpressionBindings>
+                        <Item1 Ref="22" EventName="BeforePrint" PropertyName="Text" Expression="[sl2Name]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="23" UseFont="false" />
+                    </Item1>
+                    <Item2 Ref="24" ControlType="XRTableCell" Name="xrTableCell8" Weight="0.11024848517742956" Multiline="true" Text=":" Font="calibri, 14pt, style=Bold">
+                      <StylePriority Ref="25" UseFont="false" />
+                    </Item2>
+                    <Item3 Ref="26" ControlType="XRTableCell" Name="xrTableCell9" Weight="0.87845939981731613" Multiline="true" Text="xrTableCell9" Font="calibri, 14pt, style=Bold">
+                      <ExpressionBindings>
+                        <Item1 Ref="27" EventName="BeforePrint" PropertyName="Text" Expression="[SL2Code]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="28" UseFont="false" />
+                    </Item3>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="29" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item2>
+            <Item3 Ref="30" ControlType="XRTable" Name="xrTable2" TextAlignment="MiddleLeft" SizeF="205.5503,19.97437" LocationFloat="167.7189,44.39511" Font="Calibri, 13pt" Padding="2,2,0,0,96" Borders="None">
+              <Rows>
+                <Item1 Ref="31" ControlType="XRTableRow" Name="xrTableRow2" Weight="1">
+                  <Cells>
+                    <Item1 Ref="32" ControlType="XRTableCell" Name="xrTableCell4" Weight="1.1204429709552515" Multiline="true" Text="xrTableCell4" Font="Calibri, 14pt, style=Bold">
+                      <ExpressionBindings>
+                        <Item1 Ref="33" EventName="BeforePrint" PropertyName="Text" Expression="[sl1Name]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="34" UseFont="false" />
+                    </Item1>
+                    <Item2 Ref="35" ControlType="XRTableCell" Name="xrTableCell5" Weight="0.20764087043797796" Multiline="true" Text=":" Font="Calibri, 14pt, style=Bold">
+                      <StylePriority Ref="36" UseFont="false" />
+                    </Item2>
+                    <Item3 Ref="37" ControlType="XRTableCell" Name="xrTableCell6" Weight="1.6900018276931097" Multiline="true" Text="xrTableCell6" Font="Calibri, 14pt, style=Bold">
+                      <ExpressionBindings>
+                        <Item1 Ref="38" EventName="BeforePrint" PropertyName="Text" Expression="[SL1Code]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="39" UseFont="false" />
+                    </Item3>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="40" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item3>
+            <Item4 Ref="41" ControlType="XRTable" Name="xrTable1" TextAlignment="MiddleLeft" SizeF="205.5503,16.76925" LocationFloat="167.719,27.62587" Font="calibri, 15pt" Padding="2,2,0,0,96">
+              <Rows>
+                <Item1 Ref="42" ControlType="XRTableRow" Name="xrTableRow1" Weight="1">
+                  <Cells>
+                    <Item1 Ref="43" ControlType="XRTableCell" Name="xrTableCell1" Weight="0.57010709179872487" Multiline="true" Text="Whs." Font="calibri, 14pt, style=Bold" Borders="None">
+                      <StylePriority Ref="44" UseFont="false" UseBorders="false" />
+                    </Item1>
+                    <Item2 Ref="45" ControlType="XRTableCell" Name="xrTableCell2" Weight="0.10564964596256814" Multiline="true" Text=":" TextAlignment="MiddleLeft" Font="calibri, 14pt, style=Bold" Borders="None">
+                      <StylePriority Ref="46" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="47" ControlType="XRTableCell" Name="xrTableCell3" Weight="0.859910941713335" Multiline="true" Text="xrTableCell3" Font="calibri, 14pt, style=Bold" Borders="None">
+                      <ExpressionBindings>
+                        <Item1 Ref="48" EventName="BeforePrint" PropertyName="Text" Expression="[whsCode]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="49" UseFont="false" UseBorders="false" />
+                    </Item3>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="50" UseFont="false" UseTextAlignment="false" />
+            </Item4>
+            <Item5 Ref="51" ControlType="XRBarCode" Name="xrBarCode1" AutoModule="true" TextAlignment="MiddleCenter" ShowText="false" SizeF="139.4497,94.51898" LocationFloat="27.3076763,30.81954" Font="Arial, 13pt" Padding="0,0,0,0,100" Borders="None">
+              <Symbology Ref="52" Name="QRCode" CompactionMode="Byte" ErrorCorrectionLevel="Q" IncludeQuietZone="false" />
+              <ExpressionBindings>
+                <Item1 Ref="53" EventName="BeforePrint" PropertyName="Text" Expression="'[binCode]'" />
+              </ExpressionBindings>
+              <StylePriority Ref="54" UseFont="false" UsePadding="false" UseBorders="false" UseTextAlignment="false" />
+            </Item5>
+            <Item6 Ref="55" ControlType="XRLine" Name="xrLine2" LineWidth="2" SizeF="381.2821,2.08334351" LocationFloat="2.24359274,125.650146" Borders="None">
+              <StylePriority Ref="56" UseBorders="false" />
+            </Item6>
+            <Item7 Ref="57" ControlType="XRLine" Name="xrLine1" LineWidth="2" SizeF="376.4744,2.08333325" LocationFloat="0,22.76538" Borders="None">
+              <StylePriority Ref="58" UseBorders="false" />
+            </Item7>
+            <Item8 Ref="59" ControlType="XRLabel" Name="xrLabel12" Multiline="true" Text="xrLabel12" TextAlignment="MiddleCenter" SizeF="371.0256,19.37328" LocationFloat="2.243589,2.430558" Font="calibri, 17pt, style=Bold" Padding="2,2,0,0,100" Borders="None">
+              <ExpressionBindings>
+                <Item1 Ref="60" EventName="BeforePrint" PropertyName="Text" Expression="[whsName]" />
+              </ExpressionBindings>
+              <StylePriority Ref="61" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item8>
+            <Item9 Ref="62" ControlType="XRLabel" Name="xrLabel15" Multiline="true" Text="xrLabel15" TextAlignment="MiddleCenter" SizeF="370.3846,17.46255" LocationFloat="2.24359274,129.012375" Font="calibri, 14pt, style=Bold" Padding="2,2,0,0,100" Borders="None">
+              <ExpressionBindings>
+                <Item1 Ref="63" EventName="BeforePrint" PropertyName="Text" Expression="[binCode]" />
+              </ExpressionBindings>
+              <StylePriority Ref="64" UseFont="false" UseBorders="false" UseTextAlignment="false" />
+            </Item9>
+          </Controls>
+          <StylePriority Ref="65" UseBorders="false" UseBorderWidth="false" />
+        </Item1>
+      </Controls>
+    </Item3>
+  </Bands>
+  <ParameterPanelLayoutItems>
+    <Item1 Ref="66" LayoutItemType="Parameter" Parameter="#Ref-3" />
+  </ParameterPanelLayoutItems>
+  <ComponentStorage>
+    <Item1 Ref="0" ObjectType="DevExpress.DataAccess.Sql.SqlDataSource,DevExpress.DataAccess.v23.1" Name="sqlDataSource1" Base64="PFNxbERhdGFTb3VyY2UgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxDb25uZWN0aW9uIE5hbWU9IkZhcl9oYW5hIiBGcm9tQXBwQ29uZmlnPSJ0cnVlIiAvPjxRdWVyeSBUeXBlPSJTdG9yZWRQcm9jUXVlcnkiIE5hbWU9IkFNR19UUkRfVUFFX1JQVF9XSFNCaW5EZXRhaWxzIj48UGFyYW1ldGVyIE5hbWU9IkJJTkNPREUiIFR5cGU9IkRldkV4cHJlc3MuRGF0YUFjY2Vzcy5FeHByZXNzaW9uIj4oU3lzdGVtLlN0cmluZykoP2JpbkNvZGUpPC9QYXJhbWV0ZXI+PFByb2NOYW1lPkFNR19UUkRfVUFFLlJQVF9XSFNCaW5EZXRhaWxzPC9Qcm9jTmFtZT48L1F1ZXJ5PjxSZXN1bHRTY2hlbWE+PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9IkFNR19UUkRfVUFFX1JQVF9XSFNCaW5EZXRhaWxzIj48RmllbGQgTmFtZT0id2hzQ29kZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJ3aHNOYW1lIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9ImJpbkNvZGUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iU0wxQ29kZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJzbDFOYW1lIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlNMMkNvZGUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0ic2wyTmFtZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJTTDNDb2RlIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9InNsM05hbWUiIFR5cGU9IlN0cmluZyIgLz48L1ZpZXc+PC9EYXRhU2V0PjwvUmVzdWx0U2NoZW1hPjxDb25uZWN0aW9uT3B0aW9ucyBDbG9zZUNvbm5lY3Rpb249InRydWUiIC8+PC9TcWxEYXRhU291cmNlPg==" />
+  </ComponentStorage>
+</XtraReportsLayoutSerializer>

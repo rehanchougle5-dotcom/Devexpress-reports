@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="23.1.6.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="Coupon_Printing_02_Original" Margins="1, 1, 1, 1" PaperKind="Custom" PageWidth="210" PageHeight="110" Version="23.1" DataMember="RPT_Coupon_Printing" DataSource="#Ref-0" Font="Arial, 9.75pt">
+  <Parameters>
+    <Item1 Ref="3" Description="Coupon ID From" ValueInfo="0" Name="cidFrom" Type="#Ref-2" />
+    <Item2 Ref="4" Description="Coupon ID To" ValueInfo="0" Name="cidTo" Type="#Ref-2" />
+    <Item3 Ref="5" Description="Coupon ID" ValueInfo="0" Name="cid" Type="#Ref-2" />
+    <Item4 Ref="7" Name="codeFrom" />
+    <Item5 Ref="8" Name="codeTo" />
+    <Item6 Ref="9" ValueInfo="0" Name="salesPromoId" Type="#Ref-2" />
+  </Parameters>
+  <Bands>
+    <Item1 Ref="10" ControlType="TopMarginBand" Name="TopMargin" HeightF="1" />
+    <Item2 Ref="11" ControlType="BottomMarginBand" Name="BottomMargin" HeightF="1" />
+    <Item3 Ref="12" ControlType="DetailBand" Name="Detail" HeightF="0">
+      <SubBands>
+        <Item1 Ref="13" ControlType="SubBand" Name="SubBand1" HeightF="102.999992">
+          <Controls>
+            <Item1 Ref="14" ControlType="XRLabel" Name="xrLabel3" Multiline="true" Text="Scan to register coupon" TextAlignment="MiddleCenter" SizeF="86.07521,9.050163" LocationFloat="119.924759,93.94983" Font="Arial, 6.5pt" Padding="0,0,0,0,100">
+              <ExpressionBindings>
+                <Item1 Ref="15" EventName="BeforePrint" PropertyName="Text" Expression="[couponCode]" />
+              </ExpressionBindings>
+              <StylePriority Ref="16" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+            </Item1>
+            <Item2 Ref="17" ControlType="XRLabel" Name="xrLabel1" Multiline="true" Text="Scan to register coupon" TextAlignment="MiddleCenter" SizeF="83.07525,9.564012" LocationFloat="124.924767,0" Font="Arial, 5pt, style=Italic" Padding="0,0,0,0,100">
+              <StylePriority Ref="18" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+            </Item2>
+            <Item3 Ref="19" ControlType="XRBarCode" Name="xrBarCode1" AutoModule="true" TextAlignment="BottomRight" ShowText="false" SnapLineMargin="5,5,5,5,100" SizeF="83.5950546,82.3774" LocationFloat="123.924782,11.49562" Font="Arial, 16pt" Padding="0,0,0,0,100">
+              <Symbology Ref="20" Name="QRCode" CompactionMode="Byte" IncludeQuietZone="false" />
+              <ExpressionBindings>
+                <Item1 Ref="21" EventName="BeforePrint" PropertyName="Text" Expression="[qrCode]" />
+              </ExpressionBindings>
+              <StylePriority Ref="22" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+            </Item3>
+            <Item4 Ref="23" ControlType="XRTable" Name="xrTable2" SizeF="111.244217,100.000008" LocationFloat="0,0" Font="calibri, 6pt" Padding="2,2,0,0,96">
+              <Rows>
+                <Item1 Ref="24" ControlType="XRTableRow" Name="xrTableRow1" Weight="1.7914563880865146">
+                  <Cells>
+                    <Item1 Ref="25" ControlType="XRTableCell" Name="xrTableCell1" Weight="1" CanShrink="true" Multiline="true" Text="xrTableCell3" TextAlignment="MiddleLeft" Font="tahoma, 6pt, style=Bold" Padding="2,2,10,0,100">
+                      <ExpressionBindings>
+                        <Item1 Ref="26" EventName="BeforePrint" PropertyName="Text" Expression="[remarks]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="27" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+                    </Item1>
+                  </Cells>
+                </Item1>
+                <Item2 Ref="28" ControlType="XRTableRow" Name="xrTableRow4" Weight="1.5961353417828326">
+                  <Cells>
+                    <Item1 Ref="29" ControlType="XRTableCell" Name="xrTableCell4" Weight="1" CanGrow="false" CanShrink="true" Multiline="true" AllowMarkupText="true" Text="xrTableCell2" TextAlignment="BottomLeft" Font="calibri, 6pt" ForeColor="Black" Padding="2,2,2,0,100">
+                      <ExpressionBindings>
+                        <Item1 Ref="30" EventName="BeforePrint" PropertyName="Font.Bold" Expression="'Validity : ' " />
+                        <Item2 Ref="31" EventName="BeforePrint" PropertyName="Text" Expression="'&lt;b&gt;Validity :&lt;/b&gt;' + NewLine() + [validity]&#xA;" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="32" UseFont="false" UseForeColor="false" UsePadding="false" UseTextAlignment="false" />
+                    </Item1>
+                  </Cells>
+                </Item2>
+              </Rows>
+              <StylePriority Ref="33" UseFont="false" />
+            </Item4>
+          </Controls>
+          <ExpressionBindings>
+            <Item1 Ref="34" EventName="BeforePrint" PropertyName="Visible" Expression="/*[validityType] = 'R'*/" />
+          </ExpressionBindings>
+        </Item1>
+        <Item2 Ref="35" ControlType="SubBand" Name="SubBand2" Visible="false">
+          <Controls>
+            <Item1 Ref="36" ControlType="XRBarCode" Name="xrBarCode2" AutoModule="true" ShowText="false" SnapLineMargin="5,5,5,5,100" SizeF="69.20759,68.1414" LocationFloat="120.5149,13.55526" Font="Arial, 16pt" Padding="0,0,0,0,100">
+              <Symbology Ref="37" Name="QRCode" CompactionMode="Byte" />
+              <ExpressionBindings>
+                <Item1 Ref="38" EventName="BeforePrint" PropertyName="Text" Expression="[qrCode]" />
+              </ExpressionBindings>
+              <StylePriority Ref="39" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+            </Item1>
+            <Item2 Ref="40" ControlType="XRLabel" Name="xrLabel2" Multiline="true" Text="Scan to register coupon" TextAlignment="MiddleCenter" SizeF="71.56248,13.44473" LocationFloat="117.2292,0" Font="Arial, 4.7pt, style=Italic" Padding="0,0,0,0,100">
+              <StylePriority Ref="41" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+            </Item2>
+            <Item3 Ref="42" ControlType="XRLabel" Name="xrLabel4" Multiline="true" Text="Scan to register coupon" TextAlignment="MiddleCenter" SizeF="69.20757,6.062996" LocationFloat="120.5149,81.84177" Font="Arial, 4.1pt" Padding="0,0,0,0,100">
+              <ExpressionBindings>
+                <Item1 Ref="43" EventName="BeforePrint" PropertyName="Text" Expression="[couponCode]" />
+              </ExpressionBindings>
+              <StylePriority Ref="44" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+            </Item3>
+            <Item4 Ref="45" ControlType="XRTable" Name="xrTable3" SizeF="114.8727,84.68979" LocationFloat="0,0" Font="calibri, 6pt" Padding="2,2,0,0,96">
+              <Rows>
+                <Item1 Ref="46" ControlType="XRTableRow" Name="xrTableRow5" Weight="2.2189411951169213">
+                  <Cells>
+                    <Item1 Ref="47" ControlType="XRTableCell" Name="xrTableCell5" Weight="1" Multiline="true" Text="xrTableCell3" TextAlignment="MiddleLeft" Font="tahoma, 6pt, style=Bold">
+                      <ExpressionBindings>
+                        <Item1 Ref="48" EventName="BeforePrint" PropertyName="Text" Expression="[remarks]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="49" UseFont="false" UseTextAlignment="false" />
+                    </Item1>
+                  </Cells>
+                </Item1>
+                <Item2 Ref="50" ControlType="XRTableRow" Name="xrTableRow6" Weight="1.1686505347524261">
+                  <Cells>
+                    <Item1 Ref="51" ControlType="XRTableCell" Name="xrTableCell6" Weight="1" CanShrink="true" Multiline="true" AllowMarkupText="true" Text="xrTableCell2" TextAlignment="BottomLeft" Font="calibri, 6pt">
+                      <ExpressionBindings>
+                        <Item1 Ref="52" EventName="BeforePrint" PropertyName="Font.Bold" Expression="'Validity : ' " />
+                        <Item2 Ref="53" EventName="BeforePrint" PropertyName="Text" Expression="'&lt;b&gt;Validity :&lt;/b&gt;' + NewLine() + [validity]&#xA;" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="54" UseFont="false" UseTextAlignment="false" />
+                    </Item1>
+                  </Cells>
+                </Item2>
+              </Rows>
+              <StylePriority Ref="55" UseFont="false" />
+            </Item4>
+          </Controls>
+          <ExpressionBindings>
+            <Item1 Ref="56" EventName="BeforePrint" PropertyName="Visible" Expression="/*[validityType] = 'N'*/" />
+          </ExpressionBindings>
+        </Item2>
+      </SubBands>
+    </Item3>
+  </Bands>
+  <ParameterPanelLayoutItems>
+    <Item1 Ref="57" LayoutItemType="Parameter" Parameter="#Ref-3" />
+    <Item2 Ref="58" LayoutItemType="Parameter" Parameter="#Ref-4" />
+    <Item3 Ref="59" LayoutItemType="Parameter" Parameter="#Ref-5" />
+  </ParameterPanelLayoutItems>
+  <ComponentStorage>
+    <Item1 Ref="0" ObjectType="DevExpress.DataAccess.Sql.SqlDataSource,DevExpress.DataAccess.v23.1" Name="sqlDataSource1" Base64="PFNxbERhdGFTb3VyY2UgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxDb25uZWN0aW9uIE5hbWU9IlBvd2VyQkkiIEZyb21BcHBDb25maWc9InRydWUiIC8+PFF1ZXJ5IFR5cGU9IlN0b3JlZFByb2NRdWVyeSIgTmFtZT0iUlBUX0NvdXBvbl9QcmludGluZyI+PFBhcmFtZXRlciBOYW1lPSJAY2lkIiBUeXBlPSJEZXZFeHByZXNzLkRhdGFBY2Nlc3MuRXhwcmVzc2lvbiI+KFN5c3RlbS5JbnQ2NCkoP2NpZCk8L1BhcmFtZXRlcj48UGFyYW1ldGVyIE5hbWU9IkBjaWRGcm9tIiBUeXBlPSJEZXZFeHByZXNzLkRhdGFBY2Nlc3MuRXhwcmVzc2lvbiI+KFN5c3RlbS5JbnQ2NCkoP2NpZEZyb20pPC9QYXJhbWV0ZXI+PFBhcmFtZXRlciBOYW1lPSJAY2lkVG8iIFR5cGU9IkRldkV4cHJlc3MuRGF0YUFjY2Vzcy5FeHByZXNzaW9uIj4oU3lzdGVtLkludDY0KSg/Y2lkVG8pPC9QYXJhbWV0ZXI+PFBhcmFtZXRlciBOYW1lPSJAY29kZUZyb20iIFR5cGU9IkRldkV4cHJlc3MuRGF0YUFjY2Vzcy5FeHByZXNzaW9uIj4oU3lzdGVtLlN0cmluZykoP2NvZGVGcm9tKTwvUGFyYW1ldGVyPjxQYXJhbWV0ZXIgTmFtZT0iQGNvZGVUbyIgVHlwZT0iRGV2RXhwcmVzcy5EYXRhQWNjZXNzLkV4cHJlc3Npb24iPihTeXN0ZW0uU3RyaW5nKSg/Y29kZVRvKTwvUGFyYW1ldGVyPjxQYXJhbWV0ZXIgTmFtZT0iQHNhbGVzUHJvbW9JZCIgVHlwZT0iRGV2RXhwcmVzcy5EYXRhQWNjZXNzLkV4cHJlc3Npb24iPihTeXN0ZW0uSW50NjQpKD9zYWxlc1Byb21vSWQpPC9QYXJhbWV0ZXI+PFByb2NOYW1lPlJQVC5Db3Vwb25fUHJpbnRpbmc8L1Byb2NOYW1lPjwvUXVlcnk+PFJlc3VsdFNjaGVtYT48RGF0YVNldCBOYW1lPSJzcWxEYXRhU291cmNlMSI+PFZpZXcgTmFtZT0iUlBUX0NvdXBvbl9QcmludGluZyI+PEZpZWxkIE5hbWU9ImNvdXBvbklkIiBUeXBlPSJHdWlkIiAvPjxGaWVsZCBOYW1lPSJjb3Vwb25Db2RlIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9InJlbWFya3MiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0idmFsaWRpdHlUeXBlIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9InJlZGVlbUJhc2VPbiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJyZWRlZW1Db3VudCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9InJlZGVlbUxpbWl0IiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0idmFsdWUiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJ2YWxpZEZyb20iIFR5cGU9IkRhdGVUaW1lIiAvPjxGaWVsZCBOYW1lPSJ2YWxpZFRvIiBUeXBlPSJEYXRlVGltZSIgLz48RmllbGQgTmFtZT0idmFsaWREYXlzIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iQ291cG9uSWRGcm9tIiBUeXBlPSJJbnQ2NCIgLz48RmllbGQgTmFtZT0iQ291cG9uSWRUbyIgVHlwZT0iSW50NjQiIC8+PEZpZWxkIE5hbWU9IlRlcm1zQ2hhbm5lbCIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJUZXJtc1Nob3BzIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlRlcm1zQ29tcGFueSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJ2YWxpZGl0eSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJxckNvZGUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0idGVybXMxX3JldGFpbF8xIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9InRlcm1zMV9yZXRhaWxfMiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJ0ZXJtczJfb25sbmVfMSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJ0ZXJtczNfZGF0ZV8xIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9InRlcm1zM19kYXRlXzIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0idGVybXM0X2RhdGVfMSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJ0ZXJtczVfMSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJ0ZXJtczZfMSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJjb21wYW55IiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9InNhbGVzVHlwZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJ3aHNOYW1lIiBUeXBlPSJTdHJpbmciIC8+PC9WaWV3PjwvRGF0YVNldD48L1Jlc3VsdFNjaGVtYT48Q29ubmVjdGlvbk9wdGlvbnMgQ2xvc2VDb25uZWN0aW9uPSJ0cnVlIiAvPjwvU3FsRGF0YVNvdXJjZT4=" />
+  </ComponentStorage>
+  <ObjectStorage>
+    <Item1 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v23.1" Ref="2" Content="System.Int64" Type="System.Type" />
+  </ObjectStorage>
+</XtraReportsLayoutSerializer>

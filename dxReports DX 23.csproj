@@ -1,0 +1,1298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{65D7D789-F02A-45EB-B851-DF212684B673}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>dxReports</RootNamespace>
+    <AssemblyName>dxReports</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v23.1.Core, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.Desktop.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Drawing.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v23.1.Core, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v23.1.Core, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v23.1.Core, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v23.1.Core, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v23.1.Core, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v23.1.Export, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v23.1.Core, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v23.1.UI, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v23.1.Core, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v23.1.Extensions, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="FAR.Database">
+      <HintPath>D:\Development\New Dlls\Dlls\FAR.Database.dll</HintPath>
+    </Reference>
+    <Reference Include="FAR.Utils">
+      <HintPath>D:\Development\New Dlls\Dlls\FAR.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DocNumberFinder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DocNumberFinder.Designer.cs">
+      <DependentUpon>DocNumberFinder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExportReport.cs" />
+    <Compile Include="frmdxReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmdxReport.Designer.cs">
+      <DependentUpon>frmdxReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\Actual Vs Target\Actual_VS_Target.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Actual Vs Target\Actual_VS_Target.Designer.cs">
+      <DependentUpon>Actual_VS_Target.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\AP Credit Memo\AP_Credit_Memo_2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\AP Credit Memo\AP_Credit_Memo_2.Designer.cs">
+      <DependentUpon>AP_Credit_Memo_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\AP Credit Memo\AP_Crredit_Memo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\AP Credit Memo\AP_Crredit_Memo.Designer.cs">
+      <DependentUpon>AP_Crredit_Memo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\AP Credit Memo\AP_Credit_Notes.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\AP Credit Memo\AP_Credit_Notes.Designer.cs">
+      <DependentUpon>AP_Credit_Notes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\AP Down Payment Request\AP_Down_Payment_Request.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\AP Down Payment Request\AP_Down_Payment_Request.Designer.cs">
+      <DependentUpon>AP_Down_Payment_Request.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\AP Down Payment Request\AP_Down_Payment_Request_Draft.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\AP Down Payment Request\AP_Down_Payment_Request_Draft.Designer.cs">
+      <DependentUpon>AP_Down_Payment_Request_Draft.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\AP Invoice Draft\AP_INVOICE_DRAFT.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\AP Invoice Draft\AP_INVOICE_DRAFT.Designer.cs">
+      <DependentUpon>AP_INVOICE_DRAFT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\AP Invoice\AP_INVOICE.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\AP Invoice\AP_INVOICE.Designer.cs">
+      <DependentUpon>AP_INVOICE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\AP Invoice\AR_Invoice_Barcode.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\AP Invoice\AR_Invoice_Barcode.Designer.cs">
+      <DependentUpon>AR_Invoice_Barcode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\AR Credit Note\AR_CREDIT_NOTE_1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\AR Credit Note\AR_CREDIT_NOTE_1.Designer.cs">
+      <DependentUpon>AR_CREDIT_NOTE_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\AR_Invoice\AR_INVOICE_3.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\AR_Invoice\AR_INVOICE_3.Designer.cs">
+      <DependentUpon>AR_INVOICE_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\AR_Invoice\AR_INVOICE_4.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\AR_Invoice\AR_INVOICE_4.Designer.cs">
+      <DependentUpon>AR_INVOICE_4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\AR_Invoice\XtraReport3.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\AR_Invoice\XtraReport3.Designer.cs">
+      <DependentUpon>XtraReport3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Asset Barcode\Asset_Barcode.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Asset Barcode\Asset_Barcode.Designer.cs">
+      <DependentUpon>Asset_Barcode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Asset Barcode\XtraReport4.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Asset Barcode\XtraReport4.Designer.cs">
+      <DependentUpon>XtraReport4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Bank Details\Bank_Details_2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Bank Details\Bank_Details_2.Designer.cs">
+      <DependentUpon>Bank_Details_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Box Print\Box_Print_01.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Box Print\Box_Print_01.Designer.cs">
+      <DependentUpon>Box_Print_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Box Print\Box_Print_02.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Box Print\Box_Print_02.Designer.cs">
+      <DependentUpon>Box_Print_02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Cash Balance Summary\Cash_Balance_Summary_01.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Cash Balance Summary\Cash_Balance_Summary_01.Designer.cs">
+      <DependentUpon>Cash_Balance_Summary_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Checklist Audit\Checklist_Audit_01.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Checklist Audit\Checklist_Audit_01.Designer.cs">
+      <DependentUpon>Checklist_Audit_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Commercial_License\Commercial_License.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Commercial_License\Commercial_License.Designer.cs">
+      <DependentUpon>Commercial_License.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Commercial_License\Commercial_License_2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Commercial_License\Commercial_License_2.Designer.cs">
+      <DependentUpon>Commercial_License_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Commercial_License\sr_License_Activies.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Commercial_License\sr_License_Activies.Designer.cs">
+      <DependentUpon>sr_License_Activies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Commercial_License\sr_License_Member.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Commercial_License\sr_License_Member.Designer.cs">
+      <DependentUpon>sr_License_Member.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Commercial_License\sr_Permit_Details.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Commercial_License\sr_Permit_Details.Designer.cs">
+      <DependentUpon>sr_Permit_Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Commercial_License\sr_Register_Activites.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Commercial_License\sr_Register_Activites.Designer.cs">
+      <DependentUpon>sr_Register_Activites.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Coupon QR Printing\Coupon QR Pringting\Coupon_Printing_02_Original.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Coupon QR Printing\Coupon QR Pringting\Coupon_Printing_02_Original.Designer.cs">
+      <DependentUpon>Coupon_Printing_02_Original.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Coupon QR Printing\Coupon QR Pringting\Coupon_Printing_2x2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Coupon QR Printing\Coupon QR Pringting\Coupon_Printing_2x2.Designer.cs">
+      <DependentUpon>Coupon_Printing_2x2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Coupon QR Printing\Coupon QR Printing.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Coupon QR Printing\Coupon QR Printing.Designer.cs">
+      <DependentUpon>Coupon QR Printing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Coupon QR Printing\Coupon_Printing_02.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Coupon QR Printing\Coupon_Printing_02.Designer.cs">
+      <DependentUpon>Coupon_Printing_02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Coupon QR Printing\Coupon_Printing_03.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Coupon QR Printing\Coupon_Printing_03.Designer.cs">
+      <DependentUpon>Coupon_Printing_03.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Coupon QR Printing\Coupon_Printing_04.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Coupon QR Printing\Coupon_Printing_04.Designer.cs">
+      <DependentUpon>Coupon_Printing_04.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Coupon QR Printing\Coupon_Printing_05.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Coupon QR Printing\Coupon_Printing_05.Designer.cs">
+      <DependentUpon>Coupon_Printing_05.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Coupon QR Printing\temp\temp.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Coupon QR Printing\temp\temp.Designer.cs">
+      <DependentUpon>temp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Customer Aging\Customer_Aging_1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Customer Aging\Customer_Aging_1.Designer.cs">
+      <DependentUpon>Customer_Aging_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Customer Statement\Customer_Statement_1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Customer Statement\Customer_Statement_1.Designer.cs">
+      <DependentUpon>Customer_Statement_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Customer Statement\Customer_Statement_2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Customer Statement\Customer_Statement_2.Designer.cs">
+      <DependentUpon>Customer_Statement_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Delivery Order\Delivery_Order.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Delivery Order\Delivery_Order.Designer.cs">
+      <DependentUpon>Delivery_Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\E-Commerce\Amazon.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\E-Commerce\Amazon.Designer.cs">
+      <DependentUpon>Amazon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\E-Commerce\E_COMMERCE_AR_INVOICE_2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\E-Commerce\E_COMMERCE_AR_INVOICE_2.Designer.cs">
+      <DependentUpon>E_COMMERCE_AR_INVOICE_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\E-Commerce\E_COMM_AR_INVOICE_1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\E-Commerce\E_COMM_AR_INVOICE_1.Designer.cs">
+      <DependentUpon>E_COMM_AR_INVOICE_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Goods Receipt PO\Goods_Receipt_PO.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Goods Receipt PO\Goods_Receipt_PO.Designer.cs">
+      <DependentUpon>Goods_Receipt_PO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Goods Receipt PO\Goods_Receipt_PO_2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Goods Receipt PO\Goods_Receipt_PO_2.Designer.cs">
+      <DependentUpon>Goods_Receipt_PO_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Goods Receipt PO\XtraReport5.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Goods Receipt PO\XtraReport5.Designer.cs">
+      <DependentUpon>XtraReport5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Incoming Payments\Incoming_Payments.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Incoming Payments\Incoming_Payments.Designer.cs">
+      <DependentUpon>Incoming_Payments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Inventory Transfer Drafts\Inventory_Transfer_Draft.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Inventory Transfer Drafts\Inventory_Transfer_Draft.Designer.cs">
+      <DependentUpon>Inventory_Transfer_Draft.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Inventory Transfer Request Drafts\Inventory_Transfer_Request_Draft.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Inventory Transfer Request Drafts\Inventory_Transfer_Request_Draft.Designer.cs">
+      <DependentUpon>Inventory_Transfer_Request_Draft.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Inventory Transfer Request\Inventory_Transfer_Request.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Inventory Transfer Request\Inventory_Transfer_Request.Designer.cs">
+      <DependentUpon>Inventory_Transfer_Request.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Inventory Transfer\Inventory_Transfer_1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Inventory Transfer\Inventory_Transfer_1.Designer.cs">
+      <DependentUpon>Inventory_Transfer_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\IT Comprehensive Report\IT_Comprehensive_Report_01.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\IT Comprehensive Report\IT_Comprehensive_Report_01.Designer.cs">
+      <DependentUpon>IT_Comprehensive_Report_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\IT Comprehensive Report\IT_OPERATIONS_STOCK.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\IT Comprehensive Report\IT_OPERATIONS_STOCK.Designer.cs">
+      <DependentUpon>IT_OPERATIONS_STOCK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\IT Comprehensive Report\IT_Comprehensive_Report_03.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\IT Comprehensive Report\IT_Comprehensive_Report_03.Designer.cs">
+      <DependentUpon>IT_Comprehensive_Report_03.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\IT Comprehensive Report\IT_Comprehensive_Report_Cover.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\IT Comprehensive Report\IT_Comprehensive_Report_Cover.Designer.cs">
+      <DependentUpon>IT_Comprehensive_Report_Cover.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\IT Comprehensive Report\IT_Comprehensive_Report_Purchases.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\IT Comprehensive Report\IT_Comprehensive_Report_Purchases.Designer.cs">
+      <DependentUpon>IT_Comprehensive_Report_Purchases.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\IT Operations\IT_Operations_Main_Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\IT Operations\IT_Operations_Main_Report.Designer.cs">
+      <DependentUpon>IT_Operations_Main_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\IT Operations\IT_Operations_Purchases.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\IT Operations\IT_Operations_Purchases.Designer.cs">
+      <DependentUpon>IT_Operations_Purchases.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\IT Operations\IT_Operations_Stock.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\IT Operations\IT_Operations_Stock.Designer.cs">
+      <DependentUpon>IT_Operations_Stock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\IT Operations\IT_Operations_Support.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\IT Operations\IT_Operations_Support.Designer.cs">
+      <DependentUpon>IT_Operations_Support.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\IT Operations\IT_Operations_Support_02.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\IT Operations\IT_Operations_Support_02.Designer.cs">
+      <DependentUpon>IT_Operations_Support_02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\IT Operations\IT_Operations_Support_Projects.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\IT Operations\IT_Operations_Support_Projects.Designer.cs">
+      <DependentUpon>IT_Operations_Support_Projects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Maintenance Dept Reports\Stock Receive\Maint_Dpt_Stock_Receive.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Maintenance Dept Reports\Stock Receive\Maint_Dpt_Stock_Receive.Designer.cs">
+      <DependentUpon>Maint_Dpt_Stock_Receive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Outgoing Payment Draft\Outgoing_Payment_Draft.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Outgoing Payment Draft\Outgoing_Payment_Draft.Designer.cs">
+      <DependentUpon>Outgoing_Payment_Draft.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Outgoing Payments\Outgoing Payment Standar Approval Sub Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Outgoing Payments\Outgoing Payment Standar Approval Sub Report.Designer.cs">
+      <DependentUpon>Outgoing Payment Standar Approval Sub Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Outgoing Payments\Outgoing_Payments.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Outgoing Payments\Outgoing_Payments.Designer.cs">
+      <DependentUpon>Outgoing_Payments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Outgoing Payments\Outgoing_Payment_2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Outgoing Payments\Outgoing_Payment_2.Designer.cs">
+      <DependentUpon>Outgoing_Payment_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Outgoing Payments\Outgoing_Payment_3.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Outgoing Payments\Outgoing_Payment_3.Designer.cs">
+      <DependentUpon>Outgoing_Payment_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Outgoing Payments\Outgoing_Payment_4.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Outgoing Payments\Outgoing_Payment_4.Designer.cs">
+      <DependentUpon>Outgoing_Payment_4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Payment Voucher\Payment_Voucher_1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Payment Voucher\Payment_Voucher_1.Designer.cs">
+      <DependentUpon>Payment_Voucher_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Pick List\Pick_List_01.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Pick List\Pick_List_01.Designer.cs">
+      <DependentUpon>Pick_List_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Pick List\Pick_List_02.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Pick List\Pick_List_02.Designer.cs">
+      <DependentUpon>Pick_List_02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Purchase Order Drafts\Purchase_Order_Draft.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Purchase Order Drafts\Purchase_Order_Draft.Designer.cs">
+      <DependentUpon>Purchase_Order_Draft.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Purchase Order Drafts\Purchase_Order_Draft_2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Purchase Order Drafts\Purchase_Order_Draft_2.Designer.cs">
+      <DependentUpon>Purchase_Order_Draft_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Purchase Order\Purchase_Order.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Purchase Order\Purchase_Order.Designer.cs">
+      <DependentUpon>Purchase_Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Purchase Order\Purchase_Order_Additional_Expenses_Sub_Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Purchase Order\Purchase_Order_Additional_Expenses_Sub_Report.Designer.cs">
+      <DependentUpon>Purchase_Order_Additional_Expenses_Sub_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Purchase Order\Purchase_Order_Approvals_Sub_Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Purchase Order\Purchase_Order_Approvals_Sub_Report.Designer.cs">
+      <DependentUpon>Purchase_Order_Approvals_Sub_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Purchase Order\Purchase_Order_Approvals_Sub_Report_2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Purchase Order\Purchase_Order_Approvals_Sub_Report_2.Designer.cs">
+      <DependentUpon>Purchase_Order_Approvals_Sub_Report_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Purchase Order\PURCHASE_ORDER_TAX_DETAILS_SUB_REPORT.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Purchase Order\PURCHASE_ORDER_TAX_DETAILS_SUB_REPORT.Designer.cs">
+      <DependentUpon>PURCHASE_ORDER_TAX_DETAILS_SUB_REPORT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Purchase Order\Purchase_Order_Tax_Details_Sub_Report_Main.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Purchase Order\Purchase_Order_Tax_Details_Sub_Report_Main.Designer.cs">
+      <DependentUpon>Purchase_Order_Tax_Details_Sub_Report_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Purchase Request Drafts\Purchase_Request_Draft.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Purchase Request Drafts\Purchase_Request_Draft.Designer.cs">
+      <DependentUpon>Purchase_Request_Draft.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Purchase Request Drafts\Purchase_Request_Draft_Approval_Sub_Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Purchase Request Drafts\Purchase_Request_Draft_Approval_Sub_Report.Designer.cs">
+      <DependentUpon>Purchase_Request_Draft_Approval_Sub_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Purchase Request\PURCHASE_REQUEST.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Purchase Request\PURCHASE_REQUEST.Designer.cs">
+      <DependentUpon>PURCHASE_REQUEST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Purchase Request\Purchase_Request_Approvals_Sub_Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Purchase Request\Purchase_Request_Approvals_Sub_Report.Designer.cs">
+      <DependentUpon>Purchase_Request_Approvals_Sub_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Purchase Request\SR_CONSUMPTION_DETAIL.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Purchase Request\SR_CONSUMPTION_DETAIL.Designer.cs">
+      <DependentUpon>SR_CONSUMPTION_DETAIL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Purchase Request\SR_PURCHASE_DETAIL.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Purchase Request\SR_PURCHASE_DETAIL.Designer.cs">
+      <DependentUpon>SR_PURCHASE_DETAIL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Report Header\Header.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Report Header\Header.Designer.cs">
+      <DependentUpon>Header.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Sales_Order\AR_SO_3.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Sales_Order\AR_SO_3.Designer.cs">
+      <DependentUpon>AR_SO_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\BankDetails_1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\BankDetails_1.Designer.cs">
+      <DependentUpon>BankDetails_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ReportsFactory.cs" />
+    <Compile Include="Reports\Sales_Order\AR_SO_4.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Sales_Order\AR_SO_4.Designer.cs">
+      <DependentUpon>AR_SO_4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Sales_Order\AR_SO_5.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Sales_Order\AR_SO_5.Designer.cs">
+      <DependentUpon>AR_SO_5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Sales_Order\AR_SO_6.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Sales_Order\AR_SO_6.Designer.cs">
+      <DependentUpon>AR_SO_6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Sales_Order\AR_SO_7.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Sales_Order\AR_SO_7.Designer.cs">
+      <DependentUpon>AR_SO_7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Sales_Order\AR_SO_8.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Sales_Order\AR_SO_8.Designer.cs">
+      <DependentUpon>AR_SO_8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Sales_Order\Sales_Order_Draft.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Sales_Order\Sales_Order_Draft.Designer.cs">
+      <DependentUpon>Sales_Order_Draft.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Sales_Quotation\SQ_1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Sales_Quotation\SQ_1.Designer.cs">
+      <DependentUpon>SQ_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Sales_Quotation\SQ_2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Sales_Quotation\SQ_2.Designer.cs">
+      <DependentUpon>SQ_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Standar Approval - Sub Report\Standar Approval_Sub_Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Standar Approval - Sub Report\Standar Approval_Sub_Report.Designer.cs">
+      <DependentUpon>Standar Approval_Sub_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Stock Count OLD\STOCK_COUNT_1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Stock Count OLD\STOCK_COUNT_1.Designer.cs">
+      <DependentUpon>STOCK_COUNT_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Stock_Count\sr_Stock_Count_Auditors.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Stock_Count\sr_Stock_Count_Auditors.Designer.cs">
+      <DependentUpon>sr_Stock_Count_Auditors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Stock_Count\sr_Stock_Count_Denomination.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Stock_Count\sr_Stock_Count_Denomination.Designer.cs">
+      <DependentUpon>sr_Stock_Count_Denomination.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Stock_Count\sr_Stock_Count_Salespersons.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Stock_Count\sr_Stock_Count_Salespersons.Designer.cs">
+      <DependentUpon>sr_Stock_Count_Salespersons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Stock_Count\Stock_Count_Detail_Sub_Report.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Stock_Count\Stock_Count_Detail_Sub_Report.Designer.cs">
+      <DependentUpon>Stock_Count_Detail_Sub_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Stock Count OLD\STOCK_COUNT_ITEMS_ONLY_SUB_RPT.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Stock Count OLD\STOCK_COUNT_ITEMS_ONLY_SUB_RPT.Designer.cs">
+      <DependentUpon>STOCK_COUNT_ITEMS_ONLY_SUB_RPT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Stock_Count\Stock_Count_On_Hand_Sub_Report_CrossTab.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Stock_Count\Stock_Count_On_Hand_Sub_Report_CrossTab.Designer.cs">
+      <DependentUpon>Stock_Count_On_Hand_Sub_Report_CrossTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Stock_Count\STOCK_COUNT_SQL_4.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Stock_Count\STOCK_COUNT_SQL_4.Designer.cs">
+      <DependentUpon>STOCK_COUNT_SQL_4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Stock_Count\Stock_Count_Sub_Report_CrossTab.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Stock_Count\Stock_Count_Sub_Report_CrossTab.Designer.cs">
+      <DependentUpon>Stock_Count_Sub_Report_CrossTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Stock_Count\Stock_Count_Sub_Report_Signatures.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Stock_Count\Stock_Count_Sub_Report_Signatures.Designer.cs">
+      <DependentUpon>Stock_Count_Sub_Report_Signatures.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Stock_Count\Test Reports\Test Audit Details.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Stock_Count\Test Reports\Test Audit Details.Designer.cs">
+      <DependentUpon>Test Audit Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Stock_Count\Updated File\sr_Stock_Count_Auditors.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Stock_Count\Updated File\sr_Stock_Count_Auditors.Designer.cs">
+      <DependentUpon>sr_Stock_Count_Auditors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Stock_Count\Updated File\sr_Stock_Count_Denomination.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Stock_Count\Updated File\sr_Stock_Count_Denomination.Designer.cs">
+      <DependentUpon>sr_Stock_Count_Denomination.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Stock_Count\Updated File\sr_Stoc_Count_Salespersons.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Stock_Count\Updated File\sr_Stoc_Count_Salespersons.Designer.cs">
+      <DependentUpon>sr_Stoc_Count_Salespersons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Stock_Count\Updated File\STOCK_COUNT_5.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Stock_Count\Updated File\STOCK_COUNT_5.Designer.cs">
+      <DependentUpon>STOCK_COUNT_5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Support Ticket\Support_Ticket_1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Support Ticket\Support_Ticket_1.Designer.cs">
+      <DependentUpon>Support_Ticket_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Support Ticket\Support_Ticket_2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Support Ticket\Support_Ticket_2.Designer.cs">
+      <DependentUpon>Support_Ticket_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Task Status Report\Task_Status_Report_1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Task Status Report\Task_Status_Report_1.Designer.cs">
+      <DependentUpon>Task_Status_Report_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Task Status Report\Task_Status_Report_2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Task Status Report\Task_Status_Report_2.Designer.cs">
+      <DependentUpon>Task_Status_Report_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\TEST\XtraReport1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\TEST\XtraReport1.Designer.cs">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\TEST\XtraReport2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\TEST\XtraReport2.Designer.cs">
+      <DependentUpon>XtraReport2.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DocNumberFinder.resx">
+      <DependentUpon>DocNumberFinder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmdxReport.resx">
+      <DependentUpon>frmdxReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reports\Actual Vs Target\Actual_VS_Target.resx">
+      <DependentUpon>Actual_VS_Target.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\AP Credit Memo\AP_Credit_Memo_2.resx">
+      <DependentUpon>AP_Credit_Memo_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\AP Credit Memo\AP_Crredit_Memo.resx">
+      <DependentUpon>AP_Crredit_Memo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\AP Credit Memo\AP_Credit_Notes.resx">
+      <DependentUpon>AP_Credit_Notes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\AP Down Payment Request\AP_Down_Payment_Request.resx">
+      <DependentUpon>AP_Down_Payment_Request.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\AP Down Payment Request\AP_Down_Payment_Request_Draft.resx">
+      <DependentUpon>AP_Down_Payment_Request_Draft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\AP Invoice Draft\AP_INVOICE_DRAFT.resx">
+      <DependentUpon>AP_INVOICE_DRAFT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\AP Invoice\AP_INVOICE.resx">
+      <DependentUpon>AP_INVOICE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\AP Invoice\AR_Invoice_Barcode.resx">
+      <DependentUpon>AR_Invoice_Barcode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\AR Credit Note\AR_CREDIT_NOTE_1.resx">
+      <DependentUpon>AR_CREDIT_NOTE_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\AR_Invoice\AR_INVOICE_3.resx">
+      <DependentUpon>AR_INVOICE_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\AR_Invoice\AR_INVOICE_4.resx">
+      <DependentUpon>AR_INVOICE_4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\AR_Invoice\XtraReport3.resx">
+      <DependentUpon>XtraReport3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Asset Barcode\Asset_Barcode.resx">
+      <DependentUpon>Asset_Barcode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Asset Barcode\XtraReport4.resx">
+      <DependentUpon>XtraReport4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Bank Details\Bank_Details_2.resx">
+      <DependentUpon>Bank_Details_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Box Print\Box_Print_01.resx">
+      <DependentUpon>Box_Print_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Box Print\Box_Print_02.resx">
+      <DependentUpon>Box_Print_02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Cash Balance Summary\Cash_Balance_Summary_01.resx">
+      <DependentUpon>Cash_Balance_Summary_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Checklist Audit\Checklist_Audit_01.resx">
+      <DependentUpon>Checklist_Audit_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Commercial_License\Commercial_License.resx">
+      <DependentUpon>Commercial_License.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Commercial_License\Commercial_License_2.resx">
+      <DependentUpon>Commercial_License_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Commercial_License\sr_License_Activies.resx">
+      <DependentUpon>sr_License_Activies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Commercial_License\sr_License_Member.resx">
+      <DependentUpon>sr_License_Member.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Commercial_License\sr_Permit_Details.resx">
+      <DependentUpon>sr_Permit_Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Commercial_License\sr_Register_Activites.resx">
+      <DependentUpon>sr_Register_Activites.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Coupon QR Printing\Coupon QR Pringting\Coupon_Printing_02_Original.resx">
+      <DependentUpon>Coupon_Printing_02_Original.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Coupon QR Printing\Coupon QR Pringting\Coupon_Printing_2x2.resx">
+      <DependentUpon>Coupon_Printing_2x2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Coupon QR Printing\Coupon QR Printing.resx">
+      <DependentUpon>Coupon QR Printing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Coupon QR Printing\Coupon_Printing_02.resx">
+      <DependentUpon>Coupon_Printing_02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Coupon QR Printing\Coupon_Printing_03.resx">
+      <DependentUpon>Coupon_Printing_03.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Coupon QR Printing\Coupon_Printing_04.resx">
+      <DependentUpon>Coupon_Printing_04.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Coupon QR Printing\Coupon_Printing_05.resx">
+      <DependentUpon>Coupon_Printing_05.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Coupon QR Printing\temp\temp.resx">
+      <DependentUpon>temp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Customer Aging\Customer_Aging_1.resx">
+      <DependentUpon>Customer_Aging_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Customer Statement\Customer_Statement_1.resx">
+      <DependentUpon>Customer_Statement_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Customer Statement\Customer_Statement_2.resx">
+      <DependentUpon>Customer_Statement_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Delivery Order\Delivery_Order.resx">
+      <DependentUpon>Delivery_Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\E-Commerce\Amazon.resx">
+      <DependentUpon>Amazon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\E-Commerce\E_COMMERCE_AR_INVOICE_2.resx">
+      <DependentUpon>E_COMMERCE_AR_INVOICE_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\E-Commerce\E_COMM_AR_INVOICE_1.resx">
+      <DependentUpon>E_COMM_AR_INVOICE_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Goods Receipt PO\Goods_Receipt_PO.resx">
+      <DependentUpon>Goods_Receipt_PO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Goods Receipt PO\Goods_Receipt_PO_2.resx">
+      <DependentUpon>Goods_Receipt_PO_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Goods Receipt PO\XtraReport5.resx">
+      <DependentUpon>XtraReport5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Incoming Payments\Incoming_Payments.resx">
+      <DependentUpon>Incoming_Payments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Inventory Transfer Drafts\Inventory_Transfer_Draft.resx">
+      <DependentUpon>Inventory_Transfer_Draft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Inventory Transfer Request Drafts\Inventory_Transfer_Request_Draft.resx">
+      <DependentUpon>Inventory_Transfer_Request_Draft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Inventory Transfer Request\Inventory_Transfer_Request.resx">
+      <DependentUpon>Inventory_Transfer_Request.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Inventory Transfer\Inventory_Transfer_1.resx">
+      <DependentUpon>Inventory_Transfer_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\IT Comprehensive Report\IT_Comprehensive_Report_01.resx">
+      <DependentUpon>IT_Comprehensive_Report_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\IT Comprehensive Report\IT_OPERATIONS_STOCK.resx">
+      <DependentUpon>IT_OPERATIONS_STOCK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\IT Comprehensive Report\IT_Comprehensive_Report_03.resx">
+      <DependentUpon>IT_Comprehensive_Report_03.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\IT Comprehensive Report\IT_Comprehensive_Report_Cover.resx">
+      <DependentUpon>IT_Comprehensive_Report_Cover.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\IT Comprehensive Report\IT_Comprehensive_Report_Purchases.resx">
+      <DependentUpon>IT_Comprehensive_Report_Purchases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\IT Operations\IT_Operations_Main_Report.resx">
+      <DependentUpon>IT_Operations_Main_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\IT Operations\IT_Operations_Purchases.resx">
+      <DependentUpon>IT_Operations_Purchases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\IT Operations\IT_Operations_Stock.resx">
+      <DependentUpon>IT_Operations_Stock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\IT Operations\IT_Operations_Support.resx">
+      <DependentUpon>IT_Operations_Support.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\IT Operations\IT_Operations_Support_02.resx">
+      <DependentUpon>IT_Operations_Support_02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\IT Operations\IT_Operations_Support_Projects.resx">
+      <DependentUpon>IT_Operations_Support_Projects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Maintenance Dept Reports\Stock Receive\Maint_Dpt_Stock_Receive.resx">
+      <DependentUpon>Maint_Dpt_Stock_Receive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Outgoing Payment Draft\Outgoing_Payment_Draft.resx">
+      <DependentUpon>Outgoing_Payment_Draft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Outgoing Payments\Outgoing Payment Standar Approval Sub Report.resx">
+      <DependentUpon>Outgoing Payment Standar Approval Sub Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Outgoing Payments\Outgoing_Payments.resx">
+      <DependentUpon>Outgoing_Payments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Outgoing Payments\Outgoing_Payment_2.resx">
+      <DependentUpon>Outgoing_Payment_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Outgoing Payments\Outgoing_Payment_3.resx">
+      <DependentUpon>Outgoing_Payment_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Outgoing Payments\Outgoing_Payment_4.resx">
+      <DependentUpon>Outgoing_Payment_4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Payment Voucher\Payment_Voucher_1.resx">
+      <DependentUpon>Payment_Voucher_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Pick List\Pick_List_01.resx">
+      <DependentUpon>Pick_List_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Pick List\Pick_List_02.resx">
+      <DependentUpon>Pick_List_02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Purchase Order Drafts\Purchase_Order_Draft.resx">
+      <DependentUpon>Purchase_Order_Draft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Purchase Order Drafts\Purchase_Order_Draft_2.resx">
+      <DependentUpon>Purchase_Order_Draft_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Purchase Order\Purchase_Order.resx">
+      <DependentUpon>Purchase_Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Purchase Order\Purchase_Order_Additional_Expenses_Sub_Report.resx">
+      <DependentUpon>Purchase_Order_Additional_Expenses_Sub_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Purchase Order\Purchase_Order_Approvals_Sub_Report.resx">
+      <DependentUpon>Purchase_Order_Approvals_Sub_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Purchase Order\Purchase_Order_Approvals_Sub_Report_2.resx">
+      <DependentUpon>Purchase_Order_Approvals_Sub_Report_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Purchase Order\PURCHASE_ORDER_TAX_DETAILS_SUB_REPORT.resx">
+      <DependentUpon>PURCHASE_ORDER_TAX_DETAILS_SUB_REPORT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Purchase Order\Purchase_Order_Tax_Details_Sub_Report_Main.resx">
+      <DependentUpon>Purchase_Order_Tax_Details_Sub_Report_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Purchase Request Drafts\Purchase_Request_Draft.resx">
+      <DependentUpon>Purchase_Request_Draft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Purchase Request Drafts\Purchase_Request_Draft_Approval_Sub_Report.resx">
+      <DependentUpon>Purchase_Request_Draft_Approval_Sub_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Purchase Request\PURCHASE_REQUEST.resx">
+      <DependentUpon>PURCHASE_REQUEST.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Purchase Request\Purchase_Request_Approvals_Sub_Report.resx">
+      <DependentUpon>Purchase_Request_Approvals_Sub_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Purchase Request\SR_CONSUMPTION_DETAIL.resx">
+      <DependentUpon>SR_CONSUMPTION_DETAIL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Purchase Request\SR_PURCHASE_DETAIL.resx">
+      <DependentUpon>SR_PURCHASE_DETAIL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Report Header\Header.resx">
+      <DependentUpon>Header.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Sales_Order\AR_SO_3.resx">
+      <DependentUpon>AR_SO_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\BankDetails_1.resx">
+      <DependentUpon>BankDetails_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Sales_Order\AR_SO_4.resx">
+      <DependentUpon>AR_SO_4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Sales_Order\AR_SO_5.resx">
+      <DependentUpon>AR_SO_5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Sales_Order\AR_SO_6.resx">
+      <DependentUpon>AR_SO_6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Sales_Order\AR_SO_7.resx">
+      <DependentUpon>AR_SO_7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Sales_Order\AR_SO_8.resx">
+      <DependentUpon>AR_SO_8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Sales_Order\Sales_Order_Draft.resx">
+      <DependentUpon>Sales_Order_Draft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Sales_Quotation\SQ_1.resx">
+      <DependentUpon>SQ_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Sales_Quotation\SQ_2.resx">
+      <DependentUpon>SQ_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Standar Approval - Sub Report\Standar Approval_Sub_Report.resx">
+      <DependentUpon>Standar Approval_Sub_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Stock Count OLD\STOCK_COUNT_1.resx">
+      <DependentUpon>STOCK_COUNT_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Stock_Count\sr_Stock_Count_Auditors.resx">
+      <DependentUpon>sr_Stock_Count_Auditors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Stock_Count\sr_Stock_Count_Denomination.resx">
+      <DependentUpon>sr_Stock_Count_Denomination.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Stock_Count\sr_Stock_Count_Salespersons.resx">
+      <DependentUpon>sr_Stock_Count_Salespersons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Stock_Count\Stock_Count_Detail_Sub_Report.resx">
+      <DependentUpon>Stock_Count_Detail_Sub_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Stock Count OLD\STOCK_COUNT_ITEMS_ONLY_SUB_RPT.resx">
+      <DependentUpon>STOCK_COUNT_ITEMS_ONLY_SUB_RPT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Stock_Count\Stock_Count_On_Hand_Sub_Report_CrossTab.resx">
+      <DependentUpon>Stock_Count_On_Hand_Sub_Report_CrossTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Stock_Count\STOCK_COUNT_SQL_4.resx">
+      <DependentUpon>STOCK_COUNT_SQL_4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Stock_Count\Stock_Count_Sub_Report_CrossTab.resx">
+      <DependentUpon>Stock_Count_Sub_Report_CrossTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Stock_Count\Stock_Count_Sub_Report_Signatures.resx">
+      <DependentUpon>Stock_Count_Sub_Report_Signatures.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Stock_Count\Test Reports\Test Audit Details.resx">
+      <DependentUpon>Test Audit Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Stock_Count\Updated File\sr_Stock_Count_Auditors.resx">
+      <DependentUpon>sr_Stock_Count_Auditors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Stock_Count\Updated File\sr_Stock_Count_Denomination.resx">
+      <DependentUpon>sr_Stock_Count_Denomination.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Stock_Count\Updated File\sr_Stoc_Count_Salespersons.resx">
+      <DependentUpon>sr_Stoc_Count_Salespersons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Stock_Count\Updated File\STOCK_COUNT_5.resx">
+      <DependentUpon>STOCK_COUNT_5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Support Ticket\Support_Ticket_1.resx">
+      <DependentUpon>Support_Ticket_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Support Ticket\Support_Ticket_2.resx">
+      <DependentUpon>Support_Ticket_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Task Status Report\Task_Status_Report_1.resx">
+      <DependentUpon>Task_Status_Report_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Task Status Report\Task_Status_Report_2.resx">
+      <DependentUpon>Task_Status_Report_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\TEST\XtraReport1.resx">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\TEST\XtraReport2.resx">
+      <DependentUpon>XtraReport2.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Reports\User Task\UserTask.repx" />
+    <None Include="Resources\AMG-LOGO-JPG-6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AMG-LOGO-JPG-7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AMG-LOGO-JPG-8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AMG-LOGO-JPG-9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\border.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\border2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\border3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\border.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\border5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\border6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AMG-LOGO-JPG-10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AMG-LOGO-JPG-110.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\INTERNAL USE ONLY.emf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\INTERNAL-USE-ONLY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.emf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo2.emf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employeequickwelcome.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\productquickshippments.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employees.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AMG-LOGO-Gold.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AMG-LOGO-FILES.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrowbearright.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mr.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actions_user.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\card.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkbox.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\currency.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editcomment.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bo_department.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ticket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Commercial_License\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 1%404x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Reports\Coupon QR Printing\4x\Asset 1%404x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Reports\Coupon QR Printing\4x\Artboard 1%404x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Reports\Coupon QR Printing\4x\scan box%404x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Reports\Coupon QR Printing\4x\scan box2%404x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Reports\Coupon QR Printing\4x\scan box3%404x.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
