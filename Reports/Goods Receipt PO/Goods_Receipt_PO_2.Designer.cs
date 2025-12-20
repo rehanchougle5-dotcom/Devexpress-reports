@@ -483,7 +483,7 @@
             this.xrTableCell76.StylePriority.UseForeColor = false;
             this.xrTableCell76.StylePriority.UseTextAlignment = false;
             this.xrTableCell76.Text = "xrTableCell59";
-            this.xrTableCell76.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrTableCell76.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             this.xrTableCell76.TextFormatString = "{0:N2}";
             this.xrTableCell76.Weight = 78.090496476950392D;
             // 

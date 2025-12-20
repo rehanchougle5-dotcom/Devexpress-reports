@@ -89,8 +89,6 @@
             this.xrShape3 = new DevExpress.XtraReports.UI.XRShape();
             this.xrTableCell10 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableRow6 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.xrTableCell12 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell51 = new DevExpress.XtraReports.UI.XRTableCell();
             this.SubBand1 = new DevExpress.XtraReports.UI.SubBand();
             this.xrLine1 = new DevExpress.XtraReports.UI.XRLine();
             this.GroupHeader1 = new DevExpress.XtraReports.UI.GroupHeaderBand();
@@ -210,12 +208,14 @@
             this.xrTableCell54 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell58 = new DevExpress.XtraReports.UI.XRTableCell();
             this.SubBand8 = new DevExpress.XtraReports.UI.SubBand();
-            this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
             this.SubBand9 = new DevExpress.XtraReports.UI.SubBand();
             this.xrPageInfo2 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.cf_LineDiscount = new DevExpress.XtraReports.UI.CalculatedField();
             this.DocEntry = new DevExpress.XtraReports.Parameters.Parameter();
             this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
+            this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
+            this.xrTableCell51 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell12 = new DevExpress.XtraReports.UI.XRTableCell();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable6)).BeginInit();
@@ -713,52 +713,6 @@
             this.xrTableCell51});
             this.xrTableRow6.Name = "xrTableRow6";
             this.xrTableRow6.Weight = 1.3427146431256543D;
-            // 
-            // xrTableCell12
-            // 
-            this.xrTableCell12.BackColor = System.Drawing.Color.Transparent;
-            this.xrTableCell12.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(63)))), ((int)(((byte)(88)))));
-            this.xrTableCell12.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dot;
-            this.xrTableCell12.Borders = DevExpress.XtraPrinting.BorderSide.Right;
-            this.xrTableCell12.BorderWidth = 0.5F;
-            this.xrTableCell12.Font = new DevExpress.Drawing.DXFont("COURIER NEW", 12F, DevExpress.Drawing.DXFontStyle.Bold);
-            this.xrTableCell12.ForeColor = System.Drawing.Color.Maroon;
-            this.xrTableCell12.Multiline = true;
-            this.xrTableCell12.Name = "xrTableCell12";
-            this.xrTableCell12.StylePriority.UseBackColor = false;
-            this.xrTableCell12.StylePriority.UseBorderColor = false;
-            this.xrTableCell12.StylePriority.UseBorderDashStyle = false;
-            this.xrTableCell12.StylePriority.UseBorders = false;
-            this.xrTableCell12.StylePriority.UseBorderWidth = false;
-            this.xrTableCell12.StylePriority.UseFont = false;
-            this.xrTableCell12.StylePriority.UseForeColor = false;
-            this.xrTableCell12.StylePriority.UseTextAlignment = false;
-            this.xrTableCell12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell12.Weight = 0.1440723290899838D;
-            // 
-            // xrTableCell51
-            // 
-            this.xrTableCell51.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(244)))), ((int)(((byte)(247)))));
-            this.xrTableCell51.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(63)))), ((int)(((byte)(88)))));
-            this.xrTableCell51.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dot;
-            this.xrTableCell51.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrTableCell51.BorderWidth = 0.5F;
-            this.xrTableCell51.Font = new DevExpress.Drawing.DXFont("COURIER NEW", 12F, DevExpress.Drawing.DXFontStyle.Bold);
-            this.xrTableCell51.ForeColor = System.Drawing.Color.Maroon;
-            this.xrTableCell51.Multiline = true;
-            this.xrTableCell51.Name = "xrTableCell51";
-            this.xrTableCell51.StylePriority.UseBackColor = false;
-            this.xrTableCell51.StylePriority.UseBorderColor = false;
-            this.xrTableCell51.StylePriority.UseBorderDashStyle = false;
-            this.xrTableCell51.StylePriority.UseBorders = false;
-            this.xrTableCell51.StylePriority.UseBorderWidth = false;
-            this.xrTableCell51.StylePriority.UseFont = false;
-            this.xrTableCell51.StylePriority.UseForeColor = false;
-            this.xrTableCell51.StylePriority.UseTextAlignment = false;
-            this.xrTableCell51.Text = "[ DRAFT ]";
-            this.xrTableCell51.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell51.Visible = false;
-            this.xrTableCell51.Weight = 3.2756827898052236D;
             // 
             // SubBand1
             // 
@@ -1817,7 +1771,7 @@
             // xrTableCell61
             // 
             this.xrTableCell61.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[DocCur] + \' \' + FormatString(\'{0:N2}\', sumSum(SUM([cf_LineDiscount]))\n)\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum(SUM([cf_LineDiscount]))")});
             this.xrTableCell61.Multiline = true;
             this.xrTableCell61.Name = "xrTableCell61";
             this.xrTableCell61.StylePriority.UseTextAlignment = false;
@@ -2331,15 +2285,6 @@
             this.SubBand8.HeightF = 23F;
             this.SubBand8.Name = "SubBand8";
             // 
-            // xrSubreport1
-            // 
-            this.xrSubreport1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.xrSubreport1.Name = "xrSubreport1";
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("srDraftEntry", null, "AMG_TRD_UAE_RPT_AP_DOWN_PAYMENT_REQUEST_DRAFT.DocEntry"));
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("srObjType", null, "AMG_TRD_UAE_RPT_AP_DOWN_PAYMENT_REQUEST_DRAFT.ObjType"));
-            this.xrSubreport1.ReportSource = new dxReports.Reports.Standar_Approval___Sub_Report.Standar_Approval_Sub_Report();
-            this.xrSubreport1.SizeF = new System.Drawing.SizeF(805F, 23F);
-            // 
             // SubBand9
             // 
             this.SubBand9.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
@@ -2367,7 +2312,7 @@
             // 
             // cf_LineDiscount
             // 
-            this.cf_LineDiscount.DataMember = "AMG_TRD_UAE_RPT_AP_DOWN_PAYMENT_REQUEST_DRAFT";
+            this.cf_LineDiscount.DataMember = "AMG_TRD_UAE_RPT_AP_DOWN_PAYMENT_REQUEST";
             this.cf_LineDiscount.Expression = "[Price] - [NetPrice]";
             this.cf_LineDiscount.Name = "cf_LineDiscount";
             // 
@@ -2392,6 +2337,62 @@
             storedProcQuery1});
             this.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable");
             // 
+            // xrSubreport1
+            // 
+            this.xrSubreport1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrSubreport1.Name = "xrSubreport1";
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("srDraftEntry", null, "AMG_TRD_UAE_RPT_AP_DOWN_PAYMENT_REQUEST_DRAFT.DocEntry"));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("srObjType", null, "AMG_TRD_UAE_RPT_AP_DOWN_PAYMENT_REQUEST_DRAFT.ObjType"));
+            this.xrSubreport1.ReportSource = new dxReports.Reports.Standar_Approval___Sub_Report.Standar_Approval_Sub_Report();
+            this.xrSubreport1.SizeF = new System.Drawing.SizeF(805F, 23F);
+            // 
+            // xrTableCell51
+            // 
+            this.xrTableCell51.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(244)))), ((int)(((byte)(247)))));
+            this.xrTableCell51.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(63)))), ((int)(((byte)(88)))));
+            this.xrTableCell51.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dot;
+            this.xrTableCell51.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Right) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrTableCell51.BorderWidth = 0.5F;
+            this.xrTableCell51.Font = new DevExpress.Drawing.DXFont("COURIER NEW", 12F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrTableCell51.ForeColor = System.Drawing.Color.Maroon;
+            this.xrTableCell51.Multiline = true;
+            this.xrTableCell51.Name = "xrTableCell51";
+            this.xrTableCell51.StylePriority.UseBackColor = false;
+            this.xrTableCell51.StylePriority.UseBorderColor = false;
+            this.xrTableCell51.StylePriority.UseBorderDashStyle = false;
+            this.xrTableCell51.StylePriority.UseBorders = false;
+            this.xrTableCell51.StylePriority.UseBorderWidth = false;
+            this.xrTableCell51.StylePriority.UseFont = false;
+            this.xrTableCell51.StylePriority.UseForeColor = false;
+            this.xrTableCell51.StylePriority.UseTextAlignment = false;
+            this.xrTableCell51.Text = "[ DRAFT ]";
+            this.xrTableCell51.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrTableCell51.Weight = 3.2756827898052236D;
+            // 
+            // xrTableCell12
+            // 
+            this.xrTableCell12.BackColor = System.Drawing.Color.Transparent;
+            this.xrTableCell12.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(63)))), ((int)(((byte)(88)))));
+            this.xrTableCell12.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dot;
+            this.xrTableCell12.Borders = DevExpress.XtraPrinting.BorderSide.Right;
+            this.xrTableCell12.BorderWidth = 0.5F;
+            this.xrTableCell12.Font = new DevExpress.Drawing.DXFont("COURIER NEW", 12F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrTableCell12.ForeColor = System.Drawing.Color.Maroon;
+            this.xrTableCell12.Multiline = true;
+            this.xrTableCell12.Name = "xrTableCell12";
+            this.xrTableCell12.StylePriority.UseBackColor = false;
+            this.xrTableCell12.StylePriority.UseBorderColor = false;
+            this.xrTableCell12.StylePriority.UseBorderDashStyle = false;
+            this.xrTableCell12.StylePriority.UseBorders = false;
+            this.xrTableCell12.StylePriority.UseBorderWidth = false;
+            this.xrTableCell12.StylePriority.UseFont = false;
+            this.xrTableCell12.StylePriority.UseForeColor = false;
+            this.xrTableCell12.StylePriority.UseTextAlignment = false;
+            this.xrTableCell12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrTableCell12.Weight = 0.1440723290899838D;
+            // 
             // AP_Down_Payment_Request_Draft
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -2413,12 +2414,8 @@
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.DocEntry});
             this.Version = "23.1";
-            this.Watermark.Font = new DevExpress.Drawing.DXFont("Verdana", 90F, DevExpress.Drawing.DXFontStyle.Bold);
-            this.Watermark.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
             this.Watermark.ImageSource = new DevExpress.XtraPrinting.Drawing.ImageSource("img", resources.GetString("AP_Down_Payment_Request_Draft.Watermark.ImageSource"));
             this.Watermark.ImageTransparency = 220;
-            this.Watermark.Text = "D R A F T";
-            this.Watermark.TextDirection = DevExpress.XtraPrinting.Drawing.DirectionMode.Horizontal;
             ((System.ComponentModel.ISupportInitialize)(this.xrTable4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable6)).EndInit();

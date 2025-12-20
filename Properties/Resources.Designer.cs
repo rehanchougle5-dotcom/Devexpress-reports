@@ -19,7 +19,7 @@ namespace dxReports.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -57,16 +57,6 @@ namespace dxReports.Properties {
             }
             set {
                 resourceCulture = value;
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _15_oFF {
-            get {
-                object obj = ResourceManager.GetObject("15%oFF", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -171,36 +161,6 @@ namespace dxReports.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Artboard_1_4x {
-            get {
-                object obj = ResourceManager.GetObject("Artboard 1@4x", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Asset_1_4x {
-            get {
-                object obj = ResourceManager.GetObject("Asset 1@4x", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Asset_1_4x1 {
-            get {
-                object obj = ResourceManager.GetObject("Asset 1@4x1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
         /// </summary>
         internal static DevExpress.Utils.Svg.SvgImage bo_department {
@@ -291,42 +251,12 @@ namespace dxReports.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap COUPON_PRINTING {
-            get {
-                object obj = ResourceManager.GetObject("COUPON_PRINTING", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
         /// </summary>
         internal static DevExpress.Utils.Svg.SvgImage currency {
             get {
                 object obj = ResourceManager.GetObject("currency", resourceCulture);
                 return ((DevExpress.Utils.Svg.SvgImage)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap DISCOUNT_VOUCHER {
-            get {
-                object obj = ResourceManager.GetObject("DISCOUNT VOUCHER", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap DISCOUNT_VOUCHER2 {
-            get {
-                object obj = ResourceManager.GetObject("DISCOUNT VOUCHER2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -373,29 +303,9 @@ namespace dxReports.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap logo1 {
-            get {
-                object obj = ResourceManager.GetObject("logo1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap logo2 {
             get {
                 object obj = ResourceManager.GetObject("logo2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap logo21 {
-            get {
-                object obj = ResourceManager.GetObject("logo21", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -427,36 +337,6 @@ namespace dxReports.Properties {
             get {
                 object obj = ResourceManager.GetObject("productquickshippments", resourceCulture);
                 return ((DevExpress.Utils.Svg.SvgImage)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap scan_box_4x {
-            get {
-                object obj = ResourceManager.GetObject("scan box@4x", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap scan_box2_4x {
-            get {
-                object obj = ResourceManager.GetObject("scan box2@4x", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap scan_box3_4x {
-            get {
-                object obj = ResourceManager.GetObject("scan box3@4x", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

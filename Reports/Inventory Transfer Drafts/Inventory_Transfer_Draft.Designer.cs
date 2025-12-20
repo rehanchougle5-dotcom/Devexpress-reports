@@ -139,8 +139,6 @@
             this.rpt_HeadingBasedOnDocType_AR = new DevExpress.XtraReports.UI.CalculatedField();
             this.DocEntry = new DevExpress.XtraReports.Parameters.Parameter();
             this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
-            this.srDraftEntry = new DevExpress.XtraReports.Parameters.Parameter();
-            this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
             this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable9)).BeginInit();
@@ -1152,7 +1150,6 @@
             // 
             this.SubBand7.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrTable12});
-            this.SubBand7.HeightF = 51.02656F;
             this.SubBand7.Name = "SubBand7";
             // 
             // xrTable12
@@ -1254,8 +1251,9 @@
             // PageFooter
             // 
             this.PageFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrSubreport1,
             this.xrPageInfo2});
-            this.PageFooter.HeightF = 51.4157F;
+            this.PageFooter.HeightF = 75.79117F;
             this.PageFooter.Name = "PageFooter";
             // 
             // xrPageInfo2
@@ -1264,7 +1262,7 @@
             this.xrPageInfo2.BorderWidth = 0F;
             this.xrPageInfo2.Font = new DevExpress.Drawing.DXFont("tahoma", 8F);
             this.xrPageInfo2.ForeColor = System.Drawing.Color.Silver;
-            this.xrPageInfo2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 30.41573F);
+            this.xrPageInfo2.LocationFloat = new DevExpress.Utils.PointFloat(0.0002543131F, 54.79119F);
             this.xrPageInfo2.Name = "xrPageInfo2";
             this.xrPageInfo2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrPageInfo2.SizeF = new System.Drawing.SizeF(787.0002F, 20.99996F);
@@ -1323,29 +1321,13 @@
             storedProcQuery1});
             this.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable");
             // 
-            // srDraftEntry
-            // 
-            this.srDraftEntry.Description = "Draft Entry";
-            this.srDraftEntry.Name = "srDraftEntry";
-            this.srDraftEntry.Type = typeof(int);
-            this.srDraftEntry.ValueInfo = "0";
-            // 
-            // ReportFooter
-            // 
-            this.ReportFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrSubreport1});
-            this.ReportFooter.HeightF = 32.99999F;
-            this.ReportFooter.KeepTogether = true;
-            this.ReportFooter.Name = "ReportFooter";
-            this.ReportFooter.PrintAtBottom = true;
-            // 
             // xrSubreport1
             // 
             this.xrSubreport1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrSubreport1.Name = "xrSubreport1";
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("srDraftEntry", null, "AMG_TRD_UAE_RPT_STOCK_TRANSFER_DRAFT.DocEntry"));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("srDocEntry", null, "AMG_TRD_UAE_RPT_STOCK_TRANSFER_DRAFT.DocEntry"));
             this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("srObjType", null, "AMG_TRD_UAE_RPT_STOCK_TRANSFER_DRAFT.ObjType"));
-            this.xrSubreport1.ReportSource = new dxReports.Reports.Standar_Approval___Sub_Report.Standar_Approval_Sub_Report();
+            this.xrSubreport1.ReportSource = new dxReports.Reports.Purchase_Request_Drafts.Purchase_Request_Draft_Approval_Sub_Report();
             this.xrSubreport1.SizeF = new System.Drawing.SizeF(787.0005F, 32.99999F);
             // 
             // Inventory_Transfer_Draft
@@ -1357,8 +1339,7 @@
             this.PageHeader,
             this.GroupHeader1,
             this.GroupFooter1,
-            this.PageFooter,
-            this.ReportFooter});
+            this.PageFooter});
             this.CalculatedFields.AddRange(new DevExpress.XtraReports.UI.CalculatedField[] {
             this.calculatedField1,
             this.rpt_HeadingBasedOnDocType_AR});
@@ -1374,18 +1355,13 @@
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.DocEntry, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
-            this.DocEntry,
-            this.srDraftEntry});
+            this.DocEntry});
             this.StyleSheet.AddRange(new DevExpress.XtraReports.UI.XRControlStyle[] {
             this.xrControlStyle1,
             this.xrControlStyle2});
             this.Version = "23.1";
-            this.Watermark.Font = new DevExpress.Drawing.DXFont("Verdana", 90F, DevExpress.Drawing.DXFontStyle.Bold);
-            this.Watermark.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(216)))), ((int)(((byte)(216)))));
             this.Watermark.ImageSource = new DevExpress.XtraPrinting.Drawing.ImageSource("img", resources.GetString("Inventory_Transfer_Draft.Watermark.ImageSource"));
             this.Watermark.ImageTransparency = 225;
-            this.Watermark.Text = "D R A F T";
-            this.Watermark.TextDirection = DevExpress.XtraPrinting.Drawing.DirectionMode.Horizontal;
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable8)).EndInit();
@@ -1504,7 +1480,5 @@
         private DevExpress.XtraReports.Parameters.Parameter DocEntry;
         private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
         private DevExpress.XtraReports.UI.XRSubreport xrSubreport1;
-        private DevExpress.XtraReports.Parameters.Parameter srDraftEntry;
-        private DevExpress.XtraReports.UI.ReportFooterBand ReportFooter;
     }
 }

@@ -300,14 +300,6 @@ namespace dxReports.Reports.Sales_Quotation
             this.xrTableCell216 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell217 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell218 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.SubBand11 = new DevExpress.XtraReports.UI.SubBand();
-            this.SubBand22 = new DevExpress.XtraReports.UI.SubBand();
-            this.SubBand5 = new DevExpress.XtraReports.UI.SubBand();
-            this.SubBand14 = new DevExpress.XtraReports.UI.SubBand();
-            this.SubBand16 = new DevExpress.XtraReports.UI.SubBand();
-            this.SubBand6 = new DevExpress.XtraReports.UI.SubBand();
-            this.SubBand15 = new DevExpress.XtraReports.UI.SubBand();
-            this.SubBand17 = new DevExpress.XtraReports.UI.SubBand();
             this.GroupFooter1 = new DevExpress.XtraReports.UI.GroupFooterBand();
             this.xrLine3 = new DevExpress.XtraReports.UI.XRLine();
             this.SubBand9 = new DevExpress.XtraReports.UI.SubBand();
@@ -370,7 +362,6 @@ namespace dxReports.Reports.Sales_Quotation
             this.xrTableCell90 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell135 = new DevExpress.XtraReports.UI.XRTableCell();
             this.SubBand20 = new DevExpress.XtraReports.UI.SubBand();
-            this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
             this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
             this.xrTable4 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow8 = new DevExpress.XtraReports.UI.XRTableRow();
@@ -442,6 +433,7 @@ namespace dxReports.Reports.Sales_Quotation
             this.xrLine6 = new DevExpress.XtraReports.UI.XRLine();
             this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
             this.xrPageInfo2 = new DevExpress.XtraReports.UI.XRPageInfo();
+            this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.xrControlStyle1 = new DevExpress.XtraReports.UI.XRControlStyle();
             this.xrControlStyle2 = new DevExpress.XtraReports.UI.XRControlStyle();
             this.rpt_LineGrossAmount = new DevExpress.XtraReports.UI.CalculatedField();
@@ -452,8 +444,8 @@ namespace dxReports.Reports.Sales_Quotation
             this.isArabic = new DevExpress.XtraReports.Parameters.Parameter();
             this.DocNum = new DevExpress.XtraReports.Parameters.Parameter();
             this.QNO = new DevExpress.XtraReports.Parameters.Parameter();
-            this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.sqlDataSource2 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
+            this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable18)).BeginInit();
@@ -566,7 +558,7 @@ namespace dxReports.Reports.Sales_Quotation
             // xrTableCell48
             // 
             this.xrTableCell48.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\n\n\nIif(\n[ReportLanguage] = \'EN\', [ItemName], [ItemNameR])\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[ItemNameR]")});
             this.xrTableCell48.Multiline = true;
             this.xrTableCell48.Name = "xrTableCell48";
             this.xrTableCell48.Text = "xrTableCell37";
@@ -727,7 +719,7 @@ namespace dxReports.Reports.Sales_Quotation
             this.xrTableCell50.Multiline = true;
             this.xrTableCell50.Name = "xrTableCell50";
             this.xrTableCell50.Text = "xrTableCell36";
-            this.xrTableCell50.Weight = 19.50442956771019D;
+            this.xrTableCell50.Weight = 21.80271286391821D;
             // 
             // xrTableCell112
             // 
@@ -736,7 +728,7 @@ namespace dxReports.Reports.Sales_Quotation
             this.xrTableCell112.Multiline = true;
             this.xrTableCell112.Name = "xrTableCell112";
             this.xrTableCell112.Text = "xrTableCell37";
-            this.xrTableCell112.Weight = 64.503866260009332D;
+            this.xrTableCell112.Weight = 62.205582963801312D;
             // 
             // xrTableCell113
             // 
@@ -855,7 +847,7 @@ namespace dxReports.Reports.Sales_Quotation
             this.xrPictureBox1});
             this.SubBand13.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "/*[ReportLanguage] = \'EN\'*/\n")});
-            this.SubBand13.HeightF = 74.6104F;
+            this.SubBand13.HeightF = 78.15102F;
             this.SubBand13.Name = "SubBand13";
             // 
             // xrBarCode2
@@ -866,12 +858,12 @@ namespace dxReports.Reports.Sales_Quotation
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "IsNullOrEmpty([GlblLocNum]) || IsNullOrEmpty([Building])")});
             this.xrBarCode2.Font = new DevExpress.Drawing.DXFont("CALIBRI", 10F);
             this.xrBarCode2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(63)))), ((int)(((byte)(88)))));
-            this.xrBarCode2.LocationFloat = new DevExpress.Utils.PointFloat(593.378F, 36.04F);
+            this.xrBarCode2.LocationFloat = new DevExpress.Utils.PointFloat(594.7505F, 36.70166F);
             this.xrBarCode2.Module = 1.2F;
             this.xrBarCode2.Name = "xrBarCode2";
             this.xrBarCode2.Padding = new DevExpress.XtraPrinting.PaddingInfo(10, 10, 0, 0, 100F);
             this.xrBarCode2.ShowText = false;
-            this.xrBarCode2.SizeF = new System.Drawing.SizeF(195.7402F, 37.90423F);
+            this.xrBarCode2.SizeF = new System.Drawing.SizeF(191.5713F, 37.90423F);
             this.xrBarCode2.StylePriority.UseFont = false;
             this.xrBarCode2.StylePriority.UseForeColor = false;
             this.xrBarCode2.StylePriority.UseTextAlignment = false;
@@ -1221,7 +1213,7 @@ namespace dxReports.Reports.Sales_Quotation
             this.xrTableCell209.Multiline = true;
             this.xrTableCell209.Name = "xrTableCell209";
             this.xrTableCell209.Text = "xrTableCell9";
-            this.xrTableCell209.Weight = 0.20052997990598767D;
+            this.xrTableCell209.Weight = 0.2421937874008615D;
             // 
             // xrShape1
             // 
@@ -1251,7 +1243,7 @@ namespace dxReports.Reports.Sales_Quotation
             this.xrTableCell210.Tag = "PROFORMA INVOICE";
             this.xrTableCell210.Text = "SALES QUOTATION";
             this.xrTableCell210.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
-            this.xrTableCell210.Weight = 2.2760503413442681D;
+            this.xrTableCell210.Weight = 2.2343865338493942D;
             // 
             // xrTableRow63
             // 
@@ -1901,7 +1893,7 @@ namespace dxReports.Reports.Sales_Quotation
             // 
             this.SubBand19.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrLine2});
-            this.SubBand19.HeightF = 17.88993F;
+            this.SubBand19.HeightF = 37.90423F;
             this.SubBand19.Name = "SubBand19";
             // 
             // xrLine2
@@ -1924,15 +1916,7 @@ namespace dxReports.Reports.Sales_Quotation
             this.SubBand21,
             this.SubBand10,
             this.SubBand1,
-            this.SubBand23,
-            this.SubBand11,
-            this.SubBand22,
-            this.SubBand5,
-            this.SubBand14,
-            this.SubBand16,
-            this.SubBand6,
-            this.SubBand15,
-            this.SubBand17});
+            this.SubBand23});
             // 
             // SubBand21
             // 
@@ -2074,7 +2058,7 @@ namespace dxReports.Reports.Sales_Quotation
             // 
             // xrTableCell21
             // 
-            this.xrTableCell21.Font = new DevExpress.Drawing.DXFont("calibri", 8F);
+            this.xrTableCell21.Font = new DevExpress.Drawing.DXFont("TAHOma", 8F);
             this.xrTableCell21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(63)))), ((int)(((byte)(88)))));
             this.xrTableCell21.Multiline = true;
             this.xrTableCell21.Name = "xrTableCell21";
@@ -2157,7 +2141,7 @@ namespace dxReports.Reports.Sales_Quotation
             // 
             // xrTableCell22
             // 
-            this.xrTableCell22.Font = new DevExpress.Drawing.DXFont("calibri", 8F);
+            this.xrTableCell22.Font = new DevExpress.Drawing.DXFont("TAHOma", 8F);
             this.xrTableCell22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(63)))), ((int)(((byte)(88)))));
             this.xrTableCell22.Multiline = true;
             this.xrTableCell22.Name = "xrTableCell22";
@@ -2241,7 +2225,7 @@ namespace dxReports.Reports.Sales_Quotation
             // 
             // xrTableCell23
             // 
-            this.xrTableCell23.Font = new DevExpress.Drawing.DXFont("calibri", 8F);
+            this.xrTableCell23.Font = new DevExpress.Drawing.DXFont("TAHOma", 8F);
             this.xrTableCell23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(63)))), ((int)(((byte)(88)))));
             this.xrTableCell23.Multiline = true;
             this.xrTableCell23.Name = "xrTableCell23";
@@ -2322,8 +2306,10 @@ namespace dxReports.Reports.Sales_Quotation
             // 
             // xrTableCell94
             // 
+            this.xrTableCell94.Font = new DevExpress.Drawing.DXFont("TAHOma", 8F);
             this.xrTableCell94.Multiline = true;
             this.xrTableCell94.Name = "xrTableCell94";
+            this.xrTableCell94.StylePriority.UseFont = false;
             this.xrTableCell94.Text = ":";
             this.xrTableCell94.Weight = 0.16145632957724398D;
             // 
@@ -2596,7 +2582,7 @@ namespace dxReports.Reports.Sales_Quotation
             // 
             // xrTableCell66
             // 
-            this.xrTableCell66.Font = new DevExpress.Drawing.DXFont("calibri", 8F);
+            this.xrTableCell66.Font = new DevExpress.Drawing.DXFont("TAHOma", 8F);
             this.xrTableCell66.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(63)))), ((int)(((byte)(88)))));
             this.xrTableCell66.Multiline = true;
             this.xrTableCell66.Name = "xrTableCell66";
@@ -2681,7 +2667,7 @@ namespace dxReports.Reports.Sales_Quotation
             // 
             // xrTableCell72
             // 
-            this.xrTableCell72.Font = new DevExpress.Drawing.DXFont("calibri", 8F);
+            this.xrTableCell72.Font = new DevExpress.Drawing.DXFont("TAHOma", 8F);
             this.xrTableCell72.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(63)))), ((int)(((byte)(88)))));
             this.xrTableCell72.Multiline = true;
             this.xrTableCell72.Name = "xrTableCell72";
@@ -2767,7 +2753,7 @@ namespace dxReports.Reports.Sales_Quotation
             // 
             // xrTableCell78
             // 
-            this.xrTableCell78.Font = new DevExpress.Drawing.DXFont("calibri", 8F);
+            this.xrTableCell78.Font = new DevExpress.Drawing.DXFont("TAHOma", 8F);
             this.xrTableCell78.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(63)))), ((int)(((byte)(88)))));
             this.xrTableCell78.Multiline = true;
             this.xrTableCell78.Name = "xrTableCell78";
@@ -2850,9 +2836,11 @@ namespace dxReports.Reports.Sales_Quotation
             // 
             // xrTableCell16
             // 
+            this.xrTableCell16.Font = new DevExpress.Drawing.DXFont("TAHOma", 8F);
             this.xrTableCell16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(63)))), ((int)(((byte)(88)))));
             this.xrTableCell16.Multiline = true;
             this.xrTableCell16.Name = "xrTableCell16";
+            this.xrTableCell16.StylePriority.UseFont = false;
             this.xrTableCell16.StylePriority.UseForeColor = false;
             this.xrTableCell16.StylePriority.UseTextAlignment = false;
             this.xrTableCell16.Text = ":";
@@ -3006,7 +2994,7 @@ namespace dxReports.Reports.Sales_Quotation
             // 
             // xrTableCell187
             // 
-            this.xrTableCell187.Font = new DevExpress.Drawing.DXFont("CALIBRI", 8F);
+            this.xrTableCell187.Font = new DevExpress.Drawing.DXFont("TAHOma", 8F);
             this.xrTableCell187.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(63)))), ((int)(((byte)(88)))));
             this.xrTableCell187.Multiline = true;
             this.xrTableCell187.Name = "xrTableCell187";
@@ -3096,7 +3084,7 @@ namespace dxReports.Reports.Sales_Quotation
             // 
             // xrTableCell188
             // 
-            this.xrTableCell188.Font = new DevExpress.Drawing.DXFont("CALIbri", 8F);
+            this.xrTableCell188.Font = new DevExpress.Drawing.DXFont("TAHOma", 8F);
             this.xrTableCell188.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(63)))), ((int)(((byte)(88)))));
             this.xrTableCell188.Multiline = true;
             this.xrTableCell188.Name = "xrTableCell188";
@@ -3186,7 +3174,7 @@ namespace dxReports.Reports.Sales_Quotation
             // 
             // xrTableCell193
             // 
-            this.xrTableCell193.Font = new DevExpress.Drawing.DXFont("CALIbri", 8F);
+            this.xrTableCell193.Font = new DevExpress.Drawing.DXFont("TAHOma", 8F);
             this.xrTableCell193.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(63)))), ((int)(((byte)(88)))));
             this.xrTableCell193.Multiline = true;
             this.xrTableCell193.Name = "xrTableCell193";
@@ -3275,7 +3263,7 @@ namespace dxReports.Reports.Sales_Quotation
             // 
             // xrTableCell194
             // 
-            this.xrTableCell194.Font = new DevExpress.Drawing.DXFont("CALIbri", 8F);
+            this.xrTableCell194.Font = new DevExpress.Drawing.DXFont("TAHOma", 8F);
             this.xrTableCell194.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(63)))), ((int)(((byte)(88)))));
             this.xrTableCell194.Multiline = true;
             this.xrTableCell194.Name = "xrTableCell194";
@@ -3325,7 +3313,7 @@ namespace dxReports.Reports.Sales_Quotation
             // 
             // xrTableCell199
             // 
-            this.xrTableCell199.Font = new DevExpress.Drawing.DXFont("calibri", 8F);
+            this.xrTableCell199.Font = new DevExpress.Drawing.DXFont("TAHOma", 8F);
             this.xrTableCell199.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(63)))), ((int)(((byte)(88)))));
             this.xrTableCell199.Multiline = true;
             this.xrTableCell199.Name = "xrTableCell199";
@@ -3375,7 +3363,7 @@ namespace dxReports.Reports.Sales_Quotation
             // 
             // xrTableCell241
             // 
-            this.xrTableCell241.Font = new DevExpress.Drawing.DXFont("calibri", 8F);
+            this.xrTableCell241.Font = new DevExpress.Drawing.DXFont("TAHOma", 8F);
             this.xrTableCell241.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(63)))), ((int)(((byte)(88)))));
             this.xrTableCell241.Multiline = true;
             this.xrTableCell241.Name = "xrTableCell241";
@@ -3447,69 +3435,6 @@ namespace dxReports.Reports.Sales_Quotation
             this.xrTableCell218.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.xrTableCell218.Weight = 1.6458042275269262D;
             // 
-            // SubBand11
-            // 
-            this.SubBand11.HeightF = 0F;
-            this.SubBand11.Name = "SubBand11";
-            // 
-            // SubBand22
-            // 
-            this.SubBand22.HeightF = 0F;
-            this.SubBand22.Name = "SubBand22";
-            // 
-            // SubBand5
-            // 
-            this.SubBand5.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "/*([IsDetailedReport] = \'N\' And ([ReportLanguage] = \'EA\' OR [ReportLanguage] = \'E" +
-                    "N\'))\n*/\n\n([rpt_IsDetailedReport]= \'N\' And ([rpt_ReportLanguage] = \'EA\' OR [rpt_R" +
-                    "eportLanguage] = \'EN\'))")});
-            this.SubBand5.HeightF = 0F;
-            this.SubBand5.Name = "SubBand5";
-            // 
-            // SubBand14
-            // 
-            this.SubBand14.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "/*([IsDetailedReport] = \'N\' And ([ReportLanguage] = \'EA\' OR [ReportLanguage] = \'A" +
-                    "R\'))*/\n\n([rpt_IsDetailedReport] = \'N\' And ([rpt_ReportLanguage] = \'EA\' OR [rpt_R" +
-                    "eportLanguage] = \'AR\'))\n")});
-            this.SubBand14.HeightF = 0F;
-            this.SubBand14.Name = "SubBand14";
-            // 
-            // SubBand16
-            // 
-            this.SubBand16.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "/*([IsDetailedReport] = \'N\' And ([ReportLanguage] = \'EA\' OR [ReportLanguage] = \'A" +
-                    "R\'))*/\n\n[IsDetailedReport] = \'Y\'")});
-            this.SubBand16.HeightF = 0F;
-            this.SubBand16.Name = "SubBand16";
-            // 
-            // SubBand6
-            // 
-            this.SubBand6.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "/*([IsDetailedReport] = \'Y\' And ([ReportLanguage] = \'EA\' OR [ReportLanguage] = \'E" +
-                    "N\'))\n*/\n\n([rpt_IsDetailedReport] = \'Y\' And ([rpt_ReportLanguage] = \'EA\' OR [rpt_" +
-                    "ReportLanguage] = \'EN\'))\n")});
-            this.SubBand6.HeightF = 0F;
-            this.SubBand6.Name = "SubBand6";
-            // 
-            // SubBand15
-            // 
-            this.SubBand15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(244)))), ((int)(((byte)(247)))));
-            this.SubBand15.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "/*([IsDetailedReport] = \'Y\' And ([ReportLanguage] = \'EA\' OR [ReportLanguage] = \'A" +
-                    "R\'))\n*/\n\n([rpt_IsDetailedReport] = \'Y\' And ([rpt_ReportLanguage] = \'EA\' OR [rpt_" +
-                    "ReportLanguage] = \'AR\'))\n")});
-            this.SubBand15.HeightF = 0F;
-            this.SubBand15.Name = "SubBand15";
-            this.SubBand15.StylePriority.UseBackColor = false;
-            // 
-            // SubBand17
-            // 
-            this.SubBand17.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "/*[IsDetailedReport] = \'N\'*/")});
-            this.SubBand17.HeightF = 0F;
-            this.SubBand17.Name = "SubBand17";
-            // 
             // GroupFooter1
             // 
             this.GroupFooter1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
@@ -3535,7 +3460,7 @@ namespace dxReports.Reports.Sales_Quotation
             this.xrTable12,
             this.xrPictureBox4,
             this.xrTable10});
-            this.SubBand9.HeightF = 185.2139F;
+            this.SubBand9.HeightF = 192.5856F;
             this.SubBand9.KeepTogether = true;
             this.SubBand9.Name = "SubBand9";
             // 
@@ -4653,16 +4578,6 @@ namespace dxReports.Reports.Sales_Quotation
             this.SubBand20.KeepTogether = true;
             this.SubBand20.Name = "SubBand20";
             // 
-            // xrSubreport1
-            // 
-            this.xrSubreport1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.xrSubreport1.Name = "xrSubreport1";
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("sr_Currency", null, "AMG_TRD_UAE_RPT_SALES_QUOTATION.DocCurr"));
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("sr_ReportCode", null, "AMG_TRD_UAE_RPT_SALES_QUOTATION.ReportCode_1"));
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("sr_ReportLanguage", null, "AMG_TRD_UAE_RPT_SALES_QUOTATION.ReportLanguage"));
-            this.xrSubreport1.ReportSource = new dxReports.Reports.Bank_Details.Bank_Details_2();
-            this.xrSubreport1.SizeF = new System.Drawing.SizeF(790F, 99.99998F);
-            // 
             // ReportFooter
             // 
             this.ReportFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
@@ -4830,7 +4745,7 @@ namespace dxReports.Reports.Sales_Quotation
             this.xrLine1,
             this.xrLabel2,
             this.xrLabel1});
-            this.SubBand31.HeightF = 24.2673F;
+            this.SubBand31.HeightF = 18.43399F;
             this.SubBand31.Name = "SubBand31";
             // 
             // xrLine1
@@ -4848,16 +4763,16 @@ namespace dxReports.Reports.Sales_Quotation
                     "\', \n\t\'Currency  / عملة  : \' + [DocCurr],\n\' عملة  : \' + [DocCurr])\n")});
             this.xrLabel2.Font = new DevExpress.Drawing.DXFont("calibri", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(63)))), ((int)(((byte)(88)))));
-            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(401.4564F, 2F);
+            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(401.4563F, 2.00002F);
             this.xrLabel2.Multiline = true;
             this.xrLabel2.Name = "xrLabel2";
             this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel2.SizeF = new System.Drawing.SizeF(382.4166F, 22.2673F);
+            this.xrLabel2.SizeF = new System.Drawing.SizeF(382.4166F, 16.43397F);
             this.xrLabel2.StylePriority.UseFont = false;
             this.xrLabel2.StylePriority.UseForeColor = false;
             this.xrLabel2.StylePriority.UseTextAlignment = false;
             this.xrLabel2.Text = "xrLabel1";
-            this.xrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
+            this.xrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
             // xrLabel1
             // 
@@ -4867,11 +4782,11 @@ namespace dxReports.Reports.Sales_Quotation
                     "ت : \' + [SLPNAME])\n")});
             this.xrLabel1.Font = new DevExpress.Drawing.DXFont("calibri", 8F);
             this.xrLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(63)))), ((int)(((byte)(88)))));
-            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(0.2456506F, 2F);
+            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(0.2456665F, 2.00002F);
             this.xrLabel1.Multiline = true;
             this.xrLabel1.Name = "xrLabel1";
             this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel1.SizeF = new System.Drawing.SizeF(401.2107F, 22.2673F);
+            this.xrLabel1.SizeF = new System.Drawing.SizeF(401.2107F, 16.43397F);
             this.xrLabel1.StylePriority.UseFont = false;
             this.xrLabel1.StylePriority.UseForeColor = false;
             this.xrLabel1.StylePriority.UseTextAlignment = false;
@@ -5424,6 +5339,29 @@ namespace dxReports.Reports.Sales_Quotation
             this.xrPageInfo2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.xrPageInfo2.TextFormatString = "Page : {0} of {1}";
             // 
+            // sqlDataSource1
+            // 
+            this.sqlDataSource1.ConnectionName = "Far_hana";
+            this.sqlDataSource1.Name = "sqlDataSource1";
+            storedProcQuery1.Name = "AMG_TRD_UAE_RPT_SALES_QUOTATION";
+            queryParameter1.Name = "DOCENTRY";
+            queryParameter1.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter1.Value = new DevExpress.DataAccess.Expression("?DocEntry", typeof(int));
+            queryParameter2.Name = "DOCNUM";
+            queryParameter2.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter2.Value = new DevExpress.DataAccess.Expression("?DocNum", typeof(int));
+            queryParameter3.Name = "SONO";
+            queryParameter3.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter3.Value = new DevExpress.DataAccess.Expression("?QNO", typeof(int));
+            storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter1,
+            queryParameter2,
+            queryParameter3});
+            storedProcQuery1.StoredProcName = "AMG_TRD_UAE.RPT_SALES_QUOTATION";
+            this.sqlDataSource1.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
+            storedProcQuery1});
+            this.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable");
+            // 
             // xrControlStyle1
             // 
             this.xrControlStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(244)))), ((int)(((byte)(247)))));
@@ -5483,29 +5421,6 @@ namespace dxReports.Reports.Sales_Quotation
             this.QNO.Type = typeof(int);
             this.QNO.ValueInfo = "0";
             // 
-            // sqlDataSource1
-            // 
-            this.sqlDataSource1.ConnectionName = "Far_hana";
-            this.sqlDataSource1.Name = "sqlDataSource1";
-            storedProcQuery1.Name = "AMG_TRD_UAE_RPT_SALES_QUOTATION";
-            queryParameter1.Name = "DOCENTRY";
-            queryParameter1.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter1.Value = new DevExpress.DataAccess.Expression("?DocEntry", typeof(int));
-            queryParameter2.Name = "DOCNUM";
-            queryParameter2.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter2.Value = new DevExpress.DataAccess.Expression("?DocNum", typeof(int));
-            queryParameter3.Name = "SONO";
-            queryParameter3.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter3.Value = new DevExpress.DataAccess.Expression("?QNO", typeof(int));
-            storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter1,
-            queryParameter2,
-            queryParameter3});
-            storedProcQuery1.StoredProcName = "AMG_TRD_UAE.RPT_SALES_QUOTATION";
-            this.sqlDataSource1.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
-            storedProcQuery1});
-            this.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable");
-            // 
             // sqlDataSource2
             // 
             this.sqlDataSource2.ConnectionName = "Far_hana";
@@ -5528,6 +5443,17 @@ namespace dxReports.Reports.Sales_Quotation
             this.sqlDataSource2.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery2});
             this.sqlDataSource2.ResultSchemaSerializable = resources.GetString("sqlDataSource2.ResultSchemaSerializable");
+            // 
+            // xrSubreport1
+            // 
+            this.xrSubreport1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrSubreport1.Name = "xrSubreport1";
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("sr_Currency", null, "AMG_TRD_UAE_RPT_SALES_QUOTATION.DocCurr"));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("sr_ReportCode", null, "AMG_TRD_UAE_RPT_SALES_QUOTATION.ReportCode_1"));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("sr_ReportLanguage", null, "AMG_TRD_UAE_RPT_SALES_QUOTATION.ReportLanguage"));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("isArabic", this.isArabic));
+            this.xrSubreport1.ReportSource = new dxReports.Reports.Bank_Details.Bank_Details_2();
+            this.xrSubreport1.SizeF = new System.Drawing.SizeF(790F, 99.99998F);
             // 
             // SQ_2
             // 
@@ -5711,9 +5637,9 @@ namespace dxReports.Reports.Sales_Quotation
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell177;
         private DevExpress.XtraReports.UI.XRPictureBox xrPictureBox3;
         private DevExpress.XtraReports.UI.SubBand SubBand19;
+        private DevExpress.XtraReports.UI.XRLine xrLine2;
         private DevExpress.XtraReports.UI.GroupHeaderBand GroupHeader1;
         private DevExpress.XtraReports.UI.SubBand SubBand21;
-        private DevExpress.XtraReports.UI.XRLine xrLine2;
         private DevExpress.XtraReports.UI.SubBand SubBand10;
         private DevExpress.XtraReports.UI.XRTable xrTable1;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow1;
@@ -5791,6 +5717,9 @@ namespace dxReports.Reports.Sales_Quotation
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell83;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell84;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell85;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell20;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell16;
+        private DevExpress.XtraReports.UI.XRTableCell xrTableCell12;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow61;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell98;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell102;
@@ -5838,14 +5767,6 @@ namespace dxReports.Reports.Sales_Quotation
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell216;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell217;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell218;
-        private DevExpress.XtraReports.UI.SubBand SubBand11;
-        private DevExpress.XtraReports.UI.SubBand SubBand22;
-        private DevExpress.XtraReports.UI.SubBand SubBand5;
-        private DevExpress.XtraReports.UI.SubBand SubBand14;
-        private DevExpress.XtraReports.UI.SubBand SubBand16;
-        private DevExpress.XtraReports.UI.SubBand SubBand6;
-        private DevExpress.XtraReports.UI.SubBand SubBand15;
-        private DevExpress.XtraReports.UI.SubBand SubBand17;
         private DevExpress.XtraReports.UI.GroupFooterBand GroupFooter1;
         private DevExpress.XtraReports.UI.XRLine xrLine3;
         private DevExpress.XtraReports.UI.SubBand SubBand9;
@@ -5980,6 +5901,7 @@ namespace dxReports.Reports.Sales_Quotation
         private DevExpress.XtraReports.UI.XRLine xrLine6;
         private DevExpress.XtraReports.UI.PageFooterBand PageFooter;
         private DevExpress.XtraReports.UI.XRPageInfo xrPageInfo2;
+        private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
         private DevExpress.XtraReports.UI.XRControlStyle xrControlStyle1;
         private DevExpress.XtraReports.UI.XRControlStyle xrControlStyle2;
         private DevExpress.XtraReports.UI.CalculatedField rpt_LineGrossAmount;
@@ -5990,10 +5912,6 @@ namespace dxReports.Reports.Sales_Quotation
         private DevExpress.XtraReports.Parameters.Parameter isArabic;
         private DevExpress.XtraReports.Parameters.Parameter DocNum;
         private DevExpress.XtraReports.Parameters.Parameter QNO;
-        private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell20;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell16;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell12;
         private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource2;
     }
 }

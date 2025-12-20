@@ -62,12 +62,14 @@ namespace dxReports.Reports
             this.crossTabDataCell3 = new DevExpress.XtraReports.UI.CrossTab.XRCrossTabCell();
             this.crossTabTotalCell6 = new DevExpress.XtraReports.UI.CrossTab.XRCrossTabCell();
             this.crossTabTotalCell7 = new DevExpress.XtraReports.UI.CrossTab.XRCrossTabCell();
-            this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
+            this.sqlDataSource2 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.xrPanel3 = new DevExpress.XtraReports.UI.XRPanel();
+            this.xrPictureBox4 = new DevExpress.XtraReports.UI.XRPictureBox();
             this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrPanel9 = new DevExpress.XtraReports.UI.XRPanel();
             this.xrLabel11 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrPictureBox9 = new DevExpress.XtraReports.UI.XRPictureBox();
             this.xrLabel13 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrPictureBox6 = new DevExpress.XtraReports.UI.XRPictureBox();
             this.xrLine1 = new DevExpress.XtraReports.UI.XRLine();
@@ -75,14 +77,22 @@ namespace dxReports.Reports
             this.SubBand9 = new DevExpress.XtraReports.UI.SubBand();
             this.SubBand7 = new DevExpress.XtraReports.UI.SubBand();
             this.SubBand4 = new DevExpress.XtraReports.UI.SubBand();
+            this.xrSubreport2 = new DevExpress.XtraReports.UI.XRSubreport();
             this.SubBand2 = new DevExpress.XtraReports.UI.SubBand();
+            this.subReportRetailAuditSummary = new DevExpress.XtraReports.UI.XRSubreport();
             this.SubBand3 = new DevExpress.XtraReports.UI.SubBand();
+            this.subReportStockOnHand = new DevExpress.XtraReports.UI.XRSubreport();
             this.SubBand8 = new DevExpress.XtraReports.UI.SubBand();
+            this.xrLine3 = new DevExpress.XtraReports.UI.XRLine();
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLine2 = new DevExpress.XtraReports.UI.XRLine();
             this.xrPictureBox2 = new DevExpress.XtraReports.UI.XRPictureBox();
+            this.xrSubreport4 = new DevExpress.XtraReports.UI.XRSubreport();
+            this.subReport_Auditors = new DevExpress.XtraReports.UI.XRSubreport();
             this.SubBand10 = new DevExpress.XtraReports.UI.SubBand();
+            this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
             this.SubBand5 = new DevExpress.XtraReports.UI.SubBand();
+            this.xrSubreport3 = new DevExpress.XtraReports.UI.XRSubreport();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
             this.xrPanel1 = new DevExpress.XtraReports.UI.XRPanel();
             this.xrTable6 = new DevExpress.XtraReports.UI.XRTable();
@@ -100,7 +110,7 @@ namespace dxReports.Reports
             this.xrShape1 = new DevExpress.XtraReports.UI.XRShape();
             this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
             this.SubBand1 = new DevExpress.XtraReports.UI.SubBand();
-            this.stockCountId = new DevExpress.XtraReports.Parameters.Parameter();
+            this.auditNo = new DevExpress.XtraReports.Parameters.Parameter();
             this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
             this.xrLabel22 = new DevExpress.XtraReports.UI.XRLabel();
             this.SubBand6 = new DevExpress.XtraReports.UI.SubBand();
@@ -155,15 +165,6 @@ namespace dxReports.Reports
             this.xrTableCell3 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell39 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrPictureBox3 = new DevExpress.XtraReports.UI.XRPictureBox();
-            this.xrPictureBox4 = new DevExpress.XtraReports.UI.XRPictureBox();
-            this.xrPictureBox9 = new DevExpress.XtraReports.UI.XRPictureBox();
-            this.xrSubreport2 = new DevExpress.XtraReports.UI.XRSubreport();
-            this.subReportRetailAuditSummary = new DevExpress.XtraReports.UI.XRSubreport();
-            this.subReportStockOnHand = new DevExpress.XtraReports.UI.XRSubreport();
-            this.xrSubreport4 = new DevExpress.XtraReports.UI.XRSubreport();
-            this.subReport_Auditors = new DevExpress.XtraReports.UI.XRSubreport();
-            this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
-            this.xrSubreport3 = new DevExpress.XtraReports.UI.XRSubreport();
             ((System.ComponentModel.ISupportInitialize)(this.xrCrossTab4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
@@ -308,7 +309,7 @@ namespace dxReports.Reports
             crossTabDataField1,
             crossTabDataField2});
             this.xrCrossTab4.DataMember = "RPT_STOCK_COUNT.Result5";
-            this.xrCrossTab4.DataSource = this.sqlDataSource1;
+            this.xrCrossTab4.DataSource = this.sqlDataSource2;
             this.xrCrossTab4.HeaderAreaStyleName = "crossTabHeaderStyle5";
             this.xrCrossTab4.LocationFloat = new DevExpress.Utils.PointFloat(0F, 34.34424F);
             this.xrCrossTab4.Name = "xrCrossTab4";
@@ -490,20 +491,20 @@ namespace dxReports.Reports
             this.crossTabTotalCell7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             this.crossTabTotalCell7.TextFormatString = "{0:#,#0.00;(#,#0.00);0.00}";
             // 
-            // sqlDataSource1
+            // sqlDataSource2
             // 
-            this.sqlDataSource1.ConnectionName = "PowerBI";
-            this.sqlDataSource1.Name = "sqlDataSource1";
+            this.sqlDataSource2.ConnectionName = "PowerBI";
+            this.sqlDataSource2.Name = "sqlDataSource2";
             storedProcQuery1.Name = "RPT_STOCK_COUNT";
             queryParameter1.Name = "@stockCountId";
             queryParameter1.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter1.Value = new DevExpress.DataAccess.Expression("?stockCountId", typeof(string));
+            queryParameter1.Value = new DevExpress.DataAccess.Expression("?auditNo", typeof(string));
             storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter1});
             storedProcQuery1.StoredProcName = "RPT_STOCK_COUNT";
-            this.sqlDataSource1.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
+            this.sqlDataSource2.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1});
-            this.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable");
+            this.sqlDataSource2.ResultSchemaSerializable = resources.GetString("sqlDataSource2.ResultSchemaSerializable");
             // 
             // xrPanel3
             // 
@@ -526,6 +527,18 @@ namespace dxReports.Reports
             this.xrPanel3.StylePriority.UseBorders = false;
             this.xrPanel3.StylePriority.UseBorderWidth = false;
             this.xrPanel3.StylePriority.UsePadding = false;
+            // 
+            // xrPictureBox4
+            // 
+            this.xrPictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(238)))));
+            this.xrPictureBox4.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrPictureBox4.ImageSource = new DevExpress.XtraPrinting.Drawing.ImageSource("img", resources.GetString("xrPictureBox4.ImageSource"));
+            this.xrPictureBox4.LocationFloat = new DevExpress.Utils.PointFloat(101.8705F, 3.844234F);
+            this.xrPictureBox4.Name = "xrPictureBox4";
+            this.xrPictureBox4.SizeF = new System.Drawing.SizeF(29.70148F, 23.21338F);
+            this.xrPictureBox4.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage;
+            this.xrPictureBox4.StylePriority.UseBackColor = false;
+            this.xrPictureBox4.StylePriority.UseBorders = false;
             // 
             // xrLabel3
             // 
@@ -611,6 +624,18 @@ namespace dxReports.Reports
             this.xrLabel11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             this.xrLabel11.TextFormatString = "{0:#,#0.000;(#,#0.000);0.000}";
             // 
+            // xrPictureBox9
+            // 
+            this.xrPictureBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(239)))), ((int)(((byte)(240)))));
+            this.xrPictureBox9.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrPictureBox9.ImageSource = new DevExpress.XtraPrinting.Drawing.ImageSource("img", resources.GetString("xrPictureBox9.ImageSource"));
+            this.xrPictureBox9.LocationFloat = new DevExpress.Utils.PointFloat(101.8704F, 3.844231F);
+            this.xrPictureBox9.Name = "xrPictureBox9";
+            this.xrPictureBox9.SizeF = new System.Drawing.SizeF(29.70142F, 23.21338F);
+            this.xrPictureBox9.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage;
+            this.xrPictureBox9.StylePriority.UseBackColor = false;
+            this.xrPictureBox9.StylePriority.UseBorders = false;
+            // 
             // xrLabel13
             // 
             this.xrLabel13.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -695,6 +720,14 @@ namespace dxReports.Reports
             this.SubBand4.Name = "SubBand4";
             this.SubBand4.Visible = false;
             // 
+            // xrSubreport2
+            // 
+            this.xrSubreport2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrSubreport2.Name = "xrSubreport2";
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("sr_StockCountId", null, "RPT_STOCK_COUNT.Result1.stockCountId"));
+            this.xrSubreport2.ReportSource = new dxReports.Reports.Stock_Count_Detail_Sub_Report();
+            this.xrSubreport2.SizeF = new System.Drawing.SizeF(803.9999F, 18.30358F);
+            // 
             // SubBand2
             // 
             this.SubBand2.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
@@ -702,23 +735,52 @@ namespace dxReports.Reports
             this.SubBand2.HeightF = 180.8484F;
             this.SubBand2.Name = "SubBand2";
             // 
+            // subReportRetailAuditSummary
+            // 
+            this.subReportRetailAuditSummary.LocationFloat = new DevExpress.Utils.PointFloat(0.0001956255F, 0F);
+            this.subReportRetailAuditSummary.Name = "subReportRetailAuditSummary";
+            this.subReportRetailAuditSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("sr_StockCountId", null, "RPT_STOCK_COUNT.Result1.stockCountId"));
+            this.subReportRetailAuditSummary.ReportSource = new dxReports.Reports.Stock_Count_Sub_Report_CrossTab();
+            this.subReportRetailAuditSummary.SizeF = new System.Drawing.SizeF(804.0004F, 150F);
+            // 
             // SubBand3
             // 
             this.SubBand3.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.subReportStockOnHand});
             this.SubBand3.HeightF = 180.8484F;
+            this.SubBand3.KeepTogether = true;
             this.SubBand3.Name = "SubBand3";
+            // 
+            // subReportStockOnHand
+            // 
+            this.subReportStockOnHand.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.subReportStockOnHand.Name = "subReportStockOnHand";
+            this.subReportStockOnHand.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("sr_StockCountId", null, "RPT_STOCK_COUNT.Result1.stockCountId"));
+            this.subReportStockOnHand.ReportSource = new dxReports.Reports.Stock_Count_On_Hand_Sub_Report_CrossTab();
+            this.subReportStockOnHand.SizeF = new System.Drawing.SizeF(804.0004F, 150F);
             // 
             // SubBand8
             // 
             this.SubBand8.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLine3,
             this.xrLabel1,
             this.xrLine2,
             this.xrPictureBox2,
             this.xrSubreport4,
             this.subReport_Auditors});
-            this.SubBand8.HeightF = 163.8484F;
+            this.SubBand8.HeightF = 149.8741F;
             this.SubBand8.Name = "SubBand8";
+            // 
+            // xrLine3
+            // 
+            this.xrLine3.BorderWidth = 0F;
+            this.xrLine3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(102)))), ((int)(((byte)(122)))));
+            this.xrLine3.LineWidth = 1.5F;
+            this.xrLine3.LocationFloat = new DevExpress.Utils.PointFloat(0.0001967899F, 133.0001F);
+            this.xrLine3.Name = "xrLine3";
+            this.xrLine3.SizeF = new System.Drawing.SizeF(804.0004F, 16.87404F);
+            this.xrLine3.StylePriority.UseBorderWidth = false;
+            this.xrLine3.StylePriority.UseForeColor = false;
             // 
             // xrLabel1
             // 
@@ -764,6 +826,22 @@ namespace dxReports.Reports
             this.xrPictureBox2.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage;
             this.xrPictureBox2.StylePriority.UseBorders = false;
             // 
+            // xrSubreport4
+            // 
+            this.xrSubreport4.LocationFloat = new DevExpress.Utils.PointFloat(403.9999F, 43F);
+            this.xrSubreport4.Name = "xrSubreport4";
+            this.xrSubreport4.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("sr_StockCountId", null, "RPT_STOCK_COUNT.Result1.stockCountId"));
+            this.xrSubreport4.ReportSource = new dxReports.Reports.Stock_Count.sr_Stock_Count_Salespersons();
+            this.xrSubreport4.SizeF = new System.Drawing.SizeF(400F, 89.99999F);
+            // 
+            // subReport_Auditors
+            // 
+            this.subReport_Auditors.LocationFloat = new DevExpress.Utils.PointFloat(0F, 43F);
+            this.subReport_Auditors.Name = "subReport_Auditors";
+            this.subReport_Auditors.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("sr_StockCountId", null, "RPT_STOCK_COUNT.Result1.stockCountId"));
+            this.subReport_Auditors.ReportSource = new dxReports.Reports.Stock_Count.sr_Stock_Count_Auditors();
+            this.subReport_Auditors.SizeF = new System.Drawing.SizeF(400F, 90F);
+            // 
             // SubBand10
             // 
             this.SubBand10.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
@@ -771,12 +849,27 @@ namespace dxReports.Reports
             this.SubBand10.HeightF = 120F;
             this.SubBand10.Name = "SubBand10";
             // 
+            // xrSubreport1
+            // 
+            this.xrSubreport1.LocationFloat = new DevExpress.Utils.PointFloat(0.0001956255F, 0F);
+            this.xrSubreport1.Name = "xrSubreport1";
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("sr_AuditNumber", null, "RPT_STOCK_COUNT.Result1.auditNo"));
+            this.xrSubreport1.ReportSource = new dxReports.Reports.Stock_Count.sr_Stock_Count_Denomination();
+            this.xrSubreport1.SizeF = new System.Drawing.SizeF(804.0004F, 90F);
+            // 
             // SubBand5
             // 
             this.SubBand5.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrSubreport3});
             this.SubBand5.HeightF = 180.8484F;
             this.SubBand5.Name = "SubBand5";
+            // 
+            // xrSubreport3
+            // 
+            this.xrSubreport3.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrSubreport3.Name = "xrSubreport3";
+            this.xrSubreport3.ReportSource = new dxReports.Reports.Stock_Count_Sub_Report_Signatures();
+            this.xrSubreport3.SizeF = new System.Drawing.SizeF(803.9999F, 150F);
             // 
             // PageHeader
             // 
@@ -1009,10 +1102,9 @@ namespace dxReports.Reports
             this.SubBand1.HeightF = 0F;
             this.SubBand1.Name = "SubBand1";
             // 
-            // stockCountId
+            // auditNo
             // 
-            this.stockCountId.Name = "stockCountId";
-            this.stockCountId.ValueInfo = "602400007";
+            this.auditNo.Name = "auditNo";
             // 
             // PageFooter
             // 
@@ -1783,85 +1875,6 @@ namespace dxReports.Reports
             this.xrPictureBox3.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage;
             this.xrPictureBox3.StylePriority.UseBorderColor = false;
             // 
-            // xrPictureBox4
-            // 
-            this.xrPictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(246)))), ((int)(((byte)(238)))));
-            this.xrPictureBox4.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrPictureBox4.ImageSource = new DevExpress.XtraPrinting.Drawing.ImageSource("img", resources.GetString("xrPictureBox4.ImageSource"));
-            this.xrPictureBox4.LocationFloat = new DevExpress.Utils.PointFloat(101.8705F, 3.844234F);
-            this.xrPictureBox4.Name = "xrPictureBox4";
-            this.xrPictureBox4.SizeF = new System.Drawing.SizeF(29.70148F, 23.21338F);
-            this.xrPictureBox4.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage;
-            this.xrPictureBox4.StylePriority.UseBackColor = false;
-            this.xrPictureBox4.StylePriority.UseBorders = false;
-            // 
-            // xrPictureBox9
-            // 
-            this.xrPictureBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(239)))), ((int)(((byte)(240)))));
-            this.xrPictureBox9.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrPictureBox9.ImageSource = new DevExpress.XtraPrinting.Drawing.ImageSource("img", resources.GetString("xrPictureBox9.ImageSource"));
-            this.xrPictureBox9.LocationFloat = new DevExpress.Utils.PointFloat(101.8704F, 3.844231F);
-            this.xrPictureBox9.Name = "xrPictureBox9";
-            this.xrPictureBox9.SizeF = new System.Drawing.SizeF(29.70142F, 23.21338F);
-            this.xrPictureBox9.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage;
-            this.xrPictureBox9.StylePriority.UseBackColor = false;
-            this.xrPictureBox9.StylePriority.UseBorders = false;
-            // 
-            // xrSubreport2
-            // 
-            this.xrSubreport2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.xrSubreport2.Name = "xrSubreport2";
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("sr_StockCountId", null, "RPT_STOCK_COUNT.Result1.stockCountId"));
-            this.xrSubreport2.ReportSource = new dxReports.Reports.Stock_Count_Detail_Sub_Report();
-            this.xrSubreport2.SizeF = new System.Drawing.SizeF(803.9999F, 18.30358F);
-            // 
-            // subReportRetailAuditSummary
-            // 
-            this.subReportRetailAuditSummary.LocationFloat = new DevExpress.Utils.PointFloat(0.0001956255F, 0F);
-            this.subReportRetailAuditSummary.Name = "subReportRetailAuditSummary";
-            this.subReportRetailAuditSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("sr_StockCountId", null, "RPT_STOCK_COUNT.Result1.stockCountId"));
-            this.subReportRetailAuditSummary.ReportSource = new dxReports.Reports.Stock_Count_Sub_Report_CrossTab();
-            this.subReportRetailAuditSummary.SizeF = new System.Drawing.SizeF(804.0004F, 150F);
-            // 
-            // subReportStockOnHand
-            // 
-            this.subReportStockOnHand.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.subReportStockOnHand.Name = "subReportStockOnHand";
-            this.subReportStockOnHand.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("sr_StockCountId", null, "RPT_STOCK_COUNT.Result1.stockCountId"));
-            this.subReportStockOnHand.ReportSource = new dxReports.Reports.Stock_Count_On_Hand_Sub_Report_CrossTab();
-            this.subReportStockOnHand.SizeF = new System.Drawing.SizeF(804.0004F, 150F);
-            // 
-            // xrSubreport4
-            // 
-            this.xrSubreport4.LocationFloat = new DevExpress.Utils.PointFloat(403.9999F, 43F);
-            this.xrSubreport4.Name = "xrSubreport4";
-            this.xrSubreport4.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("sr_StockCountId", null, "RPT_STOCK_COUNT.Result1.stockCountId"));
-            this.xrSubreport4.ReportSource = new dxReports.Reports.Stock_Count.sr_Stock_Count_Salespersons();
-            this.xrSubreport4.SizeF = new System.Drawing.SizeF(400F, 89.99999F);
-            // 
-            // subReport_Auditors
-            // 
-            this.subReport_Auditors.LocationFloat = new DevExpress.Utils.PointFloat(0F, 43F);
-            this.subReport_Auditors.Name = "subReport_Auditors";
-            this.subReport_Auditors.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("sr_StockCountId", null, "RPT_STOCK_COUNT.Result1.stockCountId"));
-            this.subReport_Auditors.ReportSource = new dxReports.Reports.Stock_Count.sr_Stock_Count_Auditors();
-            this.subReport_Auditors.SizeF = new System.Drawing.SizeF(400F, 90F);
-            // 
-            // xrSubreport1
-            // 
-            this.xrSubreport1.LocationFloat = new DevExpress.Utils.PointFloat(0.0001956255F, 0F);
-            this.xrSubreport1.Name = "xrSubreport1";
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("sr_AuditNumber", null, "RPT_STOCK_COUNT.Result1.auditNo"));
-            this.xrSubreport1.ReportSource = new dxReports.Reports.Stock_Count.sr_Stock_Count_Denomination();
-            this.xrSubreport1.SizeF = new System.Drawing.SizeF(804.0004F, 90F);
-            // 
-            // xrSubreport3
-            // 
-            this.xrSubreport3.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.xrSubreport3.Name = "xrSubreport3";
-            this.xrSubreport3.ReportSource = new dxReports.Reports.Stock_Count_Sub_Report_Signatures();
-            this.xrSubreport3.SizeF = new System.Drawing.SizeF(803.9999F, 150F);
-            // 
             // STOCK_COUNT_SQL_4
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -1873,15 +1886,15 @@ namespace dxReports.Reports
             this.ReportHeader,
             this.GroupHeader1});
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
-            this.sqlDataSource1});
+            this.sqlDataSource2});
             this.DataMember = "RPT_STOCK_COUNT";
-            this.DataSource = this.sqlDataSource1;
+            this.DataSource = this.sqlDataSource2;
             this.Font = new DevExpress.Drawing.DXFont("tahoma", 9.75F);
             this.Margins = new DevExpress.Drawing.DXMargins(35F, 11F, 24.82F, 20.02F);
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.stockCountId, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.auditNo, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
-            this.stockCountId});
+            this.auditNo});
             this.ReportPrintOptions.DetailCount = 1;
             this.StyleSheet.AddRange(new DevExpress.XtraReports.UI.XRControlStyle[] {
             this.crossTabTotalStyle1,
@@ -1906,6 +1919,9 @@ namespace dxReports.Reports
             this.crossTabGeneralStyle7,
             this.crossTabHeaderStyle5});
             this.Version = "23.1";
+            this.Watermark.ImageSource = new DevExpress.XtraPrinting.Drawing.ImageSource("img", resources.GetString("STOCK_COUNT_SQL_4.Watermark.ImageSource"));
+            this.Watermark.ImageTransparency = 240;
+            this.Watermark.ImageViewMode = DevExpress.XtraPrinting.Drawing.ImageViewMode.Zoom;
             ((System.ComponentModel.ISupportInitialize)(this.xrCrossTab4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
@@ -1927,9 +1943,8 @@ namespace dxReports.Reports
         private DevExpress.XtraReports.UI.XRPictureBox xrPictureBox1;
         private DevExpress.XtraReports.UI.XRLabel xrLabel8;
         private DevExpress.XtraReports.UI.XRShape xrShape1;
-        private DevExpress.XtraReports.Parameters.Parameter stockCountId;
+        private DevExpress.XtraReports.Parameters.Parameter auditNo;
         private DevExpress.XtraReports.UI.SubBand SubBand2;
-        private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
         private DevExpress.XtraReports.UI.XRSubreport subReportRetailAuditSummary;
         private DevExpress.XtraReports.UI.SubBand SubBand3;
         private DevExpress.XtraReports.UI.XRSubreport subReportStockOnHand;
@@ -2041,5 +2056,7 @@ namespace dxReports.Reports
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell3;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell39;
         private DevExpress.XtraReports.UI.XRPictureBox xrPictureBox3;
+        private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource2;
+        private DevExpress.XtraReports.UI.XRLine xrLine3;
     }
 }
