@@ -379,6 +379,12 @@
     <Compile Include="Reports\Payment Voucher\Payment_Voucher_1.Designer.cs">
       <DependentUpon>Payment_Voucher_1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\PickList\Pick_List.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PickList\Pick_List.Designer.cs">
+      <DependentUpon>Pick_List.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\Purchase Order Drafts\Purchase_Order_Draft.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -883,6 +889,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Payment Voucher\Payment_Voucher_1.resx">
       <DependentUpon>Payment_Voucher_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PickList\Pick_List.resx">
+      <DependentUpon>Pick_List.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Purchase Order Drafts\Purchase_Order_Draft.resx">
       <DependentUpon>Purchase_Order_Draft.cs</DependentUpon>
