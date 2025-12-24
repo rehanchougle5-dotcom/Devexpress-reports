@@ -205,6 +205,12 @@
     <Compile Include="Reports\BoxPrint01\BoxPrint01.Designer.cs">
       <DependentUpon>BoxPrint01.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\Check_List\Checklist_Audit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Check_List\Checklist_Audit.Designer.cs">
+      <DependentUpon>Checklist_Audit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\Commercial_License\Commercial_License.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -378,6 +384,12 @@
     </Compile>
     <Compile Include="Reports\Payment Voucher\Payment_Voucher_1.Designer.cs">
       <DependentUpon>Payment_Voucher_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PickList\Pick_List.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PickList\Pick_List.Designer.cs">
+      <DependentUpon>Pick_List.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\Purchase Order Drafts\Purchase_Order_Draft.cs">
       <SubType>Component</SubType>
@@ -797,6 +809,9 @@
     <EmbeddedResource Include="Reports\BoxPrint01\BoxPrint01.resx">
       <DependentUpon>BoxPrint01.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Check_List\Checklist_Audit.resx">
+      <DependentUpon>Checklist_Audit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\Commercial_License\Commercial_License.resx">
       <DependentUpon>Commercial_License.cs</DependentUpon>
     </EmbeddedResource>
@@ -883,6 +898,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Payment Voucher\Payment_Voucher_1.resx">
       <DependentUpon>Payment_Voucher_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PickList\Pick_List.resx">
+      <DependentUpon>Pick_List.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Purchase Order Drafts\Purchase_Order_Draft.resx">
       <DependentUpon>Purchase_Order_Draft.cs</DependentUpon>
