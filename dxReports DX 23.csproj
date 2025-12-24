@@ -205,6 +205,12 @@
     <Compile Include="Reports\BoxPrint01\BoxPrint01.Designer.cs">
       <DependentUpon>BoxPrint01.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\Check_List\Checklist_Audit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Check_List\Checklist_Audit.Designer.cs">
+      <DependentUpon>Checklist_Audit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\Commercial_License\Commercial_License.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -802,6 +808,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\BoxPrint01\BoxPrint01.resx">
       <DependentUpon>BoxPrint01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Check_List\Checklist_Audit.resx">
+      <DependentUpon>Checklist_Audit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Commercial_License\Commercial_License.resx">
       <DependentUpon>Commercial_License.cs</DependentUpon>

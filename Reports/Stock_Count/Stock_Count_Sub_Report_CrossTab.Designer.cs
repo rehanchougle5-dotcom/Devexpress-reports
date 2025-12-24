@@ -885,6 +885,8 @@ namespace dxReports.Reports
             this.crossTabHeaderCell6.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.crossTabHeaderCell6.BorderWidth = 1F;
             this.crossTabHeaderCell6.ColumnIndex = 3;
+            this.crossTabHeaderCell6.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[remarks2]")});
             this.crossTabHeaderCell6.Font = new DevExpress.Drawing.DXFont("calibri", 7.5F);
             this.crossTabHeaderCell6.Name = "crossTabHeaderCell6";
             this.crossTabHeaderCell6.RowIndex = 2;
