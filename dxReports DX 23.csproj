@@ -590,6 +590,18 @@
     <Compile Include="Reports\Stock_Count\sr_Stock_Count_Salespersons.Designer.cs">
       <DependentUpon>sr_Stock_Count_Salespersons.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\Stock_Count\StockCountView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Stock_Count\StockCountView.Designer.cs">
+      <DependentUpon>StockCountView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Stock_Count\stockViewCross.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Stock_Count\stockViewCross.Designer.cs">
+      <DependentUpon>stockViewCross.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\Stock_Count\STOCK_COUNT.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -1000,6 +1012,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Stock_Count\sr_Stock_Count_Salespersons.resx">
       <DependentUpon>sr_Stock_Count_Salespersons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Stock_Count\StockCountView.resx">
+      <DependentUpon>StockCountView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Stock_Count\stockViewCross.resx">
+      <DependentUpon>stockViewCross.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Stock_Count\STOCK_COUNT.resx">
       <DependentUpon>STOCK_COUNT.cs</DependentUpon>
