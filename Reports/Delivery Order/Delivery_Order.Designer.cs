@@ -4752,7 +4752,7 @@ namespace dxReports.Reports.Delivery_Order
             this.DataMember = "AMG_TRD_UAE_RPT_DELIVERY_ORDER";
             this.DataSource = this.sqlDataSource1;
             this.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-            this.Margins = new DevExpress.Drawing.DXMargins(34F, 0F, 10F, 5.489509F);
+            this.Margins = new DevExpress.Drawing.DXMargins(34F, 2F, 10F, 5.489509F);
             this.PageHeight = 1169;
             this.PageWidth = 827;
             this.PaperKind = DevExpress.Drawing.Printing.DXPaperKind.A4;

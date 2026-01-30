@@ -4,11 +4,11 @@ using System.Collections;
 using System.ComponentModel;
 using System.Drawing;
 
-namespace dxReports.Reports.BinPrinting
+namespace dxReports.Reports.Coupon_Printing
 {
-    public partial class XtraReport4 : DevExpress.XtraReports.UI.XtraReport
+    public partial class Coupon_Tablet_Printing : DevExpress.XtraReports.UI.XtraReport
     {
-        public XtraReport4()
+        public Coupon_Tablet_Printing()
         {
             InitializeComponent();
         }

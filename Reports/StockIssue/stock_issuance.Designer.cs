@@ -41,6 +41,7 @@
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
             this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
+            this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
             this.xrLine3 = new DevExpress.XtraReports.UI.XRLine();
             this.xrLabel16 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel13 = new DevExpress.XtraReports.UI.XRLabel();
@@ -148,9 +149,14 @@
             this.xrLabel18,
             this.xrLabel17,
             this.xrLabel19});
-            this.ReportFooter.HeightF = 125.9641F;
+            this.ReportFooter.HeightF = 99.62744F;
             this.ReportFooter.Name = "ReportFooter";
             this.ReportFooter.PrintAtBottom = true;
+            // 
+            // PageFooter
+            // 
+            this.PageFooter.HeightF = 0F;
+            this.PageFooter.Name = "PageFooter";
             // 
             // xrLine3
             // 
@@ -1027,7 +1033,8 @@
             this.BottomMargin,
             this.ReportHeader,
             this.Detail,
-            this.ReportFooter});
+            this.ReportFooter,
+            this.PageFooter});
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.sqlDataSource1});
             this.DataMember = "RPT_StockIssueForm";
@@ -1118,6 +1125,7 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel18;
         private DevExpress.XtraReports.UI.XRLabel xrLabel17;
         private DevExpress.XtraReports.UI.XRLabel xrLabel19;
+        private DevExpress.XtraReports.UI.PageFooterBand PageFooter;
         private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
         private DevExpress.XtraReports.UI.XRControlStyle Title;
         private DevExpress.XtraReports.UI.XRControlStyle GroupCaption1;
