@@ -295,11 +295,11 @@
     <Compile Include="Reports\Customer Statement\Customer_Statement_2.Designer.cs">
       <DependentUpon>Customer_Statement_2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\Daily_Sales_Summary\Daily_Sales_Summary.cs">
+    <Compile Include="Reports\Daily_Sales_Summary\Daily_Sales_Summarry.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\Daily_Sales_Summary\Daily_Sales_Summary.Designer.cs">
-      <DependentUpon>Daily_Sales_Summary.cs</DependentUpon>
+    <Compile Include="Reports\Daily_Sales_Summary\Daily_Sales_Summarry.Designer.cs">
+      <DependentUpon>Daily_Sales_Summarry.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\Delivery Order\Delivery_Order.cs">
       <SubType>Component</SubType>
@@ -914,8 +914,8 @@
     <EmbeddedResource Include="Reports\Customer Statement\Customer_Statement_2.resx">
       <DependentUpon>Customer_Statement_2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\Daily_Sales_Summary\Daily_Sales_Summary.resx">
-      <DependentUpon>Daily_Sales_Summary.cs</DependentUpon>
+    <EmbeddedResource Include="Reports\Daily_Sales_Summary\Daily_Sales_Summarry.resx">
+      <DependentUpon>Daily_Sales_Summarry.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Delivery Order\Delivery_Order.resx">
       <DependentUpon>Delivery_Order.cs</DependentUpon>

@@ -1,6 +1,6 @@
 ﻿namespace dxReports.Reports.Daily_Sales_Summary
 {
-    partial class Daily_Sales_Summary
+    partial class Daily_Sales_Summarry
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             DevExpress.XtraReports.UI.XRSummary xrSummary1 = new DevExpress.XtraReports.UI.XRSummary();
             DevExpress.XtraPrinting.BarCode.Code39Generator code39Generator1 = new DevExpress.XtraPrinting.BarCode.Code39Generator();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Daily_Sales_Summary));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Daily_Sales_Summarry));
             DevExpress.XtraPrinting.Shape.ShapeRectangle shapeRectangle1 = new DevExpress.XtraPrinting.Shape.ShapeRectangle();
             DevExpress.XtraPrinting.BarCode.Code39Generator code39Generator2 = new DevExpress.XtraPrinting.BarCode.Code39Generator();
             DevExpress.XtraPrinting.Shape.ShapeRectangle shapeRectangle2 = new DevExpress.XtraPrinting.Shape.ShapeRectangle();
@@ -3957,7 +3957,7 @@
             this.toDate.Type = typeof(System.DateTime);
             this.toDate.ValueInfo = "2025-12-31";
             // 
-            // Daily_Sales_Summary
+            // Daily_Sales_Summarry
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
             this.TopMargin,
@@ -3997,7 +3997,7 @@
             this.xrControlStyle1,
             this.xrControlStyle2});
             this.Version = "23.1";
-            this.Watermark.ImageSource = new DevExpress.XtraPrinting.Drawing.ImageSource("img", resources.GetString("Daily_Sales_Summary.Watermark.ImageSource"));
+            this.Watermark.ImageSource = new DevExpress.XtraPrinting.Drawing.ImageSource("img", resources.GetString("Daily_Sales_Summarry.Watermark.ImageSource"));
             this.Watermark.ImageTransparency = 200;
             this.Watermark.ImageViewMode = DevExpress.XtraPrinting.Drawing.ImageViewMode.Zoom;
             ((System.ComponentModel.ISupportInitialize)(this.xrTable4)).EndInit();

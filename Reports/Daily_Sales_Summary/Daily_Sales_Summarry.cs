@@ -6,9 +6,9 @@ using System.Drawing;
 
 namespace dxReports.Reports.Daily_Sales_Summary
 {
-    public partial class Daily_Sales_Summary : DevExpress.XtraReports.UI.XtraReport
+    public partial class Daily_Sales_Summarry : DevExpress.XtraReports.UI.XtraReport
     {
-        public Daily_Sales_Summary()
+        public Daily_Sales_Summarry()
         {
             InitializeComponent();
         }
