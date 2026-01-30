@@ -373,6 +373,7 @@ namespace dxReports.Reports.Sales_Quotation
             this.xrTableCell90 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell135 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrShape19 = new DevExpress.XtraReports.UI.XRShape();
+            this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
             this.xrTable4 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow8 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableRow10 = new DevExpress.XtraReports.UI.XRTableRow();
@@ -453,9 +454,6 @@ namespace dxReports.Reports.Sales_Quotation
             this.DocNum = new DevExpress.XtraReports.Parameters.Parameter();
             this.QNO = new DevExpress.XtraReports.Parameters.Parameter();
             this.sqlDataSource2 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
-            this.xrTableCell24 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell59 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable18)).BeginInit();
@@ -774,7 +772,7 @@ namespace dxReports.Reports.Sales_Quotation
             this.xrTable9.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrTable9.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow22});
-            this.xrTable9.SizeF = new System.Drawing.SizeF(783.8729F, 20.37037F);
+            this.xrTable9.SizeF = new System.Drawing.SizeF(783.8725F, 20.37037F);
             this.xrTable9.StylePriority.UseBorderColor = false;
             this.xrTable9.StylePriority.UseBorderDashStyle = false;
             this.xrTable9.StylePriority.UseBorders = false;
@@ -794,7 +792,6 @@ namespace dxReports.Reports.Sales_Quotation
             this.xrTableCell116,
             this.xrTableCell117,
             this.xrTableCell119,
-            this.xrTableCell24,
             this.xrTableCell118});
             this.xrTableRow22.Name = "xrTableRow22";
             this.xrTableRow22.Weight = 11.5D;
@@ -872,7 +869,7 @@ namespace dxReports.Reports.Sales_Quotation
             this.xrTableCell117.StylePriority.UseTextAlignment = false;
             this.xrTableCell117.Text = "xrTableCell43";
             this.xrTableCell117.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell117.TextFormatString = "{0:N2} %";
+            this.xrTableCell117.TextFormatString = "{0:N0} %";
             this.xrTableCell117.Weight = 19.525498381006468D;
             // 
             // xrTableCell119
@@ -890,7 +887,7 @@ namespace dxReports.Reports.Sales_Quotation
             // xrTableCell118
             // 
             this.xrTableCell118.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[LineGrossAmount]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[LineNetAmount]")});
             this.xrTableCell118.Multiline = true;
             this.xrTableCell118.Name = "xrTableCell118";
             this.xrTableCell118.StylePriority.UseTextAlignment = false;
@@ -3885,7 +3882,7 @@ namespace dxReports.Reports.Sales_Quotation
             this.xrTableCell121.CanGrow = false;
             this.xrTableCell121.CanShrink = true;
             this.xrTableCell121.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Sum([LineGrossAmount])")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Sum([LineNetAmount])")});
             this.xrTableCell121.Font = new DevExpress.Drawing.DXFont("calibri", 8F);
             this.xrTableCell121.ForeColor = System.Drawing.Color.Black;
             this.xrTableCell121.Multiline = true;
@@ -4688,6 +4685,16 @@ namespace dxReports.Reports.Sales_Quotation
             this.xrShape19.StylePriority.UseBorders = false;
             this.xrShape19.StylePriority.UseForeColor = false;
             // 
+            // xrSubreport1
+            // 
+            this.xrSubreport1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrSubreport1.Name = "xrSubreport1";
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("sr_Currency", null, "AMG_TRD_UAE_RPT_SALES_QUOTATION.DocCurr"));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("sr_ReportCode", null, "AMG_TRD_UAE_RPT_SALES_QUOTATION.ReportCode_1"));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("sr_ReportLanguage", null, "AMG_TRD_UAE_RPT_SALES_QUOTATION.ReportLanguage"));
+            this.xrSubreport1.ReportSource = new dxReports.Reports.Bank_Details.Bank_Details_2();
+            this.xrSubreport1.SizeF = new System.Drawing.SizeF(790F, 99.99998F);
+            // 
             // xrTable4
             // 
             this.xrTable4.LocationFloat = new DevExpress.Utils.PointFloat(0F, 44.00005F);
@@ -4870,7 +4877,7 @@ namespace dxReports.Reports.Sales_Quotation
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "/*([IsDetailedReport] = \'Y\' And ([ReportLanguage] = \'EA\' OR [ReportLanguage] = \'E" +
                     "N\'))\n*/\n\n([IsDetailedReport] = \'Y\' And ([ReportLanguage] = \'EA\' OR [ReportLangua" +
                     "ge] = \'EN\'))\n")});
-            this.SubBand27.HeightF = 36.64093F;
+            this.SubBand27.HeightF = 25F;
             this.SubBand27.Name = "SubBand27";
             // 
             // SubBand28
@@ -5172,12 +5179,12 @@ namespace dxReports.Reports.Sales_Quotation
             this.xrTable8.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrTable8.Font = new DevExpress.Drawing.DXFont("calibri", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrTable8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(63)))), ((int)(((byte)(88)))));
-            this.xrTable8.LocationFloat = new DevExpress.Utils.PointFloat(0.2457936F, 0F);
+            this.xrTable8.LocationFloat = new DevExpress.Utils.PointFloat(0.2456847F, 0F);
             this.xrTable8.Name = "xrTable8";
             this.xrTable8.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrTable8.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow20});
-            this.xrTable8.SizeF = new System.Drawing.SizeF(782.7541F, 36.64093F);
+            this.xrTable8.SizeF = new System.Drawing.SizeF(783.8725F, 25F);
             this.xrTable8.StylePriority.UseBackColor = false;
             this.xrTable8.StylePriority.UseBorderColor = false;
             this.xrTable8.StylePriority.UseBorders = false;
@@ -5197,7 +5204,6 @@ namespace dxReports.Reports.Sales_Quotation
             this.xrTableCell106,
             this.xrTableCell108,
             this.xrTableCell110,
-            this.xrTableCell59,
             this.xrTableCell111});
             this.xrTableRow20.Name = "xrTableRow20";
             this.xrTableRow20.Weight = 1D;
@@ -5247,7 +5253,7 @@ namespace dxReports.Reports.Sales_Quotation
             this.xrTableCell106.Multiline = true;
             this.xrTableCell106.Name = "xrTableCell106";
             this.xrTableCell106.StylePriority.UseTextAlignment = false;
-            this.xrTableCell106.Text = "Price \r\nBefore Disc";
+            this.xrTableCell106.Text = "Price Before Disc";
             this.xrTableCell106.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.xrTableCell106.Weight = 1.2911598759025604D;
             // 
@@ -5265,7 +5271,7 @@ namespace dxReports.Reports.Sales_Quotation
             this.xrTableCell110.Multiline = true;
             this.xrTableCell110.Name = "xrTableCell110";
             this.xrTableCell110.StylePriority.UseTextAlignment = false;
-            this.xrTableCell110.Text = "Price \r\nAfter Disc";
+            this.xrTableCell110.Text = "Price After Disc";
             this.xrTableCell110.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.xrTableCell110.Weight = 1.2911568620947138D;
             // 
@@ -5522,37 +5528,6 @@ namespace dxReports.Reports.Sales_Quotation
             this.sqlDataSource2.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery2});
             this.sqlDataSource2.ResultSchemaSerializable = resources.GetString("sqlDataSource2.ResultSchemaSerializable");
-            // 
-            // xrTableCell24
-            // 
-            this.xrTableCell24.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[LineVat]")});
-            this.xrTableCell24.Multiline = true;
-            this.xrTableCell24.Name = "xrTableCell24";
-            this.xrTableCell24.StylePriority.UseTextAlignment = false;
-            this.xrTableCell24.Text = "xrTableCell24";
-            this.xrTableCell24.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell24.TextFormatString = "{0:N2}";
-            this.xrTableCell24.Weight = 25.731305141449845D;
-            // 
-            // xrTableCell59
-            // 
-            this.xrTableCell59.Multiline = true;
-            this.xrTableCell59.Name = "xrTableCell59";
-            this.xrTableCell59.StylePriority.UseTextAlignment = false;
-            this.xrTableCell59.Text = "VAT Amount";
-            this.xrTableCell59.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.xrTableCell59.Weight = 1.2911568620947138D;
-            // 
-            // xrSubreport1
-            // 
-            this.xrSubreport1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.xrSubreport1.Name = "xrSubreport1";
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("sr_Currency", null, "AMG_TRD_UAE_RPT_SALES_QUOTATION.DocCurr"));
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("sr_ReportCode", null, "AMG_TRD_UAE_RPT_SALES_QUOTATION.ReportCode_1"));
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("sr_ReportLanguage", null, "AMG_TRD_UAE_RPT_SALES_QUOTATION.ReportLanguage"));
-            this.xrSubreport1.ReportSource = new dxReports.Reports.Bank_Details.Bank_Details_2();
-            this.xrSubreport1.SizeF = new System.Drawing.SizeF(790F, 99.99998F);
             // 
             // SQ_2
             // 
@@ -6020,7 +5995,5 @@ namespace dxReports.Reports.Sales_Quotation
         private DevExpress.XtraReports.Parameters.Parameter DocNum;
         private DevExpress.XtraReports.Parameters.Parameter QNO;
         private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource2;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell24;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell59;
     }
 }

@@ -4,11 +4,11 @@ using System.Collections;
 using System.ComponentModel;
 using System.Drawing;
 
-namespace dxReports.Reports.UserTask
+namespace dxReports.Reports.Asset_Barcode
 {
-    public partial class TaskReport1 : DevExpress.XtraReports.UI.XtraReport
+    public partial class Asset_Barcode : DevExpress.XtraReports.UI.XtraReport
     {
-        public TaskReport1()
+        public Asset_Barcode()
         {
             InitializeComponent();
         }
