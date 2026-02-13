@@ -66,23 +66,8 @@
     <Reference Include="DevExpress.Pdf.v23.1.Core, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.PivotGrid.v23.1.Core, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v23.1.Core, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Projects.v24.1.Installers, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Program Files\DevExpress 24.1\Components\System\Components\DevExpress.Projects.v24.1.Installers.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.ProjectUpgrade.Installer">
-      <HintPath>..\..\..\..\..\Program Files\DevExpress 24.1\Components\System\Components\DevExpress.ProjectUpgrade.Installer.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.ProjectUpgrade.Package">
-      <HintPath>..\..\..\..\..\Program Files\DevExpress 24.1\Components\System\Components\DevExpress.ProjectUpgrade.Package.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.ProjectUpgrade.Package.Async">
-      <HintPath>..\..\..\..\..\Program Files\DevExpress 24.1\Components\System\Components\DevExpress.ProjectUpgrade.Package.Async.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.ProjectUpgrade.Package.Async.2022">
-      <HintPath>..\..\..\..\..\Program Files\DevExpress 24.1\Components\System\Components\DevExpress.ProjectUpgrade.Package.Async.2022.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.Data.v24.1, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.DataAccess.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Drawing.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Office.v23.1.Core, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -94,37 +79,8 @@
     <Reference Include="DevExpress.Sparkline.v23.1.Core, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v23.1.UI, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.VSMenuIntegration.Async.Package">
-      <HintPath>..\..\..\..\..\Program Files\DevExpress 24.1\Components\System\Components\DevExpress.VSMenuIntegration.Async.Package.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.VSMenuIntegration.Package">
-      <HintPath>..\..\..\..\..\Program Files\DevExpress 24.1\Components\System\Components\DevExpress.VSMenuIntegration.Package.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.VSMenuIntegration.PackageInstaller">
-      <HintPath>..\..\..\..\..\Program Files\DevExpress 24.1\Components\System\Components\DevExpress.VSMenuIntegration.PackageInstaller.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.VSMenuIntegration.Templates.v24.1, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Program Files\DevExpress 24.1\Components\System\Components\DevExpress.VSMenuIntegration.Templates.v24.1.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.Win.Projects.v24.1.Design, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Program Files\DevExpress 24.1\Components\System\Components\DevExpress.Win.Projects.v24.1.Design.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.Win.Projects.v24.1.Installers">
-      <HintPath>..\..\..\..\..\Program Files\DevExpress 24.1\Components\System\Components\DevExpress.Win.Projects.v24.1.Installers.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.Xpf.Previews.v24.1, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Program Files\DevExpress 24.1\Components\System\WPF Components\DevExpress.Xpf.Previews.v24.1.dll</HintPath>
-    </Reference>
-    <Reference Include="DevExpress.Xpf.Projects.v24.1.Design, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Program Files\DevExpress 24.1\Components\System\Components\DevExpress.Xpf.Projects.v24.1.Design.dll</HintPath>
-    </Reference>
     <Reference Include="DevExpress.Xpo.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Xpo.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Xpo.v24.1, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraCharts.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraGauges.v23.1.Core, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
