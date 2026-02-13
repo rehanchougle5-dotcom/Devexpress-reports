@@ -1,0 +1,9 @@
+﻿Error: System.NullReferenceException: Object reference not set to an instance of an object.
+   at DevExpress.XtraReports.UI.Band.GetMultiColumn(XtraReportBase report)
+   at DevExpress.XtraReports.UI.Band.TryGetMultiColumn(Band band, MultiColumn& mc)
+   at DevExpress.XtraReports.UI.XRControl.HasMultiColumnPrintingWarning()
+   at DevExpress.XtraReports.UI.XRControl.LayoutErrorDetector.<DetectCore>d__1.MoveNext()
+   at System.Linq.Enumerable.<SelectManyIterator>d__17`2.MoveNext()
+   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   at DevExpress.XtraReports.Diagnostics.ReportErrorDetector.DetectCore(CancellationToken token)

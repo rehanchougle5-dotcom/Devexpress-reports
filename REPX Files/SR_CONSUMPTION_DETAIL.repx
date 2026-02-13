@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="23.1.6.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="SR_CONSUMPTION_DETAIL" Margins="35, 11, 26.02, 0" PageWidth="850" PageHeight="1100" Version="23.1" DataMember="AMG_TRD_UAE_RPT_PR_CONSUMPTIONDTL" DataSource="#Ref-0" Font="Arial, 9.75pt">
+  <Parameters>
+    <Item1 Ref="3" Visible="false" Description="DOCENTRY" ValueInfo="0" Name="DOCENTRY" Type="#Ref-2" />
+    <Item2 Ref="5" Visible="false" Description="Parameter1" Name="ITEMCODE" />
+  </Parameters>
+  <CalculatedFields>
+    <Item1 Ref="6" Name="SIXMONTHAVG" Expression="[QuantityAvg] / [AvgMonthsCount]" DataMember="AMG_TRD_UAE_RPT_PR_CONSUMPTIONDTL" />
+    <Item2 Ref="7" Name="Average" Expression="Iif([RecordNumber] &gt; 0, [rt_quantity] / [RecordNumber], 0)&#xA;" DataMember="AMG_TRD_UAE_RPT_PR_CONSUMPTIONDTL" />
+    <Item3 Ref="8" Name="rt_quantity" Expression="Sum([Quantity])&#xA;" DataMember="AMG_TRD_UAE_RPT_PR_CONSUMPTIONDTL" />
+  </CalculatedFields>
+  <Bands>
+    <Item1 Ref="9" ControlType="TopMarginBand" Name="TopMargin" HeightF="26.02" />
+    <Item2 Ref="10" ControlType="BottomMarginBand" Name="BottomMargin" HeightF="0" />
+    <Item3 Ref="11" ControlType="DetailBand" Name="Detail" HeightF="20.37">
+      <SubBands>
+        <Item1 Ref="12" ControlType="SubBand" Name="SubBand2" HeightF="2">
+          <Controls>
+            <Item1 Ref="13" ControlType="XRLine" Name="xrLine1" LineWidth="0.5" LineStyle="Dash" SizeF="275.365936,2" LocationFloat="0,0" ForeColor="255,19,63,88" BorderWidth="0" BorderDashStyle="Dash">
+              <StylePriority Ref="14" UseForeColor="false" UseBorderWidth="false" UseBorderDashStyle="false" />
+            </Item1>
+          </Controls>
+        </Item1>
+      </SubBands>
+      <Controls>
+        <Item1 Ref="15" ControlType="XRTable" Name="xrTable1" TextAlignment="MiddleLeft" SizeF="275.3659,20.37" LocationFloat="0,0" Font="calibri, 9pt" Padding="2,2,0,0,96" BorderColor="255,19,63,88" Borders="None" BorderWidth="0.5" BorderDashStyle="Dash">
+          <Rows>
+            <Item1 Ref="16" ControlType="XRTableRow" Name="xrTableRow1" Weight="11.5">
+              <Cells>
+                <Item1 Ref="17" ControlType="XRTableCell" Name="xrTableCell1" Weight="0.074530562866471209" TextFormatString="{0:dd-MMM-yy}" Multiline="true" Text="xrTableCell1" Font="calibri, 8pt">
+                  <ExpressionBindings>
+                    <Item1 Ref="18" EventName="BeforePrint" PropertyName="Text" Expression="[MONTH]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="19" UseFont="false" />
+                </Item1>
+                <Item2 Ref="20" ControlType="XRTableCell" Name="xrTableCell2" Weight="0.046361467053725847" Multiline="true" Text="xrTableCell2" TextAlignment="MiddleCenter" Font="calibri, 8pt">
+                  <ExpressionBindings>
+                    <Item1 Ref="21" EventName="BeforePrint" PropertyName="Text" Expression="[UoM]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="22" UseFont="false" UseTextAlignment="false" />
+                </Item2>
+                <Item3 Ref="23" ControlType="XRTableCell" Name="xrTableCell3" Weight="0.082973975286854337" TextFormatString="{0:N2}" Multiline="true" Text="xrTableCell3" TextAlignment="MiddleRight" Font="calibri, 8pt">
+                  <ExpressionBindings>
+                    <Item1 Ref="24" EventName="BeforePrint" PropertyName="Text" Expression="[Quantity]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="25" UseFont="false" UseTextAlignment="false" />
+                </Item3>
+              </Cells>
+            </Item1>
+          </Rows>
+          <StylePriority Ref="26" UseFont="false" UseBorderColor="false" UseBorders="false" UseBorderWidth="false" UseBorderDashStyle="false" UseTextAlignment="false" />
+        </Item1>
+      </Controls>
+    </Item3>
+    <Item4 Ref="27" ControlType="ReportHeaderBand" Name="ReportHeader" HeightF="20.69049">
+      <SubBands>
+        <Item1 Ref="28" ControlType="SubBand" Name="SubBand1" HeightF="25">
+          <Controls>
+            <Item1 Ref="29" ControlType="XRTable" Name="xrTable2" SizeF="275.366,25" LocationFloat="0,0" Font="calibri, 9pt, style=Bold" BackColor="255,239,244,247" Padding="2,2,0,0,96" BorderColor="255,19,63,88" Borders="Bottom">
+              <Rows>
+                <Item1 Ref="30" ControlType="XRTableRow" Name="xrTableRow2" Weight="1">
+                  <Cells>
+                    <Item1 Ref="31" ControlType="XRTableCell" Name="xrTableCell4" Weight="0.83650515484760868" Multiline="true" Text="Month" TextAlignment="MiddleLeft" Font="calibri, 8pt, style=Bold" ForeColor="255,19,63,88">
+                      <StylePriority Ref="32" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="33" ControlType="XRTableCell" Name="xrTableCell5" Weight="0.52034501524705568" Multiline="true" Text="UoM" TextAlignment="MiddleCenter" Font="calibri, 8pt, style=Bold" ForeColor="255,19,63,88">
+                      <StylePriority Ref="34" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="35" ControlType="XRTableCell" Name="xrTableCell6" Weight="0.93127152431127813" Multiline="true" Text="Qty" TextAlignment="MiddleRight" Font="calibri, 8pt, style=Bold" ForeColor="255,19,63,88">
+                      <StylePriority Ref="36" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                    </Item3>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="37" UseFont="false" UseBackColor="false" UseBorderColor="false" UseBorders="false" />
+            </Item1>
+          </Controls>
+        </Item1>
+      </SubBands>
+      <Controls>
+        <Item1 Ref="38" ControlType="XRTable" Name="xrTable4" TextAlignment="BottomLeft" SizeF="275.366,17.2814" LocationFloat="0,0" Padding="2,2,0,0,96">
+          <Rows>
+            <Item1 Ref="39" ControlType="XRTableRow" Name="xrTableRow4" Weight="1">
+              <Cells>
+                <Item1 Ref="40" ControlType="XRTableCell" Name="xrTableCell7" Weight="0.065277469120419068" Multiline="true" BackColor="255,239,164,31">
+                  <StylePriority Ref="41" UseBackColor="false" />
+                </Item1>
+                <Item2 Ref="42" ControlType="XRTableCell" Name="xrTableCell8" Weight="2.6883826960969937" Multiline="true" Text=" Last 3 Months Consumptions" TextAlignment="BottomLeft" Font="calibri, 12pt, style=Bold" ForeColor="255,19,63,88">
+                  <StylePriority Ref="43" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                </Item2>
+              </Cells>
+            </Item1>
+          </Rows>
+          <StylePriority Ref="44" UseTextAlignment="false" />
+        </Item1>
+      </Controls>
+    </Item4>
+    <Item5 Ref="45" ControlType="GroupFooterBand" Name="GroupFooter1" HeightF="42.74001">
+      <Controls>
+        <Item1 Ref="46" ControlType="XRLine" Name="xrLine5" LineWidth="0.5" LineStyle="Dash" SizeF="275.3659,2" LocationFloat="0,40.74001" ForeColor="255,19,63,88" BorderWidth="0" BorderDashStyle="Dash">
+          <StylePriority Ref="47" UseForeColor="false" UseBorderWidth="false" UseBorderDashStyle="false" />
+        </Item1>
+        <Item2 Ref="48" ControlType="XRLabel" Name="xrLabel4" TextFormatString="{0:N2}" Multiline="true" Text="xrLabel4" TextAlignment="MiddleRight" SizeF="75.36606,20.37" LocationFloat="199.9999,20.37" Font="CAlibri, 8pt" Padding="2,2,0,0,100" BorderColor="255,19,63,88" Borders="None" BorderWidth="0.5" BorderDashStyle="Dash">
+          <ExpressionBindings>
+            <Item1 Ref="49" EventName="BeforePrint" PropertyName="Text" Expression="[SIXMONTHAVG]" />
+          </ExpressionBindings>
+          <StylePriority Ref="50" UseFont="false" UseBorderColor="false" UseBorders="false" UseBorderWidth="false" UseBorderDashStyle="false" UseTextAlignment="false" />
+        </Item2>
+        <Item3 Ref="51" ControlType="XRLabel" Name="xrLabel1" Text="Average Consumption of " TextAlignment="MiddleLeft" SizeF="200,20.37" LocationFloat="0,20.37" Font="calibri, 8pt" ForeColor="255,19,63,88" BorderColor="255,19,63,88" Borders="None" BorderWidth="0.5" BorderDashStyle="Dash">
+          <ExpressionBindings>
+            <Item1 Ref="52" EventName="BeforePrint" PropertyName="Text" Expression="'Average Consumption of ' + [AvgMonthsCount] + ' Months :'" />
+          </ExpressionBindings>
+          <StylePriority Ref="53" UseFont="false" UseForeColor="false" UseBorderColor="false" UseBorders="false" UseBorderWidth="false" UseBorderDashStyle="false" UseTextAlignment="false" />
+        </Item3>
+        <Item4 Ref="54" ControlType="XRLabel" Name="xrLabel3" TextFormatString="{0:N2}" Multiline="true" Text="xrLabel3" TextAlignment="MiddleRight" SizeF="75.36594,20.37" LocationFloat="200,0" Font="CAlibri, 8pt" Padding="2,2,0,0,100">
+          <Summary Ref="55" Running="Report" />
+          <ExpressionBindings>
+            <Item1 Ref="56" EventName="BeforePrint" PropertyName="Text" Expression="sumAvg([Quantity])" />
+          </ExpressionBindings>
+          <StylePriority Ref="57" UseFont="false" UseTextAlignment="false" />
+        </Item4>
+        <Item5 Ref="58" ControlType="XRLabel" Name="xrLabel2" Text="Average Consumption of 3 Months :" TextAlignment="MiddleLeft" SizeF="200,20.37" LocationFloat="0,0" Font="calibri, 8pt" ForeColor="255,19,63,88">
+          <StylePriority Ref="59" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+        </Item5>
+      </Controls>
+    </Item5>
+  </Bands>
+  <StyleSheet>
+    <Item1 Ref="60" Name="xrControlStyle1" BorderStyle="Inset" Padding="0,0,0,0,100" BackColor="255,239,244,247" StringFormat="Near;Near;0;None;Character;GenericDefault" />
+  </StyleSheet>
+  <ReportPrintOptions Ref="61" PrintOnEmptyDataSource="false" />
+  <ComponentStorage>
+    <Item1 Ref="0" ObjectType="DevExpress.DataAccess.Sql.SqlDataSource,DevExpress.DataAccess.v23.1" Name="sqlDataSource1" Base64="PFNxbERhdGFTb3VyY2UgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxDb25uZWN0aW9uIE5hbWU9IkZhcl9oYW5hIiBGcm9tQXBwQ29uZmlnPSJ0cnVlIiAvPjxRdWVyeSBUeXBlPSJTdG9yZWRQcm9jUXVlcnkiIE5hbWU9IkFNR19UUkRfVUFFX1JQVF9QUl9DT05TVU1QVElPTkRUTCI+PFBhcmFtZXRlciBOYW1lPSJET0NFTlRSWSIgVHlwZT0iRGV2RXhwcmVzcy5EYXRhQWNjZXNzLkV4cHJlc3Npb24iPihTeXN0ZW0uSW50MzIpKD9ET0NFTlRSWSk8L1BhcmFtZXRlcj48UGFyYW1ldGVyIE5hbWU9IklURU1DT0RFIiBUeXBlPSJEZXZFeHByZXNzLkRhdGFBY2Nlc3MuRXhwcmVzc2lvbiI+KFN5c3RlbS5TdHJpbmcpKD9JVEVNQ09ERSk8L1BhcmFtZXRlcj48UHJvY05hbWU+QU1HX1RSRF9VQUUuUlBUX1BSX0NPTlNVTVBUSU9ORFRMPC9Qcm9jTmFtZT48L1F1ZXJ5PjxSZXN1bHRTY2hlbWE+PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9IkFNR19UUkRfVUFFX1JQVF9QUl9DT05TVU1QVElPTkRUTCI+PEZpZWxkIE5hbWU9IkRvY0VudHJ5IiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iSXRlbUNvZGUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iTU9OVEgiIFR5cGU9IkRhdGVUaW1lIiAvPjxGaWVsZCBOYW1lPSJVb00iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iUXVhbnRpdHkiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IkNvc3RBbW91bnQiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IlF1YW50aXR5QXZnIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJBdmdNb250aHNDb3VudCIgVHlwZT0iSW50MzIiIC8+PC9WaWV3PjwvRGF0YVNldD48L1Jlc3VsdFNjaGVtYT48Q29ubmVjdGlvbk9wdGlvbnMgQ2xvc2VDb25uZWN0aW9uPSJ0cnVlIiAvPjwvU3FsRGF0YVNvdXJjZT4=" />
+  </ComponentStorage>
+  <ObjectStorage>
+    <Item1 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v23.1" Ref="2" Content="System.Int32" Type="System.Type" />
+  </ObjectStorage>
+</XtraReportsLayoutSerializer>

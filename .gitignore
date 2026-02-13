@@ -1,0 +1,14 @@
+# Visual Studio temp files
+.vs/
+*.vsidx
+*.suo
+*.user
+*.cache
+
+# Build results
+bin/
+obj/
+
+# Other common ignores
+*.log
+*.tmp

@@ -1,0 +1,1082 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="23.1.6.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="Outgoing_Payment_2" Margins="50, 25, 29.48718, 71.99409" PaperKind="A4" PageWidth="827" PageHeight="1169" Version="23.1" DataMember="AMG_TRD_UAE_RPT_OUTGIONG_PAYMENT_II" DataSource="#Ref-0" Font="Arial, 9.75pt">
+  <Parameters>
+    <Item1 Ref="3" ValueInfo="55035" Name="DocEntry" Type="#Ref-2" />
+  </Parameters>
+  <CalculatedFields>
+    <Item1 Ref="4" Name="cf_Currency" Expression="Iif([VPM2_InvType_Code] == '13', [OINV_DocCur],&#xA;Iif([VPM2_InvType_Code] == '14', [ORIN_DocCur],&#xA;Iif([VPM2_InvType_Code] == '18', [OPCH_DocCur],&#xA;Iif([VPM2_InvType_Code] == '19', [ORPC_DocCur],&#xA;Iif([VPM2_InvType_Code] == '203', [ODPI_DocCur],&#xA;Iif([VPM2_InvType_Code] == '204', [ODPO_DocCur],&#xA;Iif([VPM2_InvType_Code] == '25', [ODPS_DeposCurr],&#xA;Iif([VPM2_InvType_Code] == '30' || [InvType] == '46' || [InvType] == '24' || [InvType] == '57',&#xA;    Iif(IsNull([JDT1_FCCurrency]) || [JDT1_FCCurrency] == '', [OADM_MainCurncy], [JDT1_FCCurrency]),&#xA;    null&#xA;))))))))&#xA;" DataMember="AMG_TRD_UAE_RPT_OUTGIONG_PAYMENT_II" />
+    <Item2 Ref="5" Name="cf_CheckCurrency" Expression="Iif([cf_Currency] == [OADM_MainCurncy],'True' , 'False' )" DataMember="AMG_TRD_UAE_RPT_OUTGIONG_PAYMENT_II" />
+    <Item3 Ref="6" Name="cf_Amount2" Expression="/*Iif([cf_Currency] = [OADM_MainCurncy], [VPM2_SumApplied],&#xA;    Iif([cf_Currency] == [OADM_SysCurrncy], [VPM2_AppliedSys],&#xA;        [VPM2_AppliedFC]))*/&#xA;&#xA;[VPM2_SumApplied]" DataMember="AMG_TRD_UAE_RPT_OUTGIONG_PAYMENT_II" />
+    <Item4 Ref="7" Name="cf_SubTotal" Expression="Iif([OVPM_DocCurr] == [OADM_MainCurncy], [OVPM_DocTotal],&#xA;Iif([OVPM_DocCurr] == [OADM_SysCurrncy], [OVPM_DocTotalSy], [OVPM_DocTotalFC]))&#xA;&#xA;&#xA;" DataMember="AMG_TRD_UAE_RPT_OUTGIONG_PAYMENT_II" />
+    <Item5 Ref="8" Name="cf_AmountFlag2" Expression="Iif(&#xA;    [VPM2_InvType_Code] != '13' And&#xA;    [VPM2_InvType_Code] != '14' And&#xA;    [VPM2_InvType_Code] != '203' And&#xA;    [VPM2_InvType_Code] != '165' And&#xA;    [VPM2_InvType_Code] != '166' And&#xA;    [VPM2_InvType_Code] != '18' And&#xA;    [VPM2_InvType_Code] != '19' And&#xA;    [VPM2_InvType_Code] != '204' And&#xA;    [VPM2_InvType_Code] != '163' And&#xA;    [VPM2_InvType_Code] != '164',&#xA;    &#xA;    [cf_Amount],&#xA;    &#xA;    Iif(&#xA;        [DocType] == 'C',&#xA;        Iif([VPM2_InvType_Code] == '14' || [VPM2_InvType_Code] == '19', [cf_Amount2], -1 * [cf_Amount2]),&#xA;        Iif([VPM2_InvType_Code] == '14' || [VPM2_InvType_Code] == '19', -1 * [cf_Amount2], [cf_Amount2])&#xA;    )&#xA;)&#xA;&#xA;" DataMember="AMG_TRD_UAE_RPT_OUTGIONG_PAYMENT_II" />
+    <Item6 Ref="9" Name="cf_CreditSum" Expression="Iif([OVPM_DocCurr] == [OADM_MainCurncy], [OVPM_CreditSum], [OVPM_CredSumFC])" DataMember="AMG_TRD_UAE_RPT_OUTGIONG_PAYMENT_II" />
+    <Item7 Ref="10" Name="cf_CheckSum" Expression="Iif([OVPM_DocCurr] == [OADM_MainCurncy], [OVPM_CheckSum], [OVPM_CheckSumFC])&#xA;" DataMember="AMG_TRD_UAE_RPT_OUTGIONG_PAYMENT_II" />
+    <Item8 Ref="11" Name="cf_BankSum" Expression="Iif([OVPM_DocCurr] == [OADM_MainCurncy], [OVPM_TrsfrSum], [OVPM_TrsfrSumFC])" DataMember="AMG_TRD_UAE_RPT_OUTGIONG_PAYMENT_II" />
+    <Item9 Ref="12" Name="cf_CashSum" Expression="Iif([OVPM_DocCurr] == [OADM_MainCurncy], [OVPM_CashSum], [OVPM_CashSumFC])&#xA;" DataMember="AMG_TRD_UAE_RPT_OUTGIONG_PAYMENT_II" />
+    <Item10 Ref="13" Name="cf_TotalSum" Expression="[cf_CheckSum] + [cf_BankSum] + [cf_CashSum] + [cf_CreditSum] + [OVPM_VatSum] + [cf_DdctSum]" DataMember="AMG_TRD_UAE_RPT_OUTGIONG_PAYMENT_II" />
+    <Item11 Ref="14" Name="cf_DdctSum" Expression="Iif([OVPM_DocCurr] == [OADM_MainCurncy], [OVPM_DdctSum], [OVPM_DdctSumFC])" DataMember="AMG_TRD_UAE_RPT_OUTGIONG_PAYMENT_II" />
+    <Item12 Ref="15" Name="cf_Remarks" Expression="Trim(&#xA;  Iif(!IsNullOrEmpty([OVPM_JrnlMemo]),&#xA;      [OVPM_JrnlMemo] +&#xA;        Iif(!IsNullOrEmpty([OVPM_Comments]),&#xA;            '&#xA;' + [OVPM_Comments] + &#xA;              Iif(!IsNullOrEmpty([ADP1_Remark]),&#xA;                  '&#xA;' + [ADP1_Remark],&#xA;                  ''&#xA;              ),&#xA;            Iif(!IsNullOrEmpty([ADP1_Remark]),&#xA;                '&#xA;' + [ADP1_Remark],&#xA;                ''&#xA;            )&#xA;        ),&#xA;      Iif(!IsNullOrEmpty([OVPM_Comments]),&#xA;          [OVPM_Comments] + &#xA;            Iif(!IsNullOrEmpty([ADP1_Remark]),&#xA;                '&#xA;' + [ADP1_Remark],&#xA;                ''&#xA;            ),&#xA;          Iif(!IsNullOrEmpty([ADP1_Remark]),&#xA;              [ADP1_Remark],&#xA;              ''&#xA;          )&#xA;      )&#xA;  )&#xA;)&#xA;" DataMember="AMG_TRD_UAE_RPT_OUTGIONG_PAYMENT_II" />
+    <Item13 Ref="16" Name="cf_DocumentNumber" Expression="Iif([VPM2_InvType_Code] == '13', [OINV_DocNum],&#xA;Iif([VPM2_InvType_Code] == '14', [ORIN_DocNum],&#xA;Iif([VPM2_InvType_Code] == '18', [OPCH_DocNum],&#xA;Iif([VPM2_InvType_Code] == '19', [ORPC_DocNum],&#xA;Iif([VPM2_InvType_Code] == '203', [ODPI_DocNum],&#xA;Iif([VPM2_InvType_Code] == '204', [ODPO_DocNum],&#xA;Iif([VPM2_InvType_Code] == '30', [OJDT_Number],&#xA;Iif([VPM2_InvType_Code] == '24', [OJDT_Number],&#xA;Iif([VPM2_InvType_Code] == '25', [ODPS_TransAbs],&#xA;Iif([VPM2_InvType_Code] == '46', [OVPM_DocNum],&#xA;[VPM2_DocEntry]))))))))))&#xA;" DataMember="AMG_TRD_UAE_RPT_OUTGIONG_PAYMENT_II" />
+    <Item14 Ref="17" Name="cf_DocTotal" Expression="Iif([OVPM_DocCurr] == [OADM_MainCurncy], [OVPM_DocTotal],&#xA;    Iif([OVPM_DocCurr] == [OADM_SysCurrncy], [OVPM_DocTotalSy],&#xA;        [OVPM_DocTotalFC]))&#xA;" DataMember="AMG_TRD_UAE_RPT_OUTGIONG_PAYMENT_II" />
+    <Item15 Ref="18" Name="cf_WTSum" Expression="Iif([OVPM_DocCurr] == [OADM_MainCurncy], [OVPM_WtSum],&#xA;    Iif([OVPM_DocCurr] == [OADM_SysCurrncy], [OVPM_WtSumsys],&#xA;        [OVPM_WtSumfrgn]))&#xA;" DataMember="AMG_TRD_UAE_RPT_OUTGIONG_PAYMENT_II" />
+    <Item16 Ref="19" Name="cf_PaymentOnAccount" Expression="/*Iif([OVPM_DocCurr] == [OADM_MainCurncy], [OVPM_NoDocSum],&#xA;    Iif([OVPM_DocCurr] == [OADM_SysCurrncy], [OVPM_NoDocSumSy],&#xA;        [OVPM_NoDocSumFC]))&#xA;*/&#xA;&#xA;Iif([OVPM_DocCurr] == [?Pm-OADM_MainCurncy], [OVPM_NoDocSum], [OVPM_NoDocSumFC])&#xA;" DataMember="AMG_TRD_UAE_RPT_OUTGIONG_PAYMENT_II" />
+    <Item17 Ref="20" Name="cf_Total" Expression="[cf_SubTotal]" DataMember="AMG_TRD_UAE_RPT_OUTGIONG_PAYMENT_II" />
+  </CalculatedFields>
+  <Bands>
+    <Item1 Ref="21" ControlType="TopMarginBand" Name="TopMargin" HeightF="29.48718" />
+    <Item2 Ref="22" ControlType="BottomMarginBand" Name="BottomMargin" HeightF="71.99409" />
+    <Item3 Ref="23" ControlType="DetailBand" Name="Detail" HeightF="0">
+      <SubBands>
+        <Item1 Ref="24" ControlType="SubBand" Name="SubBand10" HeightF="0" />
+        <Item2 Ref="25" ControlType="SubBand" Name="SubBand1" HeightF="0">
+          <ExpressionBindings>
+            <Item1 Ref="26" EventName="BeforePrint" PropertyName="Visible" Expression="[cf_CreditSum] &lt;&gt; 0" />
+          </ExpressionBindings>
+        </Item2>
+        <Item3 Ref="27" ControlType="SubBand" Name="SubBand2" HeightF="0">
+          <ExpressionBindings>
+            <Item1 Ref="28" EventName="BeforePrint" PropertyName="Visible" Expression="[cf_CheckSum] &lt;&gt; 0" />
+          </ExpressionBindings>
+        </Item3>
+        <Item4 Ref="29" ControlType="SubBand" Name="SubBand3" HeightF="0">
+          <ExpressionBindings>
+            <Item1 Ref="30" EventName="BeforePrint" PropertyName="Visible" Expression="[cf_BankSum] &lt;&gt; 0" />
+          </ExpressionBindings>
+        </Item4>
+        <Item5 Ref="31" ControlType="SubBand" Name="SubBand4" HeightF="0">
+          <ExpressionBindings>
+            <Item1 Ref="32" EventName="BeforePrint" PropertyName="Visible" Expression="[cf_CashSum] &lt;&gt; 0" />
+          </ExpressionBindings>
+        </Item5>
+      </SubBands>
+    </Item3>
+    <Item4 Ref="33" ControlType="GroupHeaderBand" Name="GroupHeader1" Level="5" HeightF="0">
+      <SubBands>
+        <Item1 Ref="34" ControlType="SubBand" Name="SubBand8" HeightF="0" />
+      </SubBands>
+    </Item4>
+    <Item5 Ref="35" ControlType="PageHeaderBand" Name="PageHeader" HeightF="74.60587">
+      <SubBands>
+        <Item1 Ref="36" ControlType="SubBand" Name="SubBand7" HeightF="33.1163177">
+          <Controls>
+            <Item1 Ref="37" ControlType="XRLine" Name="xrLine1" LineWidth="1.5" SizeF="751.999939,23" LocationFloat="0,0" ForeColor="255,19,63,88">
+              <StylePriority Ref="38" UseForeColor="false" />
+            </Item1>
+          </Controls>
+        </Item1>
+        <Item2 Ref="39" ControlType="SubBand" Name="SubBand5" HeightF="120.528992">
+          <Controls>
+            <Item1 Ref="40" ControlType="XRTable" Name="xrTable1" SizeF="751.999939,120.528992" LocationFloat="0,0" Font="calibri, 8pt" Padding="2,2,0,0,96">
+              <Rows>
+                <Item1 Ref="41" ControlType="XRTableRow" Name="xrTableRow1" Weight="1">
+                  <Cells>
+                    <Item1 Ref="42" ControlType="XRTableCell" Name="xrTableCell1" Weight="1.188868172496643" CanShrink="true" Multiline="true" Text="Invoice to" Font="calibri, 8pt" ForeColor="255,19,63,88">
+                      <StylePriority Ref="43" UseFont="false" UseForeColor="false" />
+                    </Item1>
+                    <Item2 Ref="44" ControlType="XRTableCell" Name="xrTableCell11" Weight="0.24675818566843877" Multiline="true" Text=":" TextAlignment="TopCenter" Font="calibri, 8pt" ForeColor="255,19,63,88">
+                      <StylePriority Ref="45" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="46" ControlType="XRTableCell" Name="xrTableCell3" Weight="10.298528851269602" Multiline="true" Text="xrTableCell3" Font="CALIBRI, 11pt, style=Bold" ForeColor="Maroon">
+                      <ExpressionBindings>
+                        <Item1 Ref="47" EventName="BeforePrint" PropertyName="Text" Expression="[OVPM_CardName]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="48" UseFont="false" UseForeColor="false" />
+                    </Item3>
+                  </Cells>
+                </Item1>
+                <Item2 Ref="49" ControlType="XRTableRow" Name="xrTableRow2" Weight="1">
+                  <Cells>
+                    <Item1 Ref="50" ControlType="XRTableCell" Name="xrTableCell2" Weight="1.1888683150515786" CanShrink="true" Multiline="true" Text="Code" Font="calibri, 8pt" ForeColor="255,19,63,88">
+                      <StylePriority Ref="51" UseFont="false" UseForeColor="false" />
+                    </Item1>
+                    <Item2 Ref="52" ControlType="XRTableCell" Name="xrTableCell13" Weight="0.24675747289376054" Multiline="true" Text=":" TextAlignment="TopCenter" Font="calibri, 8pt" ForeColor="255,19,63,88">
+                      <StylePriority Ref="53" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="54" ControlType="XRTableCell" Name="xrTableCell4" Weight="7.487061886566595" Multiline="true" Text="xrTableCell4">
+                      <ExpressionBindings>
+                        <Item1 Ref="55" EventName="BeforePrint" PropertyName="Text" Expression="[OVPM_CardCode]" />
+                      </ExpressionBindings>
+                    </Item3>
+                    <Item4 Ref="56" ControlType="XRTableCell" Name="xrTableCell17" Weight="1.3520086852356328" Multiline="true" Text="Invoice #" TextAlignment="TopLeft" Font="calibri, 8pt" ForeColor="255,19,63,88">
+                      <StylePriority Ref="57" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                    </Item4>
+                    <Item5 Ref="58" ControlType="XRTableCell" Name="xrTableCell21" Weight="0.21082621650226832" Multiline="true" Text=":" TextAlignment="TopCenter" Font="calibri, 8pt" ForeColor="255,19,63,88">
+                      <StylePriority Ref="59" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                    </Item5>
+                    <Item6 Ref="60" ControlType="XRTableCell" Name="xrTableCell25" Weight="1.248632633184847" Multiline="true" Text="xrTableCell25" TextAlignment="TopRight" Font="calibri, 8pt" ForeColor="Black">
+                      <ExpressionBindings>
+                        <Item1 Ref="61" EventName="BeforePrint" PropertyName="Text" Expression="[OVPM_DocNum]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="62" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                    </Item6>
+                  </Cells>
+                </Item2>
+                <Item3 Ref="63" ControlType="XRTableRow" Name="xrTableRow3" Weight="1">
+                  <Cells>
+                    <Item1 Ref="64" ControlType="XRTableCell" Name="xrTableCell5" Weight="1.1888680299417074" CanShrink="true" Multiline="true" Text="VAT/C.R #" Font="calibri, 8pt" ForeColor="255,19,63,88">
+                      <StylePriority Ref="65" UseFont="false" UseForeColor="false" />
+                    </Item1>
+                    <Item2 Ref="66" ControlType="XRTableCell" Name="xrTableCell14" Weight="0.24675661756414663" Multiline="true" Text=":" TextAlignment="TopCenter" Font="calibri, 8pt" ForeColor="255,19,63,88">
+                      <StylePriority Ref="67" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="68" ControlType="XRTableCell" Name="xrTableCell6" Weight="7.4870623029588046" Multiline="true" Text="xrTableCell6">
+                      <ExpressionBindings>
+                        <Item1 Ref="69" EventName="BeforePrint" PropertyName="Text" Expression="[OCRD_LicTradNum]" />
+                      </ExpressionBindings>
+                    </Item3>
+                    <Item4 Ref="70" ControlType="XRTableCell" Name="xrTableCell23" Weight="1.3520081064231606" Multiline="true" Text="Invoice Date" TextAlignment="TopLeft" ForeColor="255,19,63,88">
+                      <StylePriority Ref="71" UseForeColor="false" UseTextAlignment="false" />
+                    </Item4>
+                    <Item5 Ref="72" ControlType="XRTableCell" Name="xrTableCell30" Weight="0.21082733561514705" Multiline="true" Text=":" TextAlignment="TopCenter" ForeColor="255,19,63,88">
+                      <StylePriority Ref="73" UseForeColor="false" UseTextAlignment="false" />
+                    </Item5>
+                    <Item6 Ref="74" ControlType="XRTableCell" Name="xrTableCell29" Weight="1.2486328169317149" TextFormatString="{0:dd-MMM-yy}" Multiline="true" Text="xrTableCell29" TextAlignment="TopRight">
+                      <ExpressionBindings>
+                        <Item1 Ref="75" EventName="BeforePrint" PropertyName="Text" Expression="[OVPM_TaxDate]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="76" UseTextAlignment="false" />
+                    </Item6>
+                  </Cells>
+                </Item3>
+                <Item4 Ref="77" ControlType="XRTableRow" Name="xrTableRow4" Weight="1">
+                  <Cells>
+                    <Item1 Ref="78" ControlType="XRTableCell" Name="xrTableCell7" Weight="1.188868172496643" CanShrink="true" Multiline="true" Text="Phone" Font="calibri, 8pt" ForeColor="255,19,63,88">
+                      <StylePriority Ref="79" UseFont="false" UseForeColor="false" />
+                    </Item1>
+                    <Item2 Ref="80" ControlType="XRTableCell" Name="xrTableCell15" Weight="0.24675590478946841" Multiline="true" Text=":" TextAlignment="TopCenter" Font="calibri, 8pt" ForeColor="255,19,63,88">
+                      <StylePriority Ref="81" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="82" ControlType="XRTableCell" Name="xrTableCell8" Weight="7.4870655817223257" Multiline="true" Text="xrTableCell8">
+                      <ExpressionBindings>
+                        <Item1 Ref="83" EventName="BeforePrint" PropertyName="Text" Expression="[OCRD_Phone2]" />
+                      </ExpressionBindings>
+                    </Item3>
+                    <Item4 Ref="84" ControlType="XRTableCell" Name="xrTableCell26" Weight="2.8114655504262456" Multiline="true" Text="Contact Person :" Font="calibri, 8pt, style=Bold" ForeColor="255,19,63,88">
+                      <StylePriority Ref="85" UseFont="false" UseForeColor="false" />
+                    </Item4>
+                  </Cells>
+                </Item4>
+                <Item5 Ref="86" ControlType="XRTableRow" Name="xrTableRow17" Weight="1">
+                  <Cells>
+                    <Item1 Ref="87" ControlType="XRTableCell" Name="xrTableCell86" Weight="1.3152321416275088" Multiline="true" Text="City" Font="calibri, 8pt" ForeColor="255,19,63,88">
+                      <StylePriority Ref="88" UseFont="false" UseForeColor="false" />
+                    </Item1>
+                    <Item2 Ref="89" ControlType="XRTableCell" Name="xrTableCell87" Weight="0.2729847413812917" Multiline="true" Text=":" TextAlignment="TopCenter" Font="calibri, 8pt" ForeColor="255,19,63,88">
+                      <StylePriority Ref="90" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="91" ControlType="XRTableCell" Name="xrTableCell88" Weight="8.2828641845501352" Multiline="true" Text="xrTableCell88">
+                      <ExpressionBindings>
+                        <Item1 Ref="92" EventName="BeforePrint" PropertyName="Text" Expression="[OCRD_City]" />
+                      </ExpressionBindings>
+                    </Item3>
+                    <Item4 Ref="93" ControlType="XRTableCell" Name="xrTableCell27" Weight="3.1102958956588775" RowSpan="3" Multiline="true" ForeColor="255,19,63,88">
+                      <ExpressionBindings>
+                        <Item1 Ref="94" EventName="BeforePrint" PropertyName="Text" Expression="[OSLP_SlpName] + '&#xA;'+[OHEM_OfficeTel] +'&#xA;'+[OHEM_Email]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="95" UseForeColor="false" />
+                    </Item4>
+                  </Cells>
+                </Item5>
+                <Item6 Ref="96" ControlType="XRTableRow" Name="xrTableRow60" Weight="1">
+                  <Cells>
+                    <Item1 Ref="97" ControlType="XRTableCell" Name="xrTableCell234" Weight="1.3152321416275088" Multiline="true" Text="Country" Font="calibri, 8pt" ForeColor="255,19,63,88">
+                      <StylePriority Ref="98" UseFont="false" UseForeColor="false" />
+                    </Item1>
+                    <Item2 Ref="99" ControlType="XRTableCell" Name="xrTableCell235" Weight="0.2729847413812917" Multiline="true" Text=":" TextAlignment="TopCenter" Font="calibri, 8pt" ForeColor="255,19,63,88">
+                      <StylePriority Ref="100" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="101" ControlType="XRTableCell" Name="xrTableCell236" Weight="8.28286092155121" Multiline="true" Text="xrTableCell236">
+                      <ExpressionBindings>
+                        <Item1 Ref="102" EventName="BeforePrint" PropertyName="Text" Expression="[OCRD_Country]" />
+                      </ExpressionBindings>
+                    </Item3>
+                    <Item4 Ref="103" ControlType="XRTableCell" Name="xrTableCell28" Weight="3.1102991586578028" Multiline="true" />
+                  </Cells>
+                </Item6>
+                <Item7 Ref="104" ControlType="XRTableRow" Name="xrTableRow5" Weight="1">
+                  <Cells>
+                    <Item1 Ref="105" ControlType="XRTableCell" Name="xrTableCell9" Weight="1.3152322993345891" Multiline="true" Text="Reference" Font="calibri, 8pt" ForeColor="255,19,63,88">
+                      <StylePriority Ref="106" UseFont="false" UseForeColor="false" />
+                    </Item1>
+                    <Item2 Ref="107" ControlType="XRTableCell" Name="xrTableCell10" Weight="0.27298647615917471" Multiline="true" Text=":" TextAlignment="TopCenter" Font="calibri, 8pt" ForeColor="255,19,63,88">
+                      <StylePriority Ref="108" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="109" ControlType="XRTableCell" Name="xrTableCell12" Weight="8.2828583623992955" Multiline="true" Text="xrTableCell12">
+                      <ExpressionBindings>
+                        <Item1 Ref="110" EventName="BeforePrint" PropertyName="Text" Expression="[OVPM_CounterRef]" />
+                      </ExpressionBindings>
+                    </Item3>
+                    <Item4 Ref="111" ControlType="XRTableCell" Name="xrTableCell24" Weight="3.1102998253247507" Multiline="true" TextAlignment="TopCenter">
+                      <StylePriority Ref="112" UseTextAlignment="false" />
+                    </Item4>
+                  </Cells>
+                </Item7>
+                <Item8 Ref="113" ControlType="XRTableRow" Name="xrTableRow6" Weight="1">
+                  <Cells>
+                    <Item1 Ref="114" ControlType="XRTableCell" Name="xrTableCell18" Weight="1.3152322993345891" Multiline="true" Text="Address" Font="calibri, 8pt" ForeColor="255,19,63,88">
+                      <StylePriority Ref="115" UseFont="false" UseForeColor="false" />
+                    </Item1>
+                    <Item2 Ref="116" ControlType="XRTableCell" Name="xrTableCell19" Weight="0.27298647615917471" Multiline="true" Text=":" TextAlignment="TopCenter" Font="calibri, 8pt" ForeColor="255,19,63,88">
+                      <StylePriority Ref="117" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="118" ControlType="XRTableCell" Name="xrTableCell22" Weight="11.393158187724048" Multiline="true" />
+                  </Cells>
+                </Item8>
+              </Rows>
+              <StylePriority Ref="119" UseFont="false" />
+            </Item1>
+          </Controls>
+        </Item2>
+        <Item3 Ref="120" ControlType="SubBand" Name="SubBand6" HeightF="23">
+          <Controls>
+            <Item1 Ref="121" ControlType="XRLine" Name="xrLine2" LineWidth="1.5" SizeF="751.9999,23" LocationFloat="0,0" ForeColor="255,19,63,88">
+              <StylePriority Ref="122" UseForeColor="false" />
+            </Item1>
+          </Controls>
+        </Item3>
+      </SubBands>
+      <Controls>
+        <Item1 Ref="123" ControlType="XRBarCode" Name="xrBarCode1" Module="1.2" AutoModule="true" TextAlignment="MiddleRight" ShowText="false" SizeF="195.2493,37.90423" LocationFloat="556.7507,36.70164" Font="CALIBRI, 10pt" ForeColor="255,19,63,88" Padding="10,10,0,0,100">
+          <Symbology Ref="124" Name="Code39" WideNarrowRatio="3" />
+          <ExpressionBindings>
+            <Item1 Ref="125" EventName="BeforePrint" PropertyName="Visible" Expression="IsNullOrEmpty([GlblLocNum]) || IsNullOrEmpty([Building])" />
+            <Item2 Ref="126" EventName="BeforePrint" PropertyName="Text" Expression="[OVPM_DocNum]" />
+          </ExpressionBindings>
+          <StylePriority Ref="127" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+        </Item1>
+        <Item2 Ref="128" ControlType="XRTable" Name="xrTable26" SizeF="195.2492,32.01414" LocationFloat="556.7507,0" Padding="2,2,0,0,96">
+          <Rows>
+            <Item1 Ref="129" ControlType="XRTableRow" Name="xrTableRow35" Weight="1">
+              <Cells>
+                <Item1 Ref="130" ControlType="XRTableCell" Name="xrTableCell130" Weight="0.22418991298183943" Multiline="true" Text="xrTableCell9">
+                  <Controls>
+                    <Item1 Ref="131" ControlType="XRShape" Name="xrShape3" FillColor="255,239,164,31" SizeF="7.368408,25.06853" LocationFloat="8.50177,6.94561" ForeColor="0,0,0,0" BackColor="255,239,164,31" BorderColor="0,0,0,0" Borders="Bottom">
+                      <Shape Ref="132" ShapeName="Rectangle" />
+                      <StylePriority Ref="133" UseForeColor="false" UseBackColor="false" UseBorderColor="false" UseBorders="false" />
+                    </Item1>
+                  </Controls>
+                </Item1>
+                <Item2 Ref="134" ControlType="XRTableCell" Name="xrTableCell131" Weight="2.23454744191635" Multiline="true" Text="PROFORMA INVOICE" TextAlignment="BottomRight" Font="Calibri, 14pt, style=Bold" ForeColor="Maroon" Tag_type="System.String" Tag="PROFORMA INVOICE">
+                  <StylePriority Ref="135" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                </Item2>
+              </Cells>
+            </Item1>
+          </Rows>
+        </Item2>
+        <Item3 Ref="136" ControlType="XRTable" Name="xrTable25" SizeF="481.620148,74.60587" LocationFloat="75.13053,0" Font="Arial, 22pt" ForeColor="255,19,63,88" Padding="2,2,0,0,96">
+          <Rows>
+            <Item1 Ref="137" ControlType="XRTableRow" Name="xrTableRow31" Weight="0.25">
+              <Cells>
+                <Item1 Ref="138" ControlType="XRTableCell" Name="xrTableCell126" Weight="2.3963924593205168" Multiline="true" Text="xrTableCell3" TextAlignment="MiddleLeft" Font="Calibri, 14pt, style=Bold" ForeColor="255,19,63,88">
+                  <ExpressionBindings>
+                    <Item1 Ref="139" EventName="BeforePrint" PropertyName="Text" Expression="[U_Name]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="140" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item1>
+            <Item2 Ref="141" ControlType="XRTableRow" Name="xrTableRow32" Weight="0.18618992405363946">
+              <Cells>
+                <Item1 Ref="142" ControlType="XRTableCell" Name="xrTableCell127" Weight="2.078791818049698" RightToLeft="No" Multiline="true" Text="xrTableCell33" TextAlignment="MiddleLeft" Font="Calibri, 8pt" ForeColor="255,19,63,88">
+                  <ExpressionBindings>
+                    <Item1 Ref="143" EventName="BeforePrint" PropertyName="Text" Expression="'Sales Office : ' +  [U_SaleOfficeAddress_EN]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="144" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item2>
+            <Item3 Ref="145" ControlType="XRTableRow" Name="xrTableRow33" Weight="0.18618992405363949">
+              <Cells>
+                <Item1 Ref="146" ControlType="XRTableCell" Name="xrTableCell128" Weight="2.3963924593205168" Multiline="true" Text="xrTableCell4" TextAlignment="MiddleLeft" Font="Calibri, 8pt" ForeColor="255,19,63,88">
+                  <ExpressionBindings>
+                    <Item1 Ref="147" EventName="BeforePrint" PropertyName="Text" Expression="[U_TRNLabel_EN] + ' : ' + [U_TRNValue_EN]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="148" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item3>
+            <Item4 Ref="149" ControlType="XRTableRow" Name="xrTableRow34" Weight="0.18618992405363949">
+              <Cells>
+                <Item1 Ref="150" ControlType="XRTableCell" Name="xrTableCell129" Weight="2.3963924593205168" Multiline="true" Text="xrTableCell55" TextAlignment="MiddleLeft" Font="Calibri, 8pt" ForeColor="255,19,63,88">
+                  <ExpressionBindings>
+                    <Item1 Ref="151" EventName="BeforePrint" PropertyName="Text" Expression="[U_SaleOfficeTel_EN]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="152" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                </Item1>
+              </Cells>
+            </Item4>
+          </Rows>
+          <StylePriority Ref="153" UseFont="false" UseForeColor="false" />
+        </Item3>
+        <Item4 Ref="154" ControlType="XRPictureBox" Name="xrPictureBox1" ImageSource="img,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" Sizing="ZoomImage" SizeF="62.18679,74.60587" LocationFloat="0,0" />
+      </Controls>
+    </Item5>
+    <Item6 Ref="155" ControlType="GroupFooterBand" Name="GroupFooter1" HeightF="74.38417">
+      <SubBands>
+        <Item1 Ref="156" ControlType="SubBand" Name="SubBand9" HeightF="23">
+          <Controls>
+            <Item1 Ref="157" ControlType="XRLine" Name="xrLine10" LineWidth="1.5" SizeF="749.999756,23" LocationFloat="0,0" ForeColor="255,19,63,88">
+              <StylePriority Ref="158" UseForeColor="false" />
+            </Item1>
+          </Controls>
+        </Item1>
+      </SubBands>
+      <Controls>
+        <Item1 Ref="159" ControlType="XRLabel" Name="xrLabel1" Multiline="true" Text="xrLabel1" SizeF="691.546936,23.0000038" LocationFloat="14.45313,51.3841667" Font="calibri, 8pt" Padding="2,2,0,0,96">
+          <ExpressionBindings>
+            <Item1 Ref="160" EventName="BeforePrint" PropertyName="Text" Expression="[cf_Remarks]" />
+          </ExpressionBindings>
+          <StylePriority Ref="161" UseFont="false" />
+        </Item1>
+        <Item2 Ref="162" ControlType="XRTable" Name="xrTable24" SizeF="751.999939,17.1875" LocationFloat="0,34.1967049" Padding="2,2,0,0,96">
+          <Rows>
+            <Item1 Ref="163" ControlType="XRTableRow" Name="xrTableRow30" Weight="1">
+              <Cells>
+                <Item1 Ref="164" ControlType="XRTableCell" Name="xrTableCell123" Weight="0.068348040580749475" Multiline="true" BackColor="255,240,171,0">
+                  <StylePriority Ref="165" UseBackColor="false" />
+                </Item1>
+                <Item2 Ref="166" ControlType="XRTableCell" Name="xrTableCell124" Weight="0.076183255923368165" Multiline="true" TextAlignment="MiddleLeft" Font="Arial, 9.75pt, style=Bold" ForeColor="255,19,63,88">
+                  <StylePriority Ref="167" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                </Item2>
+                <Item3 Ref="168" ControlType="XRTableCell" Name="xrTableCell125" Weight="6.9154669495035215" Multiline="true" Text="Remarks" TextAlignment="MiddleLeft" Font="Arial, 9.75pt, style=Bold" ForeColor="255,19,63,88">
+                  <StylePriority Ref="169" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                </Item3>
+              </Cells>
+            </Item1>
+          </Rows>
+        </Item2>
+        <Item3 Ref="170" ControlType="XRLine" Name="xrLine13" SizeF="237.8349,5.102949" LocationFloat="512.1641,29.09374" ForeColor="255,19,63,88">
+          <StylePriority Ref="171" UseForeColor="false" />
+        </Item3>
+        <Item4 Ref="172" ControlType="XRTable" Name="xrTable19" SizeF="237.835083,19.09375" LocationFloat="512.1639,10.0000162" BorderColor="255,19,63,88">
+          <Rows>
+            <Item1 Ref="173" ControlType="XRTableRow" Name="xrTableRow25" Weight="1">
+              <Cells>
+                <Item1 Ref="174" ControlType="XRTableCell" Name="xrTableCell92" Weight="8.3826607195987535" Multiline="true" BackColor="255,240,171,0" Padding="2,2,0,0,100">
+                  <StylePriority Ref="175" UseBackColor="false" />
+                </Item1>
+                <Item2 Ref="176" ControlType="XRTableCell" Name="xrTableCell95" Weight="103.73068873710926" Multiline="true" Text="Total Payment Amount :" TextAlignment="MiddleLeft" Font="calibri, 8pt, style=Bold" ForeColor="255,19,63,88" Padding="2,2,0,0,100" BorderColor="255,19,63,88">
+                  <StylePriority Ref="177" UseFont="false" UseForeColor="false" UseBorderColor="false" UseTextAlignment="false" />
+                </Item2>
+                <Item3 Ref="178" ControlType="XRTableCell" Name="xrTableCell96" Weight="101.27973127430133" TextFormatString="{0:N2}" Multiline="true" Text="xrTableCell62" TextAlignment="MiddleRight" Font="calibri, 8pt, style=Bold" ForeColor="255,19,63,88" Padding="2,2,0,0,100" BorderColor="255,19,63,88">
+                  <ExpressionBindings>
+                    <Item1 Ref="179" EventName="BeforePrint" PropertyName="Text" Expression="[AMG_TRD_UAE_RPT_OUTGIONG_PAYMENT_II].[cf_TotalSum]" />
+                  </ExpressionBindings>
+                  <StylePriority Ref="180" UseFont="false" UseForeColor="false" UseBorderColor="false" UseTextAlignment="false" />
+                </Item3>
+              </Cells>
+            </Item1>
+          </Rows>
+          <StylePriority Ref="181" UseBorderColor="false" />
+        </Item4>
+      </Controls>
+    </Item6>
+    <Item7 Ref="182" ControlType="GroupHeaderBand" Name="GroupHeader2" Level="4" HeightF="0" />
+    <Item8 Ref="183" ControlType="GroupHeaderBand" Name="GroupHeader3" Level="3" HeightF="0">
+      <ExpressionBindings>
+        <Item1 Ref="184" EventName="BeforePrint" PropertyName="Visible" Expression="[cf_CreditSum] &lt;&gt; 0&#xA;" />
+      </ExpressionBindings>
+    </Item8>
+    <Item9 Ref="185" ControlType="GroupHeaderBand" Name="GroupHeader4" Level="2" HeightF="0">
+      <ExpressionBindings>
+        <Item1 Ref="186" EventName="BeforePrint" PropertyName="Visible" Expression="[cf_CheckSum] &lt;&gt; 0&#xA;" />
+      </ExpressionBindings>
+    </Item9>
+    <Item10 Ref="187" ControlType="GroupHeaderBand" Name="GroupHeader5" Level="1" HeightF="0">
+      <ExpressionBindings>
+        <Item1 Ref="188" EventName="BeforePrint" PropertyName="Visible" Expression="[cf_BankSum] &lt;&gt; 0&#xA;" />
+      </ExpressionBindings>
+    </Item10>
+    <Item11 Ref="189" ControlType="GroupHeaderBand" Name="GroupHeader6" HeightF="0">
+      <ExpressionBindings>
+        <Item1 Ref="190" EventName="BeforePrint" PropertyName="Visible" Expression="[cf_CashSum] &lt;&gt; 0" />
+      </ExpressionBindings>
+    </Item11>
+    <Item12 Ref="191" ControlType="DetailReportBand" Name="DetailReport" Level="1">
+      <Bands>
+        <Item1 Ref="192" ControlType="DetailBand" Name="Detail1" HeightF="23.0000019">
+          <Controls>
+            <Item1 Ref="193" ControlType="XRTable" Name="xrTable6" TextAlignment="MiddleRight" SizeF="751,23.0000019" LocationFloat="1.0001353,0" Font="calibri, 8pt">
+              <Rows>
+                <Item1 Ref="194" ControlType="XRTableRow" Name="xrTableRow11" Weight="1">
+                  <Cells>
+                    <Item1 Ref="195" ControlType="XRTableCell" Name="xrTableCell50" Weight="199.10253723371275" Multiline="true" Text="xrLabel13" TextAlignment="MiddleLeft" Padding="2,2,0,0,100">
+                      <ExpressionBindings>
+                        <Item1 Ref="196" EventName="BeforePrint" PropertyName="Text" Expression="[OCRC_CardName]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="197" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="198" ControlType="XRTableCell" Name="xrTableCell51" Weight="80.703895514311583" Multiline="true" Text="xrLabel14" TextAlignment="MiddleLeft" Padding="2,2,0,0,100">
+                      <ExpressionBindings>
+                        <Item1 Ref="199" EventName="BeforePrint" PropertyName="Text" Expression="[VPM3_OwnerIdNum]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="200" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="201" ControlType="XRTableCell" Name="xrTableCell52" Weight="104.26311324566048" Multiline="true" Text="xrLabel15" TextAlignment="MiddleRight" Padding="2,2,0,0,100">
+                      <ExpressionBindings>
+                        <Item1 Ref="202" EventName="BeforePrint" PropertyName="Text" Expression="[VPM3_NumOfPmnts]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="203" UseTextAlignment="false" />
+                    </Item3>
+                    <Item4 Ref="204" ControlType="XRTableCell" Name="xrTableCell53" Weight="104.26297182981477" Multiline="true" Text="xrLabel16" TextAlignment="MiddleRight" Padding="2,2,0,0,100">
+                      <ExpressionBindings>
+                        <Item1 Ref="205" EventName="BeforePrint" PropertyName="Text" Expression="[VPM3_FirstSum]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="206" UseTextAlignment="false" />
+                    </Item4>
+                    <Item5 Ref="207" ControlType="XRTableCell" Name="xrTableCell54" Weight="104.26314112933393" Multiline="true" Text="xrLabel17" TextAlignment="MiddleRight" Padding="2,2,0,0,100">
+                      <ExpressionBindings>
+                        <Item1 Ref="208" EventName="BeforePrint" PropertyName="Text" Expression="[VPM3_AddPmntSum]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="209" UseTextAlignment="false" />
+                    </Item5>
+                    <Item6 Ref="210" ControlType="XRTableCell" Name="xrTableCell55" Weight="104.26307192743695" Multiline="true" Text="xrLabel18" TextAlignment="MiddleRight" Padding="2,2,0,0,100">
+                      <ExpressionBindings>
+                        <Item1 Ref="211" EventName="BeforePrint" PropertyName="Text" Expression="[VPM3_CreditSum]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="212" UseTextAlignment="false" />
+                    </Item6>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="213" UseFont="false" UseTextAlignment="false" />
+            </Item1>
+          </Controls>
+          <ExpressionBindings>
+            <Item1 Ref="214" EventName="BeforePrint" PropertyName="Visible" Expression="[cf_CreditSum] &lt;&gt; 0&#xA;" />
+          </ExpressionBindings>
+        </Item1>
+        <Item2 Ref="215" ControlType="GroupHeaderBand" Name="GroupHeader7" HeightF="0">
+          <SubBands>
+            <Item1 Ref="216" ControlType="SubBand" Name="SubBand11" HeightF="37.9751968">
+              <Controls>
+                <Item1 Ref="217" ControlType="XRTable" Name="xrTable14" SizeF="751.9992,17.1875" LocationFloat="0,10.0000038" Padding="2,2,0,0,96">
+                  <Rows>
+                    <Item1 Ref="218" ControlType="XRTableRow" Name="xrTableRow20" Weight="1">
+                      <Cells>
+                        <Item1 Ref="219" ControlType="XRTableCell" Name="xrTableCell102" Weight="0.068348040580749475" Multiline="true" BackColor="255,240,171,0">
+                          <StylePriority Ref="220" UseBackColor="false" />
+                        </Item1>
+                        <Item2 Ref="221" ControlType="XRTableCell" Name="xrTableCell103" Weight="0.076183255923368165" Multiline="true" TextAlignment="MiddleLeft" Font="Arial, 9.75pt, style=Bold" ForeColor="255,19,63,88">
+                          <StylePriority Ref="222" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                        </Item2>
+                        <Item3 Ref="223" ControlType="XRTableCell" Name="xrTableCell104" Weight="7.37546085100889" Multiline="true" Text="Credit Card" TextAlignment="MiddleLeft" Font="Arial, 9.75pt, style=Bold" ForeColor="255,19,63,88">
+                          <StylePriority Ref="224" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                        </Item3>
+                      </Cells>
+                    </Item1>
+                  </Rows>
+                </Item1>
+              </Controls>
+            </Item1>
+            <Item2 Ref="225" ControlType="SubBand" Name="SubBand17" HeightF="23">
+              <Controls>
+                <Item1 Ref="226" ControlType="XRTable" Name="xrTable7" TextAlignment="MiddleLeft" SizeF="751,23" LocationFloat="0.9999642,0" Font="calibri, 8pt, style=Bold" ForeColor="255,19,63,88" BackColor="255,239,244,247" Padding="2,2,0,0,96" BorderColor="255,19,63,88" Borders="Top, Bottom">
+                  <Rows>
+                    <Item1 Ref="227" ControlType="XRTableRow" Name="xrTableRow12" Weight="1">
+                      <Cells>
+                        <Item1 Ref="228" ControlType="XRTableCell" Name="xrTableCell56" Weight="2.2025263727796274" Multiline="true" Text="Card Name" />
+                        <Item2 Ref="229" ControlType="XRTableCell" Name="xrTableCell57" Weight="0.8927705072298936" Multiline="true" Text="ID Number" />
+                        <Item3 Ref="230" ControlType="XRTableCell" Name="xrTableCell58" Weight="1.1533867677315122" Multiline="true" Text="No. of Payments" />
+                        <Item4 Ref="231" ControlType="XRTableCell" Name="xrTableCell59" Weight="1.153386197482817" Multiline="true" Text="1st Payment" />
+                        <Item5 Ref="232" ControlType="XRTableCell" Name="xrTableCell60" Weight="1.1533862070252836" Multiline="true" Text="Payment" />
+                        <Item6 Ref="233" ControlType="XRTableCell" Name="xrTableCell61" Weight="1.1533851081469555" Multiline="true" Text="Amount" TextAlignment="MiddleRight">
+                          <StylePriority Ref="234" UseTextAlignment="false" />
+                        </Item6>
+                      </Cells>
+                    </Item1>
+                  </Rows>
+                  <StylePriority Ref="235" UseFont="false" UseForeColor="false" UseBackColor="false" UseBorderColor="false" UseBorders="false" UseTextAlignment="false" />
+                </Item1>
+              </Controls>
+            </Item2>
+          </SubBands>
+          <ExpressionBindings>
+            <Item1 Ref="236" EventName="BeforePrint" PropertyName="Visible" Expression="[cf_CreditSum] &lt;&gt; 0&#xA;" />
+          </ExpressionBindings>
+        </Item2>
+        <Item3 Ref="237" ControlType="GroupFooterBand" Name="GroupFooter4" HeightF="34.19669">
+          <SubBands>
+            <Item1 Ref="238" ControlType="SubBand" Name="SubBand26" HeightF="23" Visible="false">
+              <Controls>
+                <Item1 Ref="239" ControlType="XRLine" Name="xrLine12" LineWidth="1.5" SizeF="752.0002,23" LocationFloat="0,0" ForeColor="255,19,63,88">
+                  <StylePriority Ref="240" UseForeColor="false" />
+                </Item1>
+              </Controls>
+            </Item1>
+          </SubBands>
+          <Controls>
+            <Item1 Ref="241" ControlType="XRTable" Name="xrTable23" SizeF="236.834839,19.09375" LocationFloat="514.1643,9.99999" BorderColor="255,19,63,88">
+              <Rows>
+                <Item1 Ref="242" ControlType="XRTableRow" Name="xrTableRow29" Weight="1">
+                  <Cells>
+                    <Item1 Ref="243" ControlType="XRTableCell" Name="xrTableCell120" Weight="8.3826607195987535" Multiline="true" BackColor="255,240,171,0" Padding="2,2,0,0,100">
+                      <StylePriority Ref="244" UseBackColor="false" />
+                    </Item1>
+                    <Item2 Ref="245" ControlType="XRTableCell" Name="xrTableCell121" Weight="103.73068873710926" Multiline="true" Text="Credit Total :" TextAlignment="MiddleLeft" Font="calibri, 8pt, style=Bold" ForeColor="255,19,63,88" Padding="2,2,0,0,100" BorderColor="255,19,63,88">
+                      <StylePriority Ref="246" UseFont="false" UseForeColor="false" UseBorderColor="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="247" ControlType="XRTableCell" Name="xrTableCell122" Weight="101.27973127430133" TextFormatString="{0:N2}" Multiline="true" Text="xrTableCell62" TextAlignment="MiddleRight" Font="calibri, 8pt, style=Bold" ForeColor="255,19,63,88" Padding="2,2,0,0,100" BorderColor="255,19,63,88">
+                      <ExpressionBindings>
+                        <Item1 Ref="248" EventName="BeforePrint" PropertyName="Text" Expression="[AMG_TRD_UAE_RPT_OUTGIONG_PAYMENT_II].[cf_CreditSum]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="249" UseFont="false" UseForeColor="false" UseBorderColor="false" UseTextAlignment="false" />
+                    </Item3>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="250" UseBorderColor="false" />
+            </Item1>
+            <Item2 Ref="251" ControlType="XRLine" Name="xrLine11" SizeF="237.8349,5.102949" LocationFloat="514.1643,29.09374" ForeColor="255,19,63,88">
+              <StylePriority Ref="252" UseForeColor="false" />
+            </Item2>
+          </Controls>
+        </Item3>
+      </Bands>
+      <ExpressionBindings>
+        <Item1 Ref="253" EventName="BeforePrint" PropertyName="Visible" Expression="[cf_CreditSum] &lt;&gt; 0" />
+      </ExpressionBindings>
+    </Item12>
+    <Item13 Ref="254" ControlType="DetailReportBand" Name="DetailReport1" Level="2">
+      <Bands>
+        <Item1 Ref="255" ControlType="DetailBand" Name="Detail2" HeightF="16">
+          <Controls>
+            <Item1 Ref="256" ControlType="XRTable" Name="xrTable9" SizeF="752.0002,16" LocationFloat="0,0" Font="calibri, 8pt" BorderColor="255,19,63,88" Borders="Bottom" BorderWidth="0.5" BorderDashStyle="Dash">
+              <Rows>
+                <Item1 Ref="257" ControlType="XRTableRow" Name="xrTableRow14" Weight="1">
+                  <Cells>
+                    <Item1 Ref="258" ControlType="XRTableCell" Name="xrTableCell71" Weight="112.51075467105005" TextFormatString="{0:dd-MMM-yy}" Multiline="true" Text="xrLabel19" Padding="2,2,0,0,100">
+                      <ExpressionBindings>
+                        <Item1 Ref="259" EventName="BeforePrint" PropertyName="Text" Expression="[AMG_TRD_UAE_RPT_OUTGIONG_PAYMENT_II].[VPM1_DueDate]" />
+                      </ExpressionBindings>
+                    </Item1>
+                    <Item2 Ref="260" ControlType="XRTableCell" Name="xrTableCell72" Weight="97.17397227786411" Multiline="true" Text="xrLabel20" TextAlignment="TopLeft" Padding="2,2,0,0,100">
+                      <ExpressionBindings>
+                        <Item1 Ref="261" EventName="BeforePrint" PropertyName="Text" Expression="[AMG_TRD_UAE_RPT_OUTGIONG_PAYMENT_II].[VPM1_CheckNum]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="262" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="263" ControlType="XRTableCell" Name="xrTableCell73" Weight="122.54536162682651" Multiline="true" Text="xrLabel24" Padding="2,2,0,0,100">
+                      <ExpressionBindings>
+                        <Item1 Ref="264" EventName="BeforePrint" PropertyName="Text" Expression="[AMG_TRD_UAE_RPT_OUTGIONG_PAYMENT_II].[ODSC_BankName]" />
+                      </ExpressionBindings>
+                    </Item3>
+                    <Item4 Ref="265" ControlType="XRTableCell" Name="xrTableCell74" Weight="123.24315129777362" Multiline="true" Text="xrLabel21" Padding="2,2,0,0,100">
+                      <ExpressionBindings>
+                        <Item1 Ref="266" EventName="BeforePrint" PropertyName="Text" Expression="[AMG_TRD_UAE_RPT_OUTGIONG_PAYMENT_II].[VPM1_Branch]" />
+                      </ExpressionBindings>
+                    </Item4>
+                    <Item5 Ref="267" ControlType="XRTableCell" Name="xrTableCell75" Weight="171.26356382521755" Multiline="true" Text="xrLabel22" Padding="2,2,0,0,100">
+                      <ExpressionBindings>
+                        <Item1 Ref="268" EventName="BeforePrint" PropertyName="Text" Expression="[AMG_TRD_UAE_RPT_OUTGIONG_PAYMENT_II].[VPM1_AcctNum]" />
+                      </ExpressionBindings>
+                    </Item5>
+                    <Item6 Ref="269" ControlType="XRTableCell" Name="xrTableCell76" Weight="104.26287926736667" TextFormatString="{0:N2}" Multiline="true" Text="xrLabel23" TextAlignment="TopRight" Padding="2,2,0,0,100">
+                      <ExpressionBindings>
+                        <Item1 Ref="270" EventName="BeforePrint" PropertyName="Text" Expression="[AMG_TRD_UAE_RPT_OUTGIONG_PAYMENT_II].[VPM1_CheckSum]" />
+                      </ExpressionBindings>
+                    </Item6>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="271" UseFont="false" UseBorderColor="false" UseBorders="false" UseBorderWidth="false" UseBorderDashStyle="false" />
+            </Item1>
+          </Controls>
+        </Item1>
+        <Item2 Ref="272" ControlType="GroupHeaderBand" Name="GroupHeader8" HeightF="0">
+          <SubBands>
+            <Item1 Ref="273" ControlType="SubBand" Name="SubBand12" HeightF="24.411438">
+              <Controls>
+                <Item1 Ref="274" ControlType="XRTable" Name="xrTable15" SizeF="752.0002,17.1875" LocationFloat="0,0" Padding="2,2,0,0,96">
+                  <Rows>
+                    <Item1 Ref="275" ControlType="XRTableRow" Name="xrTableRow21" Weight="1">
+                      <Cells>
+                        <Item1 Ref="276" ControlType="XRTableCell" Name="xrTableCell105" Weight="0.068348040580749475" Multiline="true" BackColor="255,240,171,0">
+                          <StylePriority Ref="277" UseBackColor="false" />
+                        </Item1>
+                        <Item2 Ref="278" ControlType="XRTableCell" Name="xrTableCell106" Weight="0.076183255923368165" Multiline="true" TextAlignment="MiddleLeft" Font="Arial, 9.75pt, style=Bold" ForeColor="255,19,63,88">
+                          <StylePriority Ref="279" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                        </Item2>
+                        <Item3 Ref="280" ControlType="XRTableCell" Name="xrTableCell107" Weight="7.3754706166339972" Multiline="true" Text="Cheque" TextAlignment="MiddleLeft" Font="Arial, 9.75pt, style=Bold" ForeColor="255,19,63,88">
+                          <StylePriority Ref="281" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                        </Item3>
+                      </Cells>
+                    </Item1>
+                  </Rows>
+                </Item1>
+              </Controls>
+            </Item1>
+            <Item2 Ref="282" ControlType="SubBand" Name="SubBand16" HeightF="23">
+              <Controls>
+                <Item1 Ref="283" ControlType="XRTable" Name="xrTable8" TextAlignment="MiddleLeft" SizeF="752.0002,23" LocationFloat="0,0" Font="calibri, 8pt, style=Bold" ForeColor="255,19,63,88" BackColor="255,239,244,247" Padding="2,2,0,0,96" BorderColor="255,19,63,88" Borders="Top, Bottom">
+                  <Rows>
+                    <Item1 Ref="284" ControlType="XRTableRow" Name="xrTableRow13" Weight="1">
+                      <Cells>
+                        <Item1 Ref="285" ControlType="XRTableCell" Name="xrTableCell65" Weight="1.1883783359759454" Multiline="true" Text="Date" />
+                        <Item2 Ref="286" ControlType="XRTableCell" Name="xrTableCell66" Weight="1.0263868507787735" Multiline="true" Text="Cheque" />
+                        <Item3 Ref="287" ControlType="XRTableCell" Name="xrTableCell67" Weight="1.2943628636329372" Multiline="true" Text="Bank" />
+                        <Item4 Ref="288" ControlType="XRTableCell" Name="xrTableCell68" Weight="1.3017377294342838" Multiline="true" Text="Branch" />
+                        <Item5 Ref="289" ControlType="XRTableCell" Name="xrTableCell69" Weight="1.808949362681624" Multiline="true" Text="Account&#x9;" />
+                        <Item6 Ref="290" ControlType="XRTableCell" Name="xrTableCell70" Weight="1.1012622731099466" Multiline="true" Text="Amount" TextAlignment="MiddleRight">
+                          <StylePriority Ref="291" UseTextAlignment="false" />
+                        </Item6>
+                      </Cells>
+                    </Item1>
+                  </Rows>
+                  <StylePriority Ref="292" UseFont="false" UseForeColor="false" UseBackColor="false" UseBorderColor="false" UseBorders="false" UseTextAlignment="false" />
+                </Item1>
+              </Controls>
+            </Item2>
+          </SubBands>
+        </Item2>
+        <Item3 Ref="293" ControlType="GroupFooterBand" Name="GroupFooter3" HeightF="34.19669">
+          <SubBands>
+            <Item1 Ref="294" ControlType="SubBand" Name="SubBand25" HeightF="23">
+              <Controls>
+                <Item1 Ref="295" ControlType="XRLine" Name="xrLine9" LineWidth="1.5" SizeF="750.9992,23" LocationFloat="0,0" ForeColor="255,19,63,88">
+                  <StylePriority Ref="296" UseForeColor="false" />
+                </Item1>
+              </Controls>
+            </Item1>
+          </SubBands>
+          <Controls>
+            <Item1 Ref="297" ControlType="XRLine" Name="xrLine4" SizeF="237.8349,5.102949" LocationFloat="513.1642,29.09374" ForeColor="255,19,63,88">
+              <StylePriority Ref="298" UseForeColor="false" />
+            </Item1>
+            <Item2 Ref="299" ControlType="XRTable" Name="xrTable18" SizeF="236.834839,19.09375" LocationFloat="513.1642,9.99999" BorderColor="255,19,63,88">
+              <Rows>
+                <Item1 Ref="300" ControlType="XRTableRow" Name="xrTableRow24" Weight="1">
+                  <Cells>
+                    <Item1 Ref="301" ControlType="XRTableCell" Name="xrTableCell63" Weight="8.3826607195987535" Multiline="true" BackColor="255,240,171,0" Padding="2,2,0,0,100">
+                      <StylePriority Ref="302" UseBackColor="false" />
+                    </Item1>
+                    <Item2 Ref="303" ControlType="XRTableCell" Name="xrTableCell64" Weight="103.73068873710926" Multiline="true" Text="Cheque Total :" TextAlignment="MiddleLeft" Font="calibri, 8pt, style=Bold" ForeColor="255,19,63,88" Padding="2,2,0,0,100" BorderColor="255,19,63,88">
+                      <StylePriority Ref="304" UseFont="false" UseForeColor="false" UseBorderColor="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="305" ControlType="XRTableCell" Name="xrTableCell77" Weight="101.27973127430133" TextFormatString="{0:N2}" Multiline="true" Text="xrTableCell62" TextAlignment="MiddleRight" Font="calibri, 8pt, style=Bold" ForeColor="255,19,63,88" Padding="2,2,0,0,100" BorderColor="255,19,63,88">
+                      <ExpressionBindings>
+                        <Item1 Ref="306" EventName="BeforePrint" PropertyName="Text" Expression="[AMG_TRD_UAE_RPT_OUTGIONG_PAYMENT_II].[cf_SubTotal]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="307" UseFont="false" UseForeColor="false" UseBorderColor="false" UseTextAlignment="false" />
+                    </Item3>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="308" UseBorderColor="false" />
+            </Item2>
+          </Controls>
+        </Item3>
+      </Bands>
+      <ExpressionBindings>
+        <Item1 Ref="309" EventName="BeforePrint" PropertyName="Visible" Expression="[cf_CheckSum] &lt;&gt; 0" />
+      </ExpressionBindings>
+    </Item13>
+    <Item14 Ref="310" ControlType="DetailReportBand" Name="DetailReport2" Level="3">
+      <Bands>
+        <Item1 Ref="311" ControlType="DetailBand" Name="Detail3" HeightF="23">
+          <Controls>
+            <Item1 Ref="312" ControlType="XRTable" Name="xrTable11" TextAlignment="MiddleLeft" SizeF="751,23" LocationFloat="0,0" Font="calibri, 8pt">
+              <Rows>
+                <Item1 Ref="313" ControlType="XRTableRow" Name="xrTableRow16" Weight="1">
+                  <Cells>
+                    <Item1 Ref="314" ControlType="XRTableCell" Name="xrTableCell85" Weight="181.00002386910592" Multiline="true" Text="xrLabel25" Padding="2,2,0,0,96">
+                      <ExpressionBindings>
+                        <Item1 Ref="315" EventName="BeforePrint" PropertyName="Text" Expression="[OACT_AcctName]" />
+                      </ExpressionBindings>
+                    </Item1>
+                    <Item2 Ref="316" ControlType="XRTableCell" Name="xrTableCell89" Weight="179.00004552205093" TextFormatString="{0:d}" Multiline="true" Text="xrLabel27" Padding="2,2,0,0,96">
+                      <ExpressionBindings>
+                        <Item1 Ref="317" EventName="BeforePrint" PropertyName="Text" Expression="[OVPM_TrsfrDate]" />
+                      </ExpressionBindings>
+                    </Item2>
+                    <Item3 Ref="318" ControlType="XRTableCell" Name="xrTableCell90" Weight="182.00006202818929" Multiline="true" Text="xrLabel26" Padding="2,2,0,0,96">
+                      <ExpressionBindings>
+                        <Item1 Ref="319" EventName="BeforePrint" PropertyName="Text" Expression="[OVPM_TrsfrRef]" />
+                      </ExpressionBindings>
+                    </Item3>
+                    <Item4 Ref="320" ControlType="XRTableCell" Name="xrTableCell91" Weight="87.999876210048427" Multiline="true" Text="xrLabel28" Padding="2,2,0,0,96">
+                      <ExpressionBindings>
+                        <Item1 Ref="321" EventName="BeforePrint" PropertyName="Text" Expression="[cf_BankSum]" />
+                      </ExpressionBindings>
+                    </Item4>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="322" UseFont="false" UseTextAlignment="false" />
+            </Item1>
+          </Controls>
+        </Item1>
+        <Item2 Ref="323" ControlType="GroupHeaderBand" Name="GroupHeader9" HeightF="23">
+          <SubBands>
+            <Item1 Ref="324" ControlType="SubBand" Name="SubBand13" HeightF="46.60924">
+              <Controls>
+                <Item1 Ref="325" ControlType="XRTable" Name="xrTable16" SizeF="751.9992,17.1875" LocationFloat="0,23" Padding="2,2,0,0,96">
+                  <Rows>
+                    <Item1 Ref="326" ControlType="XRTableRow" Name="xrTableRow22" Weight="1">
+                      <Cells>
+                        <Item1 Ref="327" ControlType="XRTableCell" Name="xrTableCell108" Weight="0.068348040580749475" Multiline="true" BackColor="255,240,171,0">
+                          <StylePriority Ref="328" UseBackColor="false" />
+                        </Item1>
+                        <Item2 Ref="329" ControlType="XRTableCell" Name="xrTableCell109" Weight="0.076183255923368165" Multiline="true" TextAlignment="MiddleLeft" Font="Arial, 9.75pt, style=Bold" ForeColor="255,19,63,88">
+                          <StylePriority Ref="330" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                        </Item2>
+                        <Item3 Ref="331" ControlType="XRTableCell" Name="xrTableCell110" Weight="7.37546085100889" Multiline="true" Text="Bank Transfer" TextAlignment="MiddleLeft" Font="Arial, 9.75pt, style=Bold" ForeColor="255,19,63,88">
+                          <StylePriority Ref="332" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                        </Item3>
+                      </Cells>
+                    </Item1>
+                  </Rows>
+                </Item1>
+              </Controls>
+            </Item1>
+            <Item2 Ref="333" ControlType="SubBand" Name="SubBand15" HeightF="23">
+              <Controls>
+                <Item1 Ref="334" ControlType="XRTable" Name="xrTable10" TextAlignment="MiddleLeft" SizeF="752.0002,23" LocationFloat="0,0" Font="calibri, 8pt, style=Bold" ForeColor="255,19,63,88" BackColor="255,239,244,247" Padding="2,2,0,0,96" BorderColor="255,19,63,88" Borders="Top, Bottom">
+                  <Rows>
+                    <Item1 Ref="335" ControlType="XRTableRow" Name="xrTableRow15" Weight="1">
+                      <Cells>
+                        <Item1 Ref="336" ControlType="XRTableCell" Name="xrTableCell78" Weight="0.36061192040177681" Multiline="true" Text="#" />
+                        <Item2 Ref="337" ControlType="XRTableCell" Name="xrTableCell79" Weight="1.8541504628600789" Multiline="true" Text="Accunt Name" />
+                        <Item3 Ref="338" ControlType="XRTableCell" Name="xrTableCell80" Weight="2.2025258410268691" Multiline="true" Text="Transfer Date" />
+                        <Item4 Ref="339" ControlType="XRTableCell" Name="xrTableCell81" Weight="2.2147641825668654" Multiline="true" Text="Reference" />
+                        <Item5 Ref="340" ControlType="XRTableCell" Name="xrTableCell84" Weight="1.0890267637284605" Multiline="true" Text="Amount" TextAlignment="MiddleRight">
+                          <StylePriority Ref="341" UseTextAlignment="false" />
+                        </Item5>
+                      </Cells>
+                    </Item1>
+                  </Rows>
+                  <StylePriority Ref="342" UseFont="false" UseForeColor="false" UseBackColor="false" UseBorderColor="false" UseBorders="false" UseTextAlignment="false" />
+                </Item1>
+              </Controls>
+            </Item2>
+          </SubBands>
+        </Item2>
+      </Bands>
+      <ExpressionBindings>
+        <Item1 Ref="343" EventName="BeforePrint" PropertyName="Visible" Expression="[cf_BankSum] &lt;&gt; 0" />
+      </ExpressionBindings>
+    </Item14>
+    <Item15 Ref="344" ControlType="DetailReportBand" Name="DetailReport3" Level="4">
+      <Bands>
+        <Item1 Ref="345" ControlType="DetailBand" Name="Detail4" HeightF="23">
+          <Controls>
+            <Item1 Ref="346" ControlType="XRTable" Name="xrTable13" TextAlignment="MiddleLeft" SizeF="752.0002,23" LocationFloat="0,0" Font="calibri, 8pt" ForeColor="255,19,63,88">
+              <Rows>
+                <Item1 Ref="347" ControlType="XRTableRow" Name="xrTableRow19" Weight="1">
+                  <Cells>
+                    <Item1 Ref="348" ControlType="XRTableCell" Name="xrTableCell99" Weight="181.00014593786517" Multiline="true" Text="xrLabel29" Padding="2,2,0,0,96">
+                      <ExpressionBindings>
+                        <Item1 Ref="349" EventName="BeforePrint" PropertyName="Text" Expression="[OVPM_CashAcct]" />
+                      </ExpressionBindings>
+                    </Item1>
+                    <Item2 Ref="350" ControlType="XRTableCell" Name="xrTableCell100" Weight="179.99989220910749" Multiline="true" Text="xrLabel30" Padding="2,2,0,0,96">
+                      <ExpressionBindings>
+                        <Item1 Ref="351" EventName="BeforePrint" PropertyName="Text" Expression="[OACT_AcctName]" />
+                      </ExpressionBindings>
+                    </Item2>
+                    <Item3 Ref="352" ControlType="XRTableCell" Name="xrTableCell101" Weight="270.00009155273438" Multiline="true" Text="xrLabel31" Padding="2,2,0,0,96">
+                      <ExpressionBindings>
+                        <Item1 Ref="353" EventName="BeforePrint" PropertyName="Text" Expression="[cf_CashSum]" />
+                      </ExpressionBindings>
+                    </Item3>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="354" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+            </Item1>
+          </Controls>
+        </Item1>
+        <Item2 Ref="355" ControlType="GroupHeaderBand" Name="GroupHeader10" HeightF="0">
+          <SubBands>
+            <Item1 Ref="356" ControlType="SubBand" Name="SubBand14" HeightF="46.28513">
+              <Controls>
+                <Item1 Ref="357" ControlType="XRTable" Name="xrTable17" SizeF="752.0001,17.1874962" LocationFloat="0,23.00008" Padding="2,2,0,0,96">
+                  <Rows>
+                    <Item1 Ref="358" ControlType="XRTableRow" Name="xrTableRow23" Weight="1">
+                      <Cells>
+                        <Item1 Ref="359" ControlType="XRTableCell" Name="xrTableCell82" Weight="0.068348040580749475" Multiline="true" BackColor="255,240,171,0">
+                          <StylePriority Ref="360" UseBackColor="false" />
+                        </Item1>
+                        <Item2 Ref="361" ControlType="XRTableCell" Name="xrTableCell83" Weight="0.076183255923368165" Multiline="true" TextAlignment="MiddleLeft" Font="Arial, 9.75pt, style=Bold" ForeColor="255,19,63,88">
+                          <StylePriority Ref="362" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                        </Item2>
+                        <Item3 Ref="363" ControlType="XRTableCell" Name="xrTableCell111" Weight="6.1654693827232894" Multiline="true" Text="Cash" TextAlignment="MiddleLeft" Font="Arial, 9.75pt, style=Bold" ForeColor="255,19,63,88">
+                          <StylePriority Ref="364" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                        </Item3>
+                      </Cells>
+                    </Item1>
+                  </Rows>
+                </Item1>
+              </Controls>
+            </Item1>
+            <Item2 Ref="365" ControlType="SubBand" Name="SubBand18" HeightF="23">
+              <Controls>
+                <Item1 Ref="366" ControlType="XRTable" Name="xrTable12" TextAlignment="MiddleLeft" SizeF="752.0002,23" LocationFloat="0,0" Font="calibri, 8pt, style=Bold" ForeColor="255,19,63,88" BackColor="255,239,244,247" Padding="2,2,0,0,96" BorderColor="255,19,63,88" Borders="Top, Bottom">
+                  <Rows>
+                    <Item1 Ref="367" ControlType="XRTableRow" Name="xrTableRow18" Weight="1">
+                      <Cells>
+                        <Item1 Ref="368" ControlType="XRTableCell" Name="xrTableCell93" Weight="2.1113234616270526" Multiline="true" Text="G/L Account" />
+                        <Item2 Ref="369" ControlType="XRTableCell" Name="xrTableCell94" Weight="2.0996583937487414" Multiline="true" Text="Account Name" />
+                        <Item3 Ref="370" ControlType="XRTableCell" Name="xrTableCell98" Weight="3.1494851096995844" Multiline="true" Text="Amount" TextAlignment="MiddleRight">
+                          <StylePriority Ref="371" UseTextAlignment="false" />
+                        </Item3>
+                      </Cells>
+                    </Item1>
+                  </Rows>
+                  <StylePriority Ref="372" UseFont="false" UseForeColor="false" UseBackColor="false" UseBorderColor="false" UseBorders="false" UseTextAlignment="false" />
+                </Item1>
+              </Controls>
+            </Item2>
+          </SubBands>
+        </Item2>
+      </Bands>
+      <ExpressionBindings>
+        <Item1 Ref="373" EventName="BeforePrint" PropertyName="Visible" Expression="[cf_CashSum] &lt;&gt; 0&#xA;" />
+      </ExpressionBindings>
+    </Item15>
+    <Item16 Ref="374" ControlType="DetailReportBand" Name="DetailReport4" Level="0">
+      <Bands>
+        <Item1 Ref="375" ControlType="DetailBand" Name="Detail5" HeightF="16.489584">
+          <Controls>
+            <Item1 Ref="376" ControlType="XRTable" Name="xrTable4" SizeF="750.999939,16" LocationFloat="1.00001311,0" Font="calibri, 8pt" ForeColor="Black" BorderColor="255,19,63,88" Borders="Bottom" BorderWidth="0.5" BorderDashStyle="Dash">
+              <Rows>
+                <Item1 Ref="377" ControlType="XRTableRow" Name="xrTableRow9" Weight="12058624">
+                  <Cells>
+                    <Item1 Ref="378" ControlType="XRTableCell" Name="xrTableCell46" Weight="33.941612916277904" Multiline="true" Text="xrTableCell46" Padding="2,2,0,0,100">
+                      <Summary Ref="379" Running="Report" />
+                      <ExpressionBindings>
+                        <Item1 Ref="380" EventName="BeforePrint" PropertyName="Text" Expression="sumRecordNumber()" />
+                      </ExpressionBindings>
+                    </Item1>
+                    <Item2 Ref="381" ControlType="XRTableCell" Name="xrTableCell40" Weight="180.64651530031631" Multiline="true" Text="xrLabel4" Padding="2,2,0,0,100">
+                      <ExpressionBindings>
+                        <Item1 Ref="382" EventName="BeforePrint" PropertyName="Text" Expression="[AMG_TRD_UAE_RPT_OUTGIONG_PAYMENT_II].[VPM2_InvType_Name]" />
+                      </ExpressionBindings>
+                    </Item2>
+                    <Item3 Ref="383" ControlType="XRTableCell" Name="xrTableCell41" Weight="107.294052803135" Multiline="true" Text="xrLabel5" TextAlignment="TopLeft" Padding="2,2,0,0,100">
+                      <ExpressionBindings>
+                        <Item1 Ref="384" EventName="BeforePrint" PropertyName="Text" Expression="[AMG_TRD_UAE_RPT_OUTGIONG_PAYMENT_II].[cf_DocumentNumber]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="385" UseTextAlignment="false" />
+                    </Item3>
+                    <Item4 Ref="386" ControlType="XRTableCell" Name="xrTableCell42" Weight="107.29407099399729" Multiline="true" Text="xrLabel6" Padding="2,2,0,0,100">
+                      <ExpressionBindings>
+                        <Item1 Ref="387" EventName="BeforePrint" PropertyName="Text" Expression="[AMG_TRD_UAE_RPT_OUTGIONG_PAYMENT_II].[DocumentDate]" />
+                      </ExpressionBindings>
+                    </Item4>
+                    <Item5 Ref="388" ControlType="XRTableCell" Name="xrTableCell43" Weight="107.29407099399729" Multiline="true" Text="xrLabel7" TextAlignment="TopCenter" Padding="2,2,0,0,100">
+                      <ExpressionBindings>
+                        <Item1 Ref="389" EventName="BeforePrint" PropertyName="Text" Expression="[AMG_TRD_UAE_RPT_OUTGIONG_PAYMENT_II].[VPM2_InstId] + ' of ' + [AMG_TRD_UAE_RPT_OUTGIONG_PAYMENT_II].[TotalInstallments]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="390" UseTextAlignment="false" />
+                    </Item5>
+                    <Item6 Ref="391" ControlType="XRTableCell" Name="xrTableCell44" Weight="107.29403987799637" Multiline="true" Text="xrLabel8" TextAlignment="TopLeft" Padding="2,2,0,0,100">
+                      <ExpressionBindings>
+                        <Item1 Ref="392" EventName="BeforePrint" PropertyName="Text" Expression="[AMG_TRD_UAE_RPT_OUTGIONG_PAYMENT_II].[NameAtCard]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="393" UseTextAlignment="false" />
+                    </Item6>
+                    <Item7 Ref="394" ControlType="XRTableCell" Name="xrTableCell45" Weight="107.29413931154544" TextFormatString="{0:N2}" Multiline="true" Text="xrLabel11" TextAlignment="TopRight" Padding="2,2,0,0,100">
+                      <ExpressionBindings>
+                        <Item1 Ref="395" EventName="BeforePrint" PropertyName="Text" Expression="[AMG_TRD_UAE_RPT_OUTGIONG_PAYMENT_II].[cf_AmountFlag2]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="396" UseTextAlignment="false" />
+                    </Item7>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="397" UseFont="false" UseForeColor="false" UseBorderColor="false" UseBorders="false" UseBorderWidth="false" UseBorderDashStyle="false" />
+            </Item1>
+          </Controls>
+        </Item1>
+        <Item2 Ref="398" ControlType="GroupHeaderBand" Name="GroupHeader11" HeightF="23">
+          <SubBands>
+            <Item1 Ref="399" ControlType="SubBand" Name="SubBand19" HeightF="23">
+              <Controls>
+                <Item1 Ref="400" ControlType="XRTable" Name="xrTable2" TextAlignment="MiddleLeft" SizeF="750.999939,23" LocationFloat="0.9999886,0" Font="calibri, 8pt, style=Bold" ForeColor="255,19,63,88" BackColor="255,239,244,247" Padding="2,2,0,0,96" BorderColor="255,19,63,88" Borders="Top, Bottom">
+                  <Rows>
+                    <Item1 Ref="401" ControlType="XRTableRow" Name="xrTableRow7" Weight="1">
+                      <Cells>
+                        <Item1 Ref="402" ControlType="XRTableCell" Name="xrTableCell39" Weight="0.31634195115831171" Multiline="true" Text="#" />
+                        <Item2 Ref="403" ControlType="XRTableCell" Name="xrTableCell31" Weight="1.6836580488416883" Multiline="true" Text="Paid Doc." />
+                        <Item3 Ref="404" ControlType="XRTableCell" Name="xrTableCell32" Weight="1" Multiline="true" Text="Doc. #" />
+                        <Item4 Ref="405" ControlType="XRTableCell" Name="xrTableCell33" Weight="1" Multiline="true" Text="Date" />
+                        <Item5 Ref="406" ControlType="XRTableCell" Name="xrTableCell34" Weight="1" Multiline="true" Text="Instalment ID" />
+                        <Item6 Ref="407" ControlType="XRTableCell" Name="xrTableCell35" Weight="1" Multiline="true" Text="Ref #" />
+                        <Item7 Ref="408" ControlType="XRTableCell" Name="xrTableCell36" Weight="1" Multiline="true" Text="Amount" TextAlignment="TopRight">
+                          <StylePriority Ref="409" UseTextAlignment="false" />
+                        </Item7>
+                      </Cells>
+                    </Item1>
+                  </Rows>
+                  <StylePriority Ref="410" UseFont="false" UseForeColor="false" UseBackColor="false" UseBorderColor="false" UseBorders="false" UseTextAlignment="false" />
+                </Item1>
+              </Controls>
+            </Item1>
+          </SubBands>
+          <Controls>
+            <Item1 Ref="411" ControlType="XRTable" Name="xrTable3" SizeF="751.999939,17.1875" LocationFloat="0,0" Padding="2,2,0,0,96">
+              <Rows>
+                <Item1 Ref="412" ControlType="XRTableRow" Name="xrTableRow8" Weight="1">
+                  <Cells>
+                    <Item1 Ref="413" ControlType="XRTableCell" Name="xrTableCell37" Weight="0.042586464561620338" Multiline="true" BackColor="255,240,171,0">
+                      <StylePriority Ref="414" UseBackColor="false" />
+                    </Item1>
+                    <Item2 Ref="415" ControlType="XRTableCell" Name="xrTableCell47" Weight="0.1019448319424973" Multiline="true" TextAlignment="MiddleLeft" Font="Arial, 9.75pt, style=Bold" ForeColor="255,19,63,88">
+                      <StylePriority Ref="416" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="417" ControlType="XRTableCell" Name="xrTableCell38" Weight="4.54104946664006" Multiline="true" Text="Payments" TextAlignment="MiddleLeft" Font="Arial, 9.75pt, style=Bold" ForeColor="255,19,63,88">
+                      <StylePriority Ref="418" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
+                    </Item3>
+                  </Cells>
+                </Item1>
+              </Rows>
+            </Item1>
+          </Controls>
+        </Item2>
+        <Item3 Ref="419" ControlType="GroupFooterBand" Name="GroupFooter2" HeightF="0">
+          <SubBands>
+            <Item1 Ref="420" ControlType="SubBand" Name="SubBand23" HeightF="34.1966133">
+              <Controls>
+                <Item1 Ref="421" ControlType="XRLine" Name="xrLine3" SizeF="236.8349,5.102951" LocationFloat="515.165,29.0936623" ForeColor="255,19,63,88">
+                  <StylePriority Ref="422" UseForeColor="false" />
+                </Item1>
+                <Item2 Ref="423" ControlType="XRTable" Name="xrTable5" SizeF="236.835144,19.09375" LocationFloat="515.1647,9.99999" BorderColor="255,19,63,88">
+                  <Rows>
+                    <Item1 Ref="424" ControlType="XRTableRow" Name="xrTableRow10" Weight="1">
+                      <Cells>
+                        <Item1 Ref="425" ControlType="XRTableCell" Name="xrTableCell48" Weight="8.3826607195987535" Multiline="true" BackColor="255,240,171,0" Padding="2,2,0,0,100">
+                          <StylePriority Ref="426" UseBackColor="false" />
+                        </Item1>
+                        <Item2 Ref="427" ControlType="XRTableCell" Name="xrTableCell49" Weight="124.81968810746368" Multiline="true" Text="Document Amount Due :" TextAlignment="MiddleLeft" Font="calibri, 8pt, style=Bold" ForeColor="255,19,63,88" Padding="2,2,0,0,100" BorderColor="255,19,63,88">
+                          <StylePriority Ref="428" UseFont="false" UseForeColor="false" UseBorderColor="false" UseTextAlignment="false" />
+                        </Item2>
+                        <Item3 Ref="429" ControlType="XRTableCell" Name="xrTableCell62" Weight="80.190731903946912" TextFormatString="{0:N2}" Multiline="true" Text="xrTableCell62" TextAlignment="MiddleRight" Font="calibri, 8pt, style=Bold" ForeColor="255,19,63,88" Padding="2,2,0,0,100" BorderColor="255,19,63,88">
+                          <ExpressionBindings>
+                            <Item1 Ref="430" EventName="BeforePrint" PropertyName="Text" Expression="[AMG_TRD_UAE_RPT_OUTGIONG_PAYMENT_II].[cf_SubTotal]" />
+                          </ExpressionBindings>
+                          <StylePriority Ref="431" UseFont="false" UseForeColor="false" UseBorderColor="false" UseTextAlignment="false" />
+                        </Item3>
+                      </Cells>
+                    </Item1>
+                  </Rows>
+                  <StylePriority Ref="432" UseBorderColor="false" />
+                </Item2>
+              </Controls>
+              <ExpressionBindings>
+                <Item1 Ref="433" EventName="BeforePrint" PropertyName="Visible" Expression="[AMG_TRD_UAE_RPT_OUTGIONG_PAYMENT_II].[cf_SubTotal] &lt;&gt; 0" />
+              </ExpressionBindings>
+            </Item1>
+            <Item2 Ref="434" ControlType="SubBand" Name="SubBand20" HeightF="34.1966133">
+              <Controls>
+                <Item1 Ref="435" ControlType="XRLine" Name="xrLine5" SizeF="236.8349,5.102951" LocationFloat="515.1647,29.0936623" ForeColor="255,19,63,88">
+                  <StylePriority Ref="436" UseForeColor="false" />
+                </Item1>
+                <Item2 Ref="437" ControlType="XRTable" Name="xrTable20" SizeF="236.834839,19.09375" LocationFloat="515.1647,9.99999" BorderColor="255,19,63,88">
+                  <Rows>
+                    <Item1 Ref="438" ControlType="XRTableRow" Name="xrTableRow26" Weight="1">
+                      <Cells>
+                        <Item1 Ref="439" ControlType="XRTableCell" Name="xrTableCell97" Weight="8.3826607195987535" Multiline="true" BackColor="255,240,171,0" Padding="2,2,0,0,100">
+                          <StylePriority Ref="440" UseBackColor="false" />
+                        </Item1>
+                        <Item2 Ref="441" ControlType="XRTableCell" Name="xrTableCell112" Weight="124.81969465916805" Multiline="true" Text="Payment on Account :" TextAlignment="MiddleLeft" Font="calibri, 8pt, style=Bold" ForeColor="255,19,63,88" Padding="2,2,0,0,100" BorderColor="255,19,63,88">
+                          <StylePriority Ref="442" UseFont="false" UseForeColor="false" UseBorderColor="false" UseTextAlignment="false" />
+                        </Item2>
+                        <Item3 Ref="443" ControlType="XRTableCell" Name="xrTableCell113" Weight="80.190725352242538" TextFormatString="{0:N2}" Multiline="true" Text="xrTableCell62" TextAlignment="MiddleRight" Font="calibri, 8pt, style=Bold" ForeColor="255,19,63,88" Padding="2,2,0,0,100" BorderColor="255,19,63,88">
+                          <ExpressionBindings>
+                            <Item1 Ref="444" EventName="BeforePrint" PropertyName="Visible" Expression="[AMG_TRD_UAE_RPT_OUTGIONG_PAYMENT_II].[cf_PaymentOnAccount] &lt;&gt; 0&#xA;" />
+                            <Item2 Ref="445" EventName="BeforePrint" PropertyName="Text" Expression="[AMG_TRD_UAE_RPT_OUTGIONG_PAYMENT_II].[cf_PaymentOnAccount]" />
+                          </ExpressionBindings>
+                          <StylePriority Ref="446" UseFont="false" UseForeColor="false" UseBorderColor="false" UseTextAlignment="false" />
+                        </Item3>
+                      </Cells>
+                    </Item1>
+                  </Rows>
+                  <StylePriority Ref="447" UseBorderColor="false" />
+                </Item2>
+              </Controls>
+              <ExpressionBindings>
+                <Item1 Ref="448" EventName="BeforePrint" PropertyName="Visible" Expression="[AMG_TRD_UAE_RPT_OUTGIONG_PAYMENT_II].[cf_PaymentOnAccount] &lt;&gt; 0" />
+              </ExpressionBindings>
+            </Item2>
+            <Item3 Ref="449" ControlType="SubBand" Name="SubBand21" HeightF="34.1966133">
+              <Controls>
+                <Item1 Ref="450" ControlType="XRTable" Name="xrTable21" SizeF="236.834869,19.09375" LocationFloat="515.164551,9.99999" BorderColor="255,19,63,88">
+                  <Rows>
+                    <Item1 Ref="451" ControlType="XRTableRow" Name="xrTableRow27" Weight="1">
+                      <Cells>
+                        <Item1 Ref="452" ControlType="XRTableCell" Name="xrTableCell114" Weight="8.3826607195987535" Multiline="true" BackColor="255,240,171,0" Padding="2,2,0,0,100">
+                          <StylePriority Ref="453" UseBackColor="false" />
+                        </Item1>
+                        <Item2 Ref="454" ControlType="XRTableCell" Name="xrTableCell115" Weight="124.81960257658966" Multiline="true" Text="Withholding Tax :" TextAlignment="MiddleLeft" Font="calibri, 8pt, style=Bold" ForeColor="255,19,63,88" Padding="2,2,0,0,100" BorderColor="255,19,63,88">
+                          <StylePriority Ref="455" UseFont="false" UseForeColor="false" UseBorderColor="false" UseTextAlignment="false" />
+                        </Item2>
+                        <Item3 Ref="456" ControlType="XRTableCell" Name="xrTableCell116" Weight="80.190817434820929" TextFormatString="{0:N2}" Multiline="true" Text="xrTableCell62" TextAlignment="MiddleRight" Font="calibri, 8pt, style=Bold" ForeColor="255,19,63,88" Padding="2,2,0,0,100" BorderColor="255,19,63,88">
+                          <ExpressionBindings>
+                            <Item1 Ref="457" EventName="BeforePrint" PropertyName="Text" Expression="[AMG_TRD_UAE_RPT_OUTGIONG_PAYMENT_II].[cf_WTSum]" />
+                          </ExpressionBindings>
+                          <StylePriority Ref="458" UseFont="false" UseForeColor="false" UseBorderColor="false" UseTextAlignment="false" />
+                        </Item3>
+                      </Cells>
+                    </Item1>
+                  </Rows>
+                  <StylePriority Ref="459" UseBorderColor="false" />
+                </Item1>
+                <Item2 Ref="460" ControlType="XRLine" Name="xrLine6" SizeF="236.8349,5.102951" LocationFloat="515.164551,29.0936623" ForeColor="255,19,63,88">
+                  <StylePriority Ref="461" UseForeColor="false" />
+                </Item2>
+              </Controls>
+              <ExpressionBindings>
+                <Item1 Ref="462" EventName="BeforePrint" PropertyName="Visible" Expression="[AMG_TRD_UAE_RPT_OUTGIONG_PAYMENT_II].[cf_WTSum] &lt;&gt; 0&#xA;" />
+              </ExpressionBindings>
+            </Item3>
+            <Item4 Ref="463" ControlType="SubBand" Name="SubBand22" HeightF="34.1966133">
+              <Controls>
+                <Item1 Ref="464" ControlType="XRLine" Name="xrLine7" SizeF="236.8349,5.102951" LocationFloat="515.1646,29.0936623" ForeColor="255,19,63,88">
+                  <StylePriority Ref="465" UseForeColor="false" />
+                </Item1>
+                <Item2 Ref="466" ControlType="XRTable" Name="xrTable22" SizeF="236.835144,19.09375" LocationFloat="515.164246,9.99999" BorderColor="255,19,63,88">
+                  <Rows>
+                    <Item1 Ref="467" ControlType="XRTableRow" Name="xrTableRow28" Weight="1">
+                      <Cells>
+                        <Item1 Ref="468" ControlType="XRTableCell" Name="xrTableCell117" Weight="8.3826607195987535" Multiline="true" BackColor="255,240,171,0" Padding="2,2,0,0,100">
+                          <StylePriority Ref="469" UseBackColor="false" />
+                        </Item1>
+                        <Item2 Ref="470" ControlType="XRTableCell" Name="xrTableCell118" Weight="124.81974310132904" Multiline="true" Text="Total Amount Due :" TextAlignment="MiddleLeft" Font="calibri, 8pt, style=Bold" ForeColor="255,19,63,88" Padding="2,2,0,0,100" BorderColor="255,19,63,88">
+                          <StylePriority Ref="471" UseFont="false" UseForeColor="false" UseBorderColor="false" UseTextAlignment="false" />
+                        </Item2>
+                        <Item3 Ref="472" ControlType="XRTableCell" Name="xrTableCell119" Weight="80.19067691008155" TextFormatString="{0:N2}" Multiline="true" Text="xrTableCell62" TextAlignment="MiddleRight" Font="calibri, 8pt, style=Bold" ForeColor="255,19,63,88" Padding="2,2,0,0,100" BorderColor="255,19,63,88">
+                          <ExpressionBindings>
+                            <Item1 Ref="473" EventName="BeforePrint" PropertyName="Text" Expression="[AMG_TRD_UAE_RPT_OUTGIONG_PAYMENT_II].[cf_Total]" />
+                          </ExpressionBindings>
+                          <StylePriority Ref="474" UseFont="false" UseForeColor="false" UseBorderColor="false" UseTextAlignment="false" />
+                        </Item3>
+                      </Cells>
+                    </Item1>
+                  </Rows>
+                  <StylePriority Ref="475" UseBorderColor="false" />
+                </Item2>
+              </Controls>
+            </Item4>
+            <Item5 Ref="476" ControlType="SubBand" Name="SubBand24" HeightF="23">
+              <Controls>
+                <Item1 Ref="477" ControlType="XRLine" Name="xrLine8" LineWidth="1.5" SizeF="751.9994,23" LocationFloat="0,0" ForeColor="255,19,63,88">
+                  <StylePriority Ref="478" UseForeColor="false" />
+                </Item1>
+              </Controls>
+            </Item5>
+          </SubBands>
+        </Item3>
+      </Bands>
+    </Item16>
+  </Bands>
+  <ParameterPanelLayoutItems>
+    <Item1 Ref="479" LayoutItemType="Parameter" Parameter="#Ref-3" />
+  </ParameterPanelLayoutItems>
+  <ComponentStorage>
+    <Item1 Ref="0" ObjectType="DevExpress.DataAccess.Sql.SqlDataSource,DevExpress.DataAccess.v23.1" Name="sqlDataSource1" Base64="PFNxbERhdGFTb3VyY2UgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxDb25uZWN0aW9uIE5hbWU9IkZhcl9oYW5hIiBGcm9tQXBwQ29uZmlnPSJ0cnVlIiAvPjxRdWVyeSBUeXBlPSJTdG9yZWRQcm9jUXVlcnkiIE5hbWU9IkFNR19UUkRfVUFFX1JQVF9PVVRHSU9OR19QQVlNRU5UX0lJIj48UGFyYW1ldGVyIE5hbWU9IkRPQ0VOVFJZIiBUeXBlPSJEZXZFeHByZXNzLkRhdGFBY2Nlc3MuRXhwcmVzc2lvbiI+KFN5c3RlbS5JbnQzMikoP0RvY0VudHJ5KTwvUGFyYW1ldGVyPjxQcm9jTmFtZT5BTUdfVFJEX1VBRS5SUFRfT1VUR0lPTkdfUEFZTUVOVF9JSTwvUHJvY05hbWU+PC9RdWVyeT48UmVzdWx0U2NoZW1hPjxEYXRhU2V0IE5hbWU9InNxbERhdGFTb3VyY2UxIj48VmlldyBOYW1lPSJBTUdfVFJEX1VBRV9SUFRfT1VUR0lPTkdfUEFZTUVOVF9JSSI+PEZpZWxkIE5hbWU9Ik9WUE1fVGF4RGF0ZSIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9Ik9WUE1fRG9jTnVtIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iT1ZQTV9Eb2NDdXJyIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ik9WUE1fRG9jVG90YWwiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9Ik9WUE1fQ2hlY2tTdW0iIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9Ik9WUE1fVHJzZnJTdW0iIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9Ik9WUE1fQ2FzaFN1bSIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iT1ZQTV9Kcm5sTWVtbyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJPVlBNX0NvbW1lbnRzIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ik9WUE1fRG9jVG90YWxTeSIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iT1ZQTV9Eb2NUb3RhbEZDIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJPVlBNX0NoZWNrU3VtRkMiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9Ik9WUE1fVHJzZnJTdW1GQyIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iT1ZQTV9DYXNoU3VtRkMiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9Ik9WUE1fRG9jRW50cnkiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJPVlBNX0NyZWRpdFN1bSIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iT1ZQTV9DcmVkU3VtRkMiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9Ik9WUE1fRGlmZkN1cnIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iT1ZQTV9DYXJkQ29kZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJPVlBNX0NvdW50ZXJSZWYiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iT1ZQTV9WYXRTdW0iIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9Ik9WUE1fVmF0U3VtU3kiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9Ik9WUE1fVmF0U3VtRkMiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9Ik9WUE1fRGRjdFN1bSIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iT1ZQTV9EZGN0U3VtRkMiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IlZQTTJfSW52VHlwZV9Db2RlIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlZQTTJfSW52VHlwZV9OYW1lIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkRvY3VtZW50TnVtIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iRG9jdW1lbnREYXRlIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlRvdGFsSW5zdGFsbG1lbnRzIiBUeXBlPSJJbnQxNiIgLz48RmllbGQgTmFtZT0iTmFtZUF0Q2FyZCIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJGT0xfQW1vdW50IiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJPQURNX1RheElkTnVtIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ik9BRE1fQ2hhck1vbnRoIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iT0FETV9EYXRlRm9ybWF0IiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ik9BRE1fRGF0ZVNlcCIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJPQURNX01haW5DdXJuY3kiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iT0FETV9TeXNDdXJybmN5IiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ik9BRE1fU3VtRGVjIiBUeXBlPSJJbnQxNiIgLz48RmllbGQgTmFtZT0iT0FETV9EZWNTZXAiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iT0FETV9UaG91c1NlcCIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJPQURNX0N1ck9uUmlnaHQiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iT0FETV9NYW5hZ2VyIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ik9BRE1fUGhvbmUxIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ik9BRE1fRmF4IiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ik9BRE1fRV9NYWlsIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ik9BRE1fVGF4SWROdW0zIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ik9BRE1fRGRjdE9mZmljZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJPQURNX0ZyZWVab25lTm8iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iT0lOVl9Eb2NDdXIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iT1JJTl9Eb2NDdXIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iT1BDSF9Eb2NDdXIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iT1JQQ19Eb2NDdXIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iT0RQSV9Eb2NDdXIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iT0RQT19Eb2NDdXIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iT0RQU19EZXBvc0N1cnIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iSkRUMV9GQ0N1cnJlbmN5IiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ik9JTlZfRG9jRGF0ZSIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9Ik9QQ0hfRG9jRGF0ZSIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9Ik9SUENfRG9jRGF0ZSIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9Ik9EUE9fRG9jRGF0ZSIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9Ik9WUE1fRG9jVHlwZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJWUE0yX1N1bUFwcGxpZWQiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IlZQTTJfQXBwbGllZFN5cyIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iVlBNMl9BcHBsaWVkRkMiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IlZQTTJfRG9jRW50cnkiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJWUE0yX0luc3RJZCIgVHlwZT0iSW50MTYiIC8+PEZpZWxkIE5hbWU9Ik9EUElfTnVtQXRDYXJkIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ik9EUE9fTnVtQXRDYXJkIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ik9JTlZfTnVtQXRDYXJkIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ik9QQ0hfTnVtQXRDYXJkIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ik9SSU5fTnVtQXRDYXJkIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ik9SUENfTnVtQXRDYXJkIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ik9WUE1fRG9jRGF0ZSIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9Ik9EUElfRG9jRGF0ZSIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9Ik9KRFRfRHVlRGF0ZSIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9Ik9SSU5fRG9jRGF0ZSIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9Ik9DUkRfTGljVHJhZE51bSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJPU0xQX1NscE5hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iT0hFTV9PZmZpY2VUZWwiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iT0hFTV9FbWFpbCIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJOTk0xX0JlZ2luU3RyIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ik5OTTFfRW5kU3RyIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ik9EUElfRG9jTnVtIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iT0RQT19Eb2NOdW0iIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJPSU5WX0RvY051bSIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9Ik9KRFRfTnVtYmVyIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iT1BDSF9Eb2NOdW0iIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJPUklOX0RvY051bSIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9Ik9SUENfRG9jTnVtIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iT0RQU19UcmFuc0FicyIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9Ik9EUElfRG9jRW50cnkiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJPRFBPX0RvY0VudHJ5IiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iT0RQU19EZXBvc0lkIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iT0lOVl9Eb2NFbnRyeSIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9Ik9KRFRfVHJhbnNJZCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9Ik9QQ0hfRG9jRW50cnkiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJPUklOX0RvY0VudHJ5IiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iT1JQQ19Eb2NFbnRyeSIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9Ik9JTlZfSW5zdGFsbG1udCIgVHlwZT0iSW50MTYiIC8+PEZpZWxkIE5hbWU9Ik9SSU5fSW5zdGFsbG1udCIgVHlwZT0iSW50MTYiIC8+PEZpZWxkIE5hbWU9Ik9QQ0hfSW5zdGFsbG1udCIgVHlwZT0iSW50MTYiIC8+PEZpZWxkIE5hbWU9Ik9SUENfSW5zdGFsbG1udCIgVHlwZT0iSW50MTYiIC8+PEZpZWxkIE5hbWU9Ik9EUE9fSW5zdGFsbG1udCIgVHlwZT0iSW50MTYiIC8+PEZpZWxkIE5hbWU9Ik9EUElfSW5zdGFsbG1udCIgVHlwZT0iSW50MTYiIC8+PEZpZWxkIE5hbWU9Ik9WUE1fVV9PcmciIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iT1ZQTV9DYXJkTmFtZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJPVlBNX0FkZHJlc3MiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iT0NSRF9QaG9uZTIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iT0NSRF9DaXR5IiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ik9DUkRfQ291bnRyeSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJPVlBNX09ialR5cGUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iT1ZQTV9EcmFmdEtleSIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IkFEUDFfUmVtYXJrIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ik9WUE1fV3RTdW0iIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9Ik9WUE1fV3RTdW1GcmduIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJPVlBNX1Ryc2ZyRGF0ZSIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9Ik9WUE1fVHJzZnJSZWYiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iT1ZQTV9DYXNoQWNjdCIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJPVk1QX05vRG9jU3VtIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJPVk1QX05vRG9jU3VtU3kiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9Ik9WUE1fTm9Eb2NTdW1GQyIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iT0NSQ19DYXJkTmFtZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJWUE0zX093bmVySWROdW0iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iVlBNM19OdW1PZlBtbnRzIiBUeXBlPSJJbnQxNiIgLz48RmllbGQgTmFtZT0iVlBNM19GaXJzdFN1bSIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iVlBNM19BZGRQbW50U3VtIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJWUE0zX0NyZWRpdFN1bSIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iVlBNMV9EdWVEYXRlIiBUeXBlPSJEYXRlVGltZSIgLz48RmllbGQgTmFtZT0iVlBNMV9DaGVja051bSIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9Ik9EU0NfQmFua05hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iVlBNMV9CcmFuY2giIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iVlBNMV9BY2N0TnVtIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlZQTTFfQ2hlY2tTdW0iIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9Ik9BQ1RfQWNjdE5hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iVV9OYW1lIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlVfTmFtZV9BUiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJVX1RSTkxhYmVsX0FSIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlVfVFJOTGFiZWxfRU4iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iVV9UUk5WYWx1ZV9FTiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJVX1RSTlZhbHVlX0FSIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlVfTGljZW5zZU5vTGFiZWxfQVIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iVV9MaWNlbnNlTm9MYWJlbF9FTiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJVX0xpY2Vuc2VOb1ZhbHVlX0VOIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlVfRW1haWxMYWJlbF9FTiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJVX0VtYWlsIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlVfQWNjb3VudE5vIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlVfQWNjb3VudFRpdGxlIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlVfQmFua05hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iVV9Td2lmdENvZGUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iVV9JQkFOIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlVfU2FsZU9mZmljZUFkZHJlc3NfRU4iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iVV9TYWxlT2ZmaWNlQWRkcmVzc19BUiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJVX1NhbGVPZmZpY2VUZWxfRU4iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iVV9TYWxlT2ZmaWNlVGVsX0FSIiBUeXBlPSJTdHJpbmciIC8+PC9WaWV3PjwvRGF0YVNldD48L1Jlc3VsdFNjaGVtYT48Q29ubmVjdGlvbk9wdGlvbnMgQ2xvc2VDb25uZWN0aW9uPSJ0cnVlIiAvPjwvU3FsRGF0YVNvdXJjZT4=" />
+  </ComponentStorage>
+  <ObjectStorage>
+    <Item1 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v23.1" Ref="2" Content="System.Int32" Type="System.Type" />
+  </ObjectStorage>
+</XtraReportsLayoutSerializer>
