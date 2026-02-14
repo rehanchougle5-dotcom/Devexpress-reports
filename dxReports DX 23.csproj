@@ -54,18 +54,12 @@
     <Reference Include="DevExpress.CodeParser.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.Desktop.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.DataAccess.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.DemosUpdater">
       <HintPath>..\..\..\..\..\Program Files\DevExpress 24.1\Components\System\Components\DevExpress.DemosUpdater.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Drawing.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Office.v23.1.Core, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.PackageDependenciesInfo.Installer">
       <HintPath>..\..\..\..\..\Program Files\DevExpress 24.1\Components\System\Components\DevExpress.PackageDependenciesInfo.Installer.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Pdf.v23.1.Core, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.PivotGrid.v23.1.Core, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Printing.v23.1.Core, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.DataAccess.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Drawing.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Office.v23.1.Core, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -78,7 +72,6 @@
     <Reference Include="DevExpress.Utils.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v23.1.UI, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Xpo.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Xpo.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraCharts.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraGauges.v23.1.Core, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -86,12 +79,6 @@
     <Reference Include="DevExpress.XtraPrinting.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraReports.v23.1, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraReports.v23.1.Extensions, Version=23.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="FAR.Database">
-      <HintPath>D:\Development\New Dlls\Dlls\FAR.Database.dll</HintPath>
-    </Reference>
-    <Reference Include="FAR.Utils">
-      <HintPath>D:\Development\New Dlls\Dlls\FAR.Utils.dll</HintPath>
-    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -754,23 +741,11 @@
     <Compile Include="Reports\Task Status Report\Task_Status_Report_2.Designer.cs">
       <DependentUpon>Task_Status_Report_2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\TEST\scripts.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\TEST\scripts.Designer.cs">
-      <DependentUpon>scripts.cs</DependentUpon>
-    </Compile>
     <Compile Include="Reports\TEST\XtraReport2.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\TEST\XtraReport2.Designer.cs">
       <DependentUpon>XtraReport2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\TEST\XtraReport4.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\TEST\XtraReport4.Designer.cs">
-      <DependentUpon>XtraReport4.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\UserTask\MonthlyUserTask.cs">
       <SubType>Component</SubType>
@@ -1176,9 +1151,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\TEST\XtraReport2.resx">
       <DependentUpon>XtraReport2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\TEST\XtraReport4.resx">
-      <DependentUpon>XtraReport4.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\UserTask\MonthlyUserTask.resx">
       <DependentUpon>MonthlyUserTask.cs</DependentUpon>
