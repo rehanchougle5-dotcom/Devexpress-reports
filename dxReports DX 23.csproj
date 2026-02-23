@@ -435,6 +435,12 @@
     <Compile Include="Reports\Inventory Transfer\Inventory_Transfer_1.Designer.cs">
       <DependentUpon>Inventory_Transfer_1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\Inventory Transfer\Inventory_Transfer_2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Inventory Transfer\Inventory_Transfer_2.Designer.cs">
+      <DependentUpon>Inventory_Transfer_2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\Item Launch\Item Launch.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -799,6 +805,18 @@
     <Compile Include="Reports\TEST\XtraReport2.Designer.cs">
       <DependentUpon>XtraReport2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\Transfer Request Picking\Transfer_Request_Picking_02.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Transfer Request Picking\Transfer_Request_Picking_02.Designer.cs">
+      <DependentUpon>Transfer_Request_Picking_02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Transfer Request Picking\Transfer_Request_Picking_01.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Transfer Request Picking\Transfer_Request_Picking_01.Designer.cs">
+      <DependentUpon>Transfer_Request_Picking_01.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\UserTask\MonthlyUserTask.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -1024,6 +1042,9 @@
     <EmbeddedResource Include="Reports\Inventory Transfer\Inventory_Transfer_1.resx">
       <DependentUpon>Inventory_Transfer_1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Inventory Transfer\Inventory_Transfer_2.resx">
+      <DependentUpon>Inventory_Transfer_2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\Item Launch\Item Launch.resx">
       <DependentUpon>Item Launch.cs</DependentUpon>
     </EmbeddedResource>
@@ -1203,6 +1224,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\TEST\XtraReport2.resx">
       <DependentUpon>XtraReport2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Transfer Request Picking\Transfer_Request_Picking_02.resx">
+      <DependentUpon>Transfer_Request_Picking_02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Transfer Request Picking\Transfer_Request_Picking_01.resx">
+      <DependentUpon>Transfer_Request_Picking_01.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\UserTask\MonthlyUserTask.resx">
       <DependentUpon>MonthlyUserTask.cs</DependentUpon>
